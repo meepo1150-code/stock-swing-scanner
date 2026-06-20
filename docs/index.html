@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swing Scanner — Nasdaq + Russell 2000</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0E1117;
+  --bg-elevated:#161B22;
+  --bg-card:#1A2029;
+  --border:#2A3140;
+  --border-soft:#212733;
+  --text-primary:#F0F4F8;
+  --text-secondary:#9BA3AF;
+  --text-tertiary:#6B7280;
+  --green:#3DDC84;
+  --green-dim:#1F4A33;
+  --red:#FF5D5D;
+  --red-dim:#4A1F24;
+  --gold:#E8B339;
+  --gold-dim:#4A3A1A;
+  --blue:#5B9DFF;
+  --font-display:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;
+  --font-mono:'JetBrains Mono','SF Mono',Consolas,'Courier New',monospace;
+  --radius:14px;
+  --radius-sm:8px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+body{
+  background:var(--bg);
+  color:var(--text-primary);
+  font-family:var(--font-display);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.5;
+  min-height:100vh;
+}
+
+/* ---------- Top bar ---------- */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(14,17,23,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border-soft);
+  padding:16px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;
+}
+.brand{display:flex;align-items:center;gap:10px;}
+.brand-mark{
+  width:32px;height:32px;border-radius:8px;
+  background:linear-gradient(135deg,var(--green),var(--blue));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-mono);font-weight:700;font-size:15px;color:#0E1117;
+  flex-shrink:0;
+}
+.brand-text h1{font-size:15px;font-weight:700;letter-spacing:-0.01em;}
+.brand-text p{font-size:12px;color:var(--text-tertiary);font-family:var(--font-mono);}
+
+.status-pills{display:flex;gap:8px;flex-wrap:wrap;}
+.pill{
+  font-family:var(--font-mono);font-size:11px;font-weight:500;
+  padding:5px 10px;border-radius:999px;
+  border:1px solid var(--border);
+  color:var(--text-secondary);
+  display:flex;align-items:center;gap:6px;
+}
+.pill .dot{width:6px;height:6px;border-radius:50%;background:var(--text-tertiary);}
+.pill.live .dot{background:var(--green);box-shadow:0 0 8px var(--green);}
+
+/* ---------- Layout ---------- */
+.wrap{max-width:1280px;margin:0 auto;padding:28px 24px 80px;}
+
+.hero{margin-bottom:28px;}
+.hero-eyebrow{
+  font-family:var(--font-mono);font-size:11px;color:var(--text-tertiary);
+  letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;
+}
+.hero h2{font-size:26px;font-weight:800;letter-spacing:-0.02em;margin-bottom:6px;}
+.hero p{color:var(--text-secondary);font-size:14px;max-width:640px;}
+
+/* ---------- Stats row ---------- */
+.stats-row{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:1px;background:var(--border-soft);
+  border:1px solid var(--border-soft);border-radius:var(--radius);
+  overflow:hidden;margin-bottom:24px;
+}
+.stat{background:var(--bg-elevated);padding:16px 18px;}
+.stat-label{font-size:11px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;}
+.stat-value{font-family:var(--font-mono);font-size:24px;font-weight:600;}
+.stat-value.accent-green{color:var(--green);}
+.stat-value.accent-gold{color:var(--gold);}
+
+/* ---------- Disclaimer banner ---------- */
+.disclaimer{
+  background:var(--bg-card);
+  border:1px solid var(--gold-dim);
+  border-left:3px solid var(--gold);
+  border-radius:var(--radius-sm);
+  padding:14px 18px;margin-bottom:28px;
+  font-size:13px;color:var(--text-secondary);
+  display:flex;gap:12px;align-items:flex-start;
+}
+.disclaimer .icon{flex-shrink:0;font-size:16px;line-height:1;}
+.disclaimer strong{color:var(--text-primary);}
+
+/* ---------- Controls ---------- */
+.controls{
+  display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+  margin-bottom:20px;justify-content:space-between;
+}
+.filter-group{display:flex;gap:8px;flex-wrap:wrap;}
+.filter-btn{
+  font-family:var(--font-mono);font-size:12px;font-weight:500;
+  background:var(--bg-card);border:1px solid var(--border);
+  color:var(--text-secondary);padding:7px 14px;border-radius:999px;
+  cursor:pointer;transition:all .15s ease;white-space:nowrap;
+}
+.filter-btn:hover{border-color:var(--text-tertiary);color:var(--text-primary);}
+.filter-btn.active{background:var(--green-dim);border-color:var(--green);color:var(--green);}
+
+.sort-select{
+  font-family:var(--font-mono);font-size:12px;
+  background:var(--bg-card);border:1px solid var(--border);
+  color:var(--text-secondary);padding:7px 12px;border-radius:var(--radius-sm);
+  cursor:pointer;
+}
+
+/* ---------- Card grid ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;}
+
+.card{
+  background:var(--bg-card);
+  border:1px solid var(--border-soft);
+  border-radius:var(--radius);
+  position:relative;
+  transition:border-color .15s ease,transform .15s ease;
+  cursor:pointer;
+  clip-path:inset(0 round var(--radius));
+}
+.card:hover{border-color:var(--border);transform:translateY(-2px);}
+.card.has-match{border-color:var(--green-dim);}
+.card.has-match:hover{border-color:var(--green);}
+
+.card-top{padding:18px 18px 14px;}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;}
+.ticker-block{display:flex;align-items:baseline;gap:8px;}
+.ticker{font-family:var(--font-mono);font-size:20px;font-weight:700;letter-spacing:-0.01em;}
+.company-name{font-size:12px;color:var(--text-tertiary);display:block;margin-top:2px;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.price-block{text-align:right;}
+.price{font-family:var(--font-mono);font-size:18px;font-weight:600;}
+.sector-tag{
+  font-size:10px;color:var(--text-tertiary);
+  font-family:var(--font-mono);
+}
+
+.sparkline{width:100%;height:36px;margin:10px 0;}
+
+.match-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;}
+.match-chip{
+  font-size:10.5px;font-family:var(--font-mono);
+  padding:4px 9px;border-radius:999px;
+  background:var(--green-dim);color:var(--green);
+  border:1px solid rgba(61,220,132,0.25);
+}
+.match-chip.fundamental{background:var(--gold-dim);color:var(--gold);border-color:rgba(232,179,57,0.25);}
+.no-match-text{font-size:11px;color:var(--text-tertiary);font-style:italic;}
+
+/* ---------- Perforated divider (signature element) ---------- */
+.perf-divider{
+  position:relative;height:1px;background:var(--border-soft);
+  margin:0 18px;
+}
+.perf-divider::before,
+.perf-divider::after{
+  content:'';position:absolute;top:-7px;width:14px;height:14px;
+  background:var(--bg);border-radius:50%;
+  border:1px solid var(--border-soft);
+}
+.perf-divider::before{left:-25px;}
+.perf-divider::after{right:-25px;}
+
+/* ---------- Fundamental footer ---------- */
+.card-bottom{padding:14px 18px 18px;}
+.fund-score-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+.fund-score-label{font-size:11px;color:var(--text-tertiary);font-family:var(--font-mono);}
+.fund-score-value{font-family:var(--font-mono);font-size:13px;font-weight:600;}
+.score-bar{height:5px;border-radius:999px;background:var(--bg-elevated);overflow:hidden;margin-top:6px;}
+.score-bar-fill{height:100%;border-radius:999px;transition:width .3s ease;}
+
+.fund-metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:10px;}
+.fund-metric{font-size:10.5px;}
+.fund-metric .k{color:var(--text-tertiary);font-family:var(--font-mono);}
+.fund-metric .v{color:var(--text-secondary);font-family:var(--font-mono);font-weight:500;}
+
+.fund-metrics-list{display:flex;flex-direction:column;gap:8px;}
+.fund-metric-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:8px 12px;background:var(--bg-elevated);border-radius:var(--radius-sm);
+  font-size:12.5px;
+}
+.fund-metric-row .k{color:var(--text-secondary);}
+.fund-metric-row .v{color:var(--text-primary);font-family:var(--font-mono);font-weight:600;}
+.fund-completeness{font-size:11px;color:var(--text-tertiary);margin-top:8px;font-family:var(--font-mono);}
+
+.no-fund-data{font-size:11px;color:var(--text-tertiary);font-style:italic;}
+
+/* ---------- Empty state ---------- */
+.empty-state{
+  text-align:center;padding:80px 20px;color:var(--text-tertiary);
+}
+.empty-state .big{font-size:40px;margin-bottom:12px;}
+.empty-state h3{color:var(--text-secondary);font-size:16px;margin-bottom:6px;}
+.empty-state p{font-size:13px;max-width:420px;margin:0 auto;}
+.empty-state code{
+  background:var(--bg-card);padding:2px 6px;border-radius:4px;
+  font-family:var(--font-mono);font-size:12px;color:var(--gold);
+}
+
+/* ---------- Footer ---------- */
+footer{
+  text-align:center;padding:32px 24px;color:var(--text-tertiary);
+  font-size:12px;border-top:1px solid var(--border-soft);margin-top:40px;
+}
+footer a{color:var(--blue);text-decoration:none;}
+
+/* ---------- Modal ---------- */
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,0.6);
+  display:none;align-items:center;justify-content:center;
+  z-index:100;padding:20px;backdrop-filter:blur(4px);
+}
+.modal-overlay.open{display:flex;}
+.modal{
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--radius);max-width:560px;width:100%;
+  max-height:85vh;overflow-y:auto;padding:24px;
+}
+.modal-close{
+  position:absolute;top:16px;right:16px;
+  background:none;border:none;color:var(--text-tertiary);
+  font-size:22px;cursor:pointer;line-height:1;
+}
+.modal h3{font-family:var(--font-mono);font-size:22px;margin-bottom:4px;}
+.modal .modal-sub{color:var(--text-tertiary);font-size:13px;margin-bottom:18px;}
+.modal-section{margin-bottom:18px;}
+.modal-section h4{font-size:12px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;}
+.modal-setup-item{
+  padding:10px 12px;border-radius:var(--radius-sm);margin-bottom:8px;
+  border:1px solid var(--border-soft);font-size:13px;
+}
+.modal-setup-item.matched{border-color:var(--green-dim);background:rgba(61,220,132,0.05);}
+.modal-setup-item .setup-name{font-weight:600;display:flex;align-items:center;gap:6px;margin-bottom:4px;}
+.modal-setup-item .setup-detail{color:var(--text-secondary);font-size:12px;}
+.modal-setup-item .hold-tag{
+  font-family:var(--font-mono);font-size:10px;color:var(--text-tertiary);
+  margin-top:4px;display:inline-block;
+}
+
+@media (max-width:640px){
+  .topbar{padding:12px 16px;}
+  .status-pills{width:100%;}
+  .pill{font-size:10px;padding:4px 8px;}
+  .wrap{padding:20px 16px 60px;}
+  .hero h2{font-size:21px;}
+  .grid{grid-template-columns:1fr;}
+  .controls{flex-direction:column;align-items:stretch;}
+  .sort-select{width:100%;}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    <div class="brand-mark">SS</div>
+    <div class="brand-text">
+      <h1>Swing Scanner</h1>
+      <p>NASDAQ + RUSSELL 2000</p>
+    </div>
+  </div>
+  <div class="status-pills">
+    <span class="pill" id="pill-time"><span class="dot"></span>กำลังโหลด...</span>
+    <span class="pill" id="pill-mode"><span class="dot"></span>Manual decision only</span>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-eyebrow">Scan + Dashboard — ไม่ใช่ Auto Trading Bot</div>
+    <h2>หุ้นที่เข้าเงื่อนไข Swing Setup วันนี้</h2>
+    <p>กรองจาก Base Filter (ราคา/วอลุ่ม/มูลค่าตลาด) + Fundamental Filter (ความเสี่ยงงบการเงิน) แล้วเช็ค 6 เงื่อนไข Setup เชิงเทคนิคและพื้นฐาน</p>
+  </div>
+
+  <div class="stats-row" id="stats-row"></div>
+
+  <div class="disclaimer">
+    <span class="icon">⚠️</span>
+    <div>
+      <strong>คำเตือนสำคัญ:</strong> นี่คือเครื่องมือกรองหุ้นเบื้องต้นเท่านั้น ไม่ใช่คำแนะนำการลงทุน ไม่การันตีผลกำไร
+      ก่อนซื้อขายจริงต้อง verify กับแอป Dime!/Webull ว่าซื้อได้จริงไหม — การตัดสินใจทั้งหมดเป็น Manual เท่านั้น
+      ระบบนี้ไม่มี Auto Order ใดๆ และ Fundamental score เป็นข้อมูลประกอบการพิจารณา ไม่ใช่สัญญาณซื้อขาย
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="filter-group" id="filter-group">
+      <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+      <button class="filter-btn" data-filter="matched">Match Setup</button>
+    </div>
+    <select class="sort-select" id="sort-select">
+      <option value="setups_desc">เรียงตาม: Setup ที่ match มากสุด</option>
+      <option value="fund_score_desc">เรียงตาม: Fundamental Score สูงสุด</option>
+      <option value="dollar_volume_desc">เรียงตาม: Dollar Volume สูงสุด</option>
+      <option value="ticker_asc">เรียงตาม: ชื่อ Ticker (A-Z)</option>
+    </select>
+  </div>
+
+  <div class="grid" id="grid"></div>
+</div>
+
+<footer>
+  Stock Swing Scanner Dashboard — สร้างด้วย <a href="https://claude.ai" target="_blank">Claude</a> ·
+  ข้อมูลจาก scanner_results.json (รันบนเครื่อง local แล้ว push ขึ้น repo)
+</footer>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" id="modal-content"></div>
+</div>
+
+<script>
+const SETUP_ICONS = {
+  "Gap & Hold": "📊",
+  "Volume Breakout": "🚀",
+  "Relative Strength Leader": "💪",
+  "Pullback to Support (in uptrend)": "🎯",
+  "Sector Hype Rotation": "🔥",
+  "Earnings Surprise Momentum": "📈",
+};
+
+let SCAN_DATA = null;
+let CURRENT_FILTER = "all";
+
+async function loadData() {
+  try {
+    const res = await fetch("scanner_results.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    SCAN_DATA = await res.json();
+    renderAll();
+  } catch (err) {
+    renderError(err);
+  }
+}
+
+function renderError(err) {
+  document.getElementById("grid").innerHTML = `
+    <div class="empty-state" style="grid-column:1/-1;">
+      <div class="big">📂</div>
+      <h3>ไม่พบไฟล์ scanner_results.json</h3>
+      <p>วางไฟล์ <code>scanner_results.json</code> (ที่ได้จากการรัน <code>stock_scanner.py</code>)
+      ไว้ในโฟลเดอร์เดียวกับ <code>index.html</code> นี้ แล้ว refresh หน้านี้อีกครั้ง</p>
+    </div>`;
+  document.getElementById("pill-time").innerHTML = `<span class="dot"></span>ไม่มีข้อมูล`;
+}
+
+function fmtUSD(n, decimals = 2) {
+  if (n === null || n === undefined) return "—";
+  return "$" + Number(n).toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+}
+function fmtCompact(n) {
+  if (n === null || n === undefined) return "—";
+  n = Number(n);
+  if (Math.abs(n) >= 1e9) return (n / 1e9).toFixed(2) + "B";
+  if (Math.abs(n) >= 1e6) return (n / 1e6).toFixed(2) + "M";
+  if (Math.abs(n) >= 1e3) return (n / 1e3).toFixed(1) + "K";
+  return n.toFixed(0);
+}
+function thaiTimeFromUTC(isoStr) {
+  try {
+    const d = new Date(isoStr);
+    const thaiOffset = 7 * 60;
+    const local = new Date(d.getTime() + thaiOffset * 60000);
+    const pad = (x) => String(x).padStart(2, "0");
+    return `${pad(local.getUTCDate())}/${pad(local.getUTCMonth() + 1)}/${local.getUTCFullYear()} ${pad(local.getUTCHours())}:${pad(local.getUTCMinutes())} น. (ไทย)`;
+  } catch {
+    return isoStr;
+  }
+}
+
+function renderAll() {
+  renderStats();
+  renderTopbar();
+  renderGrid();
+}
+
+function renderTopbar() {
+  document.getElementById("pill-time").innerHTML =
+    `<span class="dot"></span>${thaiTimeFromUTC(SCAN_DATA.scan_timestamp_utc)}`;
+}
+
+function renderStats() {
+  const d = SCAN_DATA;
+  const stats = [
+    { label: "สแกนทั้งหมด", value: d.total_scanned, accent: "" },
+    { label: "ผ่าน Base Filter", value: d.total_passed_base_filter, accent: "" },
+    { label: "ผ่าน Fundamental Filter", value: d.total_passed_fundamental_filter ?? "—", accent: "accent-gold" },
+    { label: "Match อย่างน้อย 1 Setup", value: d.total_matched_any_setup, accent: "accent-green" },
+  ];
+  document.getElementById("stats-row").innerHTML = stats.map(s => `
+    <div class="stat">
+      <div class="stat-label">${s.label}</div>
+      <div class="stat-value ${s.accent}">${s.value}</div>
+    </div>
+  `).join("");
+}
+
+function sparklinePath(prices, w = 280, h = 36) {
+  if (!prices || prices.length < 2) return "";
+  const min = Math.min(...prices), max = Math.max(...prices);
+  const range = max - min || 1;
+  const step = w / (prices.length - 1);
+  const pts = prices.map((p, i) => {
+    const x = i * step;
+    const y = h - ((p - min) / range) * (h - 4) - 2;
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  });
+  return pts.join(" ");
+}
+
+function scoreColor(score) {
+  if (score === null || score === undefined) return "var(--text-tertiary)";
+  if (score >= 65) return "var(--green)";
+  if (score >= 40) return "var(--gold)";
+  return "var(--red)";
+}
+
+function cardHTML(r, idx) {
+  const matched = (r.setups_matched || []).filter(s => s.matched);
+  const hasMatch = matched.length > 0;
+  const fundScore = r.fundamental_score;
+  const sparkPts = r._spark_prices ? sparklinePath(r._spark_prices) : null;
+
+  const chips = matched.length
+    ? matched.map(s => `<span class="match-chip">${SETUP_ICONS[s.setup_name] || "•"} ${s.setup_name}</span>`).join("")
+    : `<span class="no-match-text">ไม่ match setup ใดในขณะนี้</span>`;
+
+  let fundSection = `<div class="no-fund-data">ไม่มีข้อมูล fundamental เพียงพอ</div>`;
+  if (fundScore !== null && fundScore !== undefined) {
+    const color = scoreColor(fundScore);
+    fundSection = `
+      <div class="fund-score-row">
+        <span class="fund-score-label">FUNDAMENTAL SCORE</span>
+        <span class="fund-score-value" style="color:${color}">${fundScore.toFixed(1)} / 100</span>
+      </div>
+      <div class="score-bar"><div class="score-bar-fill" style="width:${fundScore}%;background:${color}"></div></div>
+    `;
+  }
+  if (!r.passed_fundamental_filter && r.fundamental_filter_fail_reason) {
+    fundSection += `<div style="margin-top:8px;font-size:11px;color:var(--red);">⛔ ${r.fundamental_filter_fail_reason}</div>`;
+  }
+
+  return `
+    <div class="card ${hasMatch ? "has-match" : ""}" data-idx="${idx}">
+      <div class="card-top">
+        <div class="card-head">
+          <div class="ticker-block">
+            <div>
+              <span class="ticker">${r.ticker}</span>
+              <span class="company-name">${r.company_name || "—"}</span>
+            </div>
+          </div>
+          <div class="price-block">
+            <div class="price">${fmtUSD(r.price)}</div>
+            <div class="sector-tag">${r.sector || "Unknown"}</div>
+          </div>
+        </div>
+        <div class="match-row">${chips}</div>
+      </div>
+      <div class="perf-divider"></div>
+      <div class="card-bottom">
+        ${fundSection}
+        <div class="fund-metrics">
+          <div class="fund-metric"><span class="k">VOL </span><span class="v">${fmtCompact(r.avg_volume)}</span></div>
+          <div class="fund-metric"><span class="k">MCAP </span><span class="v">${fmtCompact(r.market_cap)}</span></div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function getFilteredSorted() {
+  let results = [...(SCAN_DATA.results || [])].filter(r => r.passed_base_filter);
+
+  if (CURRENT_FILTER === "matched") {
+    results = results.filter(r => (r.setups_matched || []).some(s => s.matched));
+  }
+
+  const sortVal = document.getElementById("sort-select").value;
+  results.sort((a, b) => {
+    if (sortVal === "setups_desc") {
+      const am = (a.setups_matched || []).filter(s => s.matched).length;
+      const bm = (b.setups_matched || []).filter(s => s.matched).length;
+      return bm - am;
+    }
+    if (sortVal === "fund_score_desc") {
+      return (b.fundamental_score ?? -1) - (a.fundamental_score ?? -1);
+    }
+    if (sortVal === "dollar_volume_desc") {
+      return (b.avg_dollar_volume ?? 0) - (a.avg_dollar_volume ?? 0);
+    }
+    if (sortVal === "ticker_asc") {
+      return a.ticker.localeCompare(b.ticker);
+    }
+    return 0;
+  });
+  return results;
+}
+
+function renderGrid() {
+  const results = getFilteredSorted();
+  const grid = document.getElementById("grid");
+
+  if (!results.length) {
+    grid.innerHTML = `
+      <div class="empty-state" style="grid-column:1/-1;">
+        <div class="big">🔍</div>
+        <h3>ไม่มีหุ้นที่ตรงตามเงื่อนไขนี้</h3>
+        <p>ลองเปลี่ยน filter หรือรอผลสแกนรอบถัดไป</p>
+      </div>`;
+    return;
+  }
+
+  grid.innerHTML = results.map((r, i) => cardHTML(r, i)).join("");
+
+  grid.querySelectorAll(".card").forEach((card, i) => {
+    card.addEventListener("click", () => openModal(results[i]));
+  });
+}
+
+function openModal(r) {
+  const setups = r.setups_matched || [];
+  const modal = document.getElementById("modal-content");
+
+  const setupItems = setups.length
+    ? setups.map(s => `
+        <div class="modal-setup-item ${s.matched ? "matched" : ""}">
+          <div class="setup-name">${SETUP_ICONS[s.setup_name] || "•"} ${s.setup_name} ${s.matched ? "✅" : ""}</div>
+          <div class="setup-detail">${s.detail || "—"}</div>
+          ${s.matched && s.suggested_hold_days ? `<span class="hold-tag">ระยะถือแนะนำ: ${s.suggested_hold_days}</span>` : ""}
+        </div>
+      `).join("")
+    : `<div class="no-fund-data">ไม่ได้เช็ค setup (ไม่ผ่าน base/fundamental filter)</div>`;
+
+  let fundDetail = `<div class="no-fund-data">ไม่มีข้อมูล fundamental เพียงพอสำหรับตัวนี้</div>`;
+  if (r.fundamental_score !== null && r.fundamental_score !== undefined) {
+    const bd = r.fundamental_breakdown || {};
+    const LABELS = {
+      profitability: "ความสามารถทำกำไร",
+      growth: "การเติบโต",
+      financial_health: "สุขภาพทางการเงิน",
+      valuation: "มูลค่าเทียบ Sector",
+    };
+    const rows = Object.entries(bd)
+      .filter(([k]) => !k.startsWith("_"))
+      .map(([k, v]) => `
+        <div class="fund-metric-row">
+          <span class="k">${LABELS[k] || k}</span>
+          <span class="v">${v} / 100</span>
+        </div>
+      `)
+      .join("");
+    const completeness = bd._data_completeness ? `<div class="fund-completeness">ข้อมูลครบ ${bd._data_completeness}</div>` : "";
+    fundDetail = `
+      <div style="font-family:var(--font-mono);font-size:20px;font-weight:700;color:${scoreColor(r.fundamental_score)};margin-bottom:10px;">
+        ${r.fundamental_score.toFixed(1)} / 100
+      </div>
+      <div class="fund-metrics-list">${rows}</div>
+      ${completeness}
+    `;
+  }
+
+  modal.innerHTML = `
+    <button class="modal-close" id="modal-close-btn">&times;</button>
+    <h3>${r.ticker}</h3>
+    <div class="modal-sub">${r.company_name || "—"} · ${r.sector || "Unknown"} · ${fmtUSD(r.price)}</div>
+
+    <div class="modal-section">
+      <h4>Setup ที่เช็ค (6 เงื่อนไข)</h4>
+      ${setupItems}
+    </div>
+
+    <div class="modal-section">
+      <h4>Fundamental Score Breakdown</h4>
+      ${fundDetail}
+    </div>
+
+    <div class="modal-section" style="margin-bottom:0;">
+      <h4>⚠️ ก่อนตัดสินใจ</h4>
+      <div style="font-size:12.5px;color:var(--text-secondary);line-height:1.6;">
+        ตรวจสอบกับแอป Dime!/Webull ว่าซื้อ ${r.ticker} ได้จริงไหม (เต็มหุ้น/fractional) และงบที่มีพอซื้อกี่หุ้น
+        ก่อนตัดสินใจซื้อขายจริงเสมอ — นี่ไม่ใช่คำแนะนำการลงทุน
+      </div>
+    </div>
+  `;
+
+  document.getElementById("modal-overlay").classList.add("open");
+  document.getElementById("modal-close-btn").addEventListener("click", closeModal);
+}
+
+function closeModal() {
+  document.getElementById("modal-overlay").classList.remove("open");
+}
+
+document.getElementById("modal-overlay").addEventListener("click", (e) => {
+  if (e.target.id === "modal-overlay") closeModal();
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeModal();
+});
+
+document.getElementById("filter-group").addEventListener("click", (e) => {
+  const btn = e.target.closest(".filter-btn");
+  if (!btn) return;
+  document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  CURRENT_FILTER = btn.dataset.filter;
+  renderGrid();
+});
+
+document.getElementById("sort-select").addEventListener("change", renderGrid);
+
+loadData();
+</script>
+
+</body>
+</html>
