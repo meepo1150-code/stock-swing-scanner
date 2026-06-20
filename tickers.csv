@@ -1,0 +1,44 @@
+ticker
+# ==========================================================================
+# นี่คือไฟล์รายชื่อ ticker ตัวอย่าง (sample) ใช้สำหรับทดสอบ stock_scanner.py
+# ----- ยังไม่ใช่รายชื่อ Nasdaq + Russell 2000 ฉบับเต็ม -----
+#
+# วิธีหารายชื่อ Nasdaq + Russell 2000 ฉบับเต็มจริง (ทำครั้งเดียว แล้ว update เป็นระยะ):
+#
+#   วิธีที่ 1 — Nasdaq ทั้งหมด (ฟรี ไม่ต้อง API key):
+#     ดึงจาก: https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt
+#     และ:    https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt
+#     (ไฟล์นี้อัปเดตทุกวันโดย Nasdaq เอง)
+#
+#   วิธีที่ 2 — Russell 2000 (ทางการที่สุด):
+#     ดาวน์โหลดรายชื่อ holdings จาก iShares Russell 2000 ETF (ticker: IWM)
+#     หน้าเว็บ: https://www.ishares.com/us/products/239710/
+#     -> มีปุ่ม Download Holdings เป็น CSV ทุกวัน (ฟรี ไม่ต้อง login)
+#
+#   วิธีที่ 3 — ใช้ของ data provider อื่น เช่น financialmodelingprep.com
+#     (มี free tier แต่ rate limit ต่ำ) — ใช้เป็นทางเลือกเสริม
+#
+# เมื่อได้รายชื่อมาแล้ว ให้ทำเป็น CSV รูปแบบนี้ (column เดียวพอ ชื่อ "ticker"):
+#   ticker
+#   AAPL
+#   NVDA
+#   ...
+#
+# แล้วรัน: python3 stock_scanner.py --tickers-file tickers_full.csv
+# ==========================================================================
+AAPL
+NVDA
+AMD
+TSLA
+MSFT
+AMZN
+META
+GOOGL
+AVGO
+NFLX
+COIN
+PLTR
+SMCI
+MARA
+RIOT
+SOFI
