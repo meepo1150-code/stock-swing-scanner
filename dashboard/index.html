@@ -42,11 +42,13 @@ body{
 }
 
 /* ---------- Top bar ---------- */
-.topbar{
+.site-header{
   position:sticky;top:0;z-index:50;
   background:rgba(14,17,23,0.92);
   backdrop-filter:blur(12px);
   border-bottom:1px solid var(--border-soft);
+}
+.topbar{
   padding:16px 24px;
   display:flex;align-items:center;justify-content:space-between;
   flex-wrap:wrap;gap:12px;
@@ -72,6 +74,27 @@ body{
 }
 .pill .dot{width:6px;height:6px;border-radius:50%;background:var(--text-tertiary);}
 .pill.live .dot{background:var(--green);box-shadow:0 0 8px var(--green);}
+
+/* ---------- Tab navigation ---------- */
+.tabbar{
+  border-top:1px solid var(--border-soft);
+  padding:0 24px;
+  display:flex;gap:4px;
+  overflow-x:auto;
+}
+.tab-btn{
+  font-family:var(--font-display);font-size:13.5px;font-weight:600;
+  background:none;border:none;color:var(--text-tertiary);
+  padding:14px 18px 12px;cursor:pointer;
+  border-bottom:2px solid transparent;
+  transition:color .15s ease,border-color .15s ease;
+  display:flex;align-items:center;gap:7px;
+  white-space:nowrap;
+}
+.tab-btn:hover{color:var(--text-secondary);}
+.tab-btn.active{color:var(--text-primary);border-bottom-color:var(--green);}
+.tab-panel{display:none;}
+.tab-panel.active{display:block;}
 
 /* ---------- Layout ---------- */
 .wrap{max-width:1280px;margin:0 auto;padding:28px 24px 80px;}
@@ -223,6 +246,89 @@ body{
   font-family:var(--font-mono);font-size:12px;color:var(--gold);
 }
 
+/* ---------- Conditions tab ---------- */
+.cond-intro{
+  background:var(--bg-card);border:1px solid var(--gold-dim);
+  border-left:3px solid var(--gold);border-radius:var(--radius-sm);
+  padding:16px 18px;margin-bottom:24px;font-size:13.5px;color:var(--text-secondary);
+  line-height:1.65;
+}
+.cond-intro strong{color:var(--text-primary);}
+
+.cond-list{display:flex;flex-direction:column;gap:16px;}
+
+.cond-card{
+  background:var(--bg-card);border:1px solid var(--border-soft);
+  border-radius:var(--radius);overflow:hidden;
+}
+.cond-head{
+  padding:18px 20px;display:flex;align-items:center;gap:12px;
+  cursor:pointer;user-select:none;
+}
+.cond-head:hover{background:var(--bg-elevated);}
+.cond-num{
+  font-family:var(--font-mono);font-size:13px;font-weight:700;
+  color:var(--green);background:var(--green-dim);
+  width:30px;height:30px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.cond-num.fundamental{color:var(--gold);background:var(--gold-dim);}
+.cond-icon{font-size:18px;flex-shrink:0;}
+.cond-title{flex:1;font-size:15px;font-weight:700;}
+.cond-hold-tag{
+  font-family:var(--font-mono);font-size:11px;color:var(--text-tertiary);
+  background:var(--bg-elevated);padding:4px 10px;border-radius:999px;
+  white-space:nowrap;
+}
+.cond-chevron{
+  color:var(--text-tertiary);font-size:14px;transition:transform .2s ease;
+  flex-shrink:0;
+}
+.cond-card.open .cond-chevron{transform:rotate(180deg);}
+
+.cond-body{
+  max-height:0;overflow:hidden;transition:max-height .25s ease;
+}
+.cond-card.open .cond-body{max-height:900px;}
+.cond-body-inner{padding:0 20px 20px;}
+
+.cond-section{margin-top:14px;}
+.cond-section h4{
+  font-size:11px;color:var(--text-tertiary);text-transform:uppercase;
+  letter-spacing:0.05em;margin-bottom:8px;font-weight:600;
+}
+.cond-section p{font-size:13.5px;color:var(--text-secondary);line-height:1.7;}
+.cond-formula{
+  font-family:var(--font-mono);font-size:12.5px;color:var(--text-primary);
+  background:var(--bg-elevated);padding:10px 14px;border-radius:var(--radius-sm);
+  border-left:2px solid var(--green);line-height:1.6;
+}
+.cond-section.risk p{color:var(--text-secondary);}
+.cond-section.risk{
+  background:rgba(255,93,93,0.05);border-radius:var(--radius-sm);
+  padding:12px 14px;margin-top:14px;
+}
+.cond-section.risk h4{color:var(--red);}
+
+.fund-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px;}
+.fund-table th{
+  text-align:left;color:var(--text-tertiary);font-weight:600;font-size:11px;
+  text-transform:uppercase;letter-spacing:0.04em;padding:8px 10px;
+  border-bottom:1px solid var(--border-soft);
+}
+.fund-table td{padding:10px 10px;border-bottom:1px solid var(--border-soft);color:var(--text-secondary);}
+.fund-table tr:last-child td{border-bottom:none;}
+.fund-table .k{color:var(--text-primary);font-weight:600;}
+
+.cond-reading-tips{
+  margin-top:24px;background:var(--bg-card);border:1px solid var(--border-soft);
+  border-radius:var(--radius);padding:20px;
+}
+.cond-reading-tips h3{font-size:15px;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.cond-reading-tips ol{margin-left:18px;display:flex;flex-direction:column;gap:10px;}
+.cond-reading-tips li{font-size:13.5px;color:var(--text-secondary);line-height:1.65;}
+.cond-reading-tips li strong{color:var(--text-primary);}
+
 /* ---------- Footer ---------- */
 footer{
   text-align:center;padding:32px 24px;color:var(--text-tertiary);
@@ -281,6 +387,7 @@ footer a{color:var(--blue);text-decoration:none;}
 </head>
 <body>
 
+<div class="site-header">
 <div class="topbar">
   <div class="brand">
     <div class="brand-mark">SS</div>
@@ -295,6 +402,13 @@ footer a{color:var(--blue);text-decoration:none;}
   </div>
 </div>
 
+<div class="tabbar">
+  <button class="tab-btn active" data-tab="results">📊 ผลสแกน</button>
+  <button class="tab-btn" data-tab="conditions">📖 เงื่อนไข Setup</button>
+</div>
+</div>
+
+<div class="tab-panel active" id="panel-results">
 <div class="wrap">
   <div class="hero">
     <div class="hero-eyebrow">Scan + Dashboard — ไม่ใช่ Auto Trading Bot</div>
@@ -327,6 +441,35 @@ footer a{color:var(--blue);text-decoration:none;}
   </div>
 
   <div class="grid" id="grid"></div>
+</div>
+</div>
+
+<div class="tab-panel" id="panel-conditions">
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-eyebrow">อ้างอิง — ไม่ใช่ผลสแกน</div>
+    <h2>ความหมายของแต่ละเงื่อนไข Scan</h2>
+    <p>ทำไมแต่ละเงื่อนไข "น่าสนใจ" ในมุม swing trade และความเสี่ยงที่ต้องระวัง — กดที่หัวข้อเพื่อดูรายละเอียด</p>
+  </div>
+
+  <div class="cond-intro">
+    <strong>⚠️ เตือนความจำสำคัญ:</strong> ทุกเงื่อนไขในนี้คือสัญญาณทางสถิติ ไม่ใช่การันตี
+    หุ้นที่ match setup อาจจะขึ้นต่อหรือไม่ก็ได้ และ scanner ดูข้อมูลของเมื่อคืนล่าสุดเท่านั้น
+    (EOD data) ไม่ใช่ real-time — ระหว่างที่คุณอ่านผลตอนเช้า ราคาอาจขยับไปแล้วจากที่เห็นในรายงาน
+  </div>
+
+  <div class="cond-list" id="cond-list"></div>
+
+  <div class="cond-reading-tips">
+    <h3>🎯 วิธีอ่านผลลัพธ์ใน Dashboard ให้ได้ประโยชน์สูงสุด</h3>
+    <ol>
+      <li><strong>ดูว่า match กี่ setup</strong> — หุ้นที่ match หลาย setup พร้อมกัน (เช่น Volume Breakout + Sector Hype Rotation) น่าสนใจกว่าหุ้นที่ match แค่ 1 setup เพราะมีหลายปัจจัยหนุนพร้อมกัน</li>
+      <li><strong>ดู Fundamental Score ควบคู่</strong> — ถ้า match setup เยอะแต่ score ต่ำมาก (เช่น &lt;20) ควรระวังเป็นพิเศษ อาจเป็นหุ้นที่ราคาซิ่งจากปัจจัยเก็งกำไรเพียว ไม่มีพื้นฐานรองรับเลย</li>
+      <li><strong>เช็คทุกครั้งว่าซื้อได้จริงไหม</strong> — ก่อนตัดสินใจ verify กับแอป Dime!/Webull ว่าหุ้นตัวนั้นซื้อได้จริง (เต็มหุ้นหรือ fractional) และงบที่มีพอซื้อกี่หุ้น</li>
+      <li><strong>อย่าไล่ซื้อทุกตัวที่ match</strong> — เลือกดูตัวที่เข้าใจ "เหตุผล" ว่าทำไมขึ้น ไม่ใช่ซื้อตามตัวเลขอย่างเดียว</li>
+    </ol>
+  </div>
+</div>
 </div>
 
 <footer>
@@ -638,6 +781,149 @@ document.getElementById("filter-group").addEventListener("click", (e) => {
 });
 
 document.getElementById("sort-select").addEventListener("change", renderGrid);
+
+// =========================================================================
+// 📖 Conditions tab — ข้อมูลอธิบายเงื่อนไข Setup (อ้างอิงจาก SETUP_CONDITIONS_EXPLAINED.md)
+// =========================================================================
+
+const CONDITIONS_DATA = [
+  {
+    num: "1", icon: "📊", title: "Gap & Hold", hold: "1-3 วัน",
+    formula: "Gap up &gt; 4% (ราคาเปิดสูงกว่าราคาปิดเมื่อวันก่อนเกิน 4%) + ราคาต่ำสุดของวันไม่หลุดกลับไปต่ำกว่าราคาปิดเดิม",
+    why: "หุ้นที่ gap แรงแล้ว \"ยืนได้\" (ไม่หลุด gap กลับลงมา) มักมีข่าวหรือ catalyst ใหม่หนุนอยู่ (earnings, ข่าวบริษัท, sector rotation) และคนที่ขายตามข่าวไปแล้วก็ยังไม่กลับมาขายหนักพอจะดันราคาทะลุ gap ลงไป แปลว่าฝั่งซื้อยังควบคุมสถานการณ์อยู่",
+    risk: "Gap อาจเป็น \"sell the news\" ที่ดีดขึ้นวันเดียวแล้วร่วงวันถัดไป (เช็คว่า volume สูงพอประกอบด้วย) — ถ้า gap เกิดจากข่าวเชิงลบที่กลับมาแรงทีหลัง อาจเป็นกับดัก (bull trap)",
+  },
+  {
+    num: "2", icon: "🚀", title: "Volume Breakout", hold: "2-5 วัน",
+    formula: "ราคาปิดทะลุจุดสูงสุดของ 20 วันที่ผ่านมา + volume วันนี้มากกว่า 2 เท่าของค่าเฉลี่ย 20 วัน",
+    why: "การ breakout พร้อม volume สูงคือสัญญาณว่า \"เงินจริง\" เข้ามาดันราคา ไม่ใช่แค่ขยับเบาๆแบบไม่มีใครสนใจ — Volume คือสิ่งที่ยืนยันว่าการเคลื่อนไหวของราคามีน้ำหนักจริง ถ้า breakout แต่ volume เบาบาง มักจะ fail เร็ว (false breakout)",
+    risk: "Volume พุ่งอาจเกิดจาก event ทางเทคนิคัล (เช่น index rebalancing, options expiry) ที่ไม่เกี่ยวกับปัจจัยพื้นฐานเลย — การ breakout ที่ดี ราคาควร \"ปิด\" เหนือจุด breakout ไม่ใช่แค่แตะแล้วร่วงกลับ",
+  },
+  {
+    num: "3", icon: "💪", title: "Relative Strength Leader", hold: "3-5 วัน",
+    formula: "หุ้นทำผลตอบแทนดีกว่า Nasdaq Composite ติดต่อกันอย่างน้อย 3 วันจาก 5 วันหลังสุด",
+    why: "หลักการ \"Relative Strength\" เป็นแนวคิดคลาสสิกของ William O'Neil (ผู้คิดระบบ CANSLIM) — หุ้นที่แรงกว่าตลาดโดยรวมอย่างต่อเนื่อง มักมีแรงซื้อเฉพาะตัวที่ไม่ขึ้นกับทิศทางตลาดทั้งหมด ถ้าตลาดกลับมาเป็นบวก หุ้นกลุ่มนี้มักวิ่งแรงกว่าค่าเฉลี่ย",
+    risk: "ถ้าตลาดโดยรวมเป็นขาลงหนัก หุ้นที่ \"แรงกว่าตลาด\" อาจแค่ลงน้อยกว่า ไม่ได้แปลว่าจะขึ้นจริง — เทียบกับ Nasdaq Composite เท่านั้น ไม่ได้เทียบกับ sector ตัวเอง (อาจสับสนกับเงื่อนไขที่ 5)",
+  },
+  {
+    num: "4", icon: "🎯", title: "Pullback to Support (in uptrend)", hold: "2-4 วัน",
+    formula: "อยู่ใน uptrend (EMA10 &gt; EMA20 และราคาสูงกว่า 20 วันก่อน) + ราคาปัจจุบัน pullback ลงมาแตะ EMA10 หรือ EMA20 (ห่างไม่เกิน 2%)",
+    why: "นี่คือแนวคิด \"buy the dip in an uptrend\" — หุ้นที่อยู่ใน uptrend ชัดเจน เวลาราคาพักตัวลงมาแตะเส้นค่าเฉลี่ยเคลื่อนที่ (ซึ่งทำหน้าที่เป็นแนวรับทางจิตวิทยา) มักจะมีแรงซื้อกลับเข้ามา เพราะนักลงทุนระยะสั้นมองจุดนี้เป็นโอกาส \"ซื้อถูกกว่ายอด\" ก่อนเทรนด์เดิมจะกลับมา",
+    risk: "การ \"แตะ EMA\" ไม่ได้แปลว่าจะเด้งกลับเสมอ ถ้าหลุด EMA ลงไปแรงต่อ อาจเป็นสัญญาณเปลี่ยนเทรนด์แทน — เป็นเงื่อนไขที่ \"ช้า\" กว่าตัวอื่น เพราะรอ pullback มาก่อน ไม่ใช่จับจังหวะเริ่ม breakout",
+  },
+  {
+    num: "5", icon: "🔥", title: "Sector Hype Rotation", hold: "3-5 วัน",
+    formula: "Sector ETF ของหุ้นนั้นบวกแรง (&gt;2% ใน 5 วัน) และหุ้นวิ่งตามอย่างน้อย 80% ของการเคลื่อนไหวของ sector",
+    why: "เงินในตลาดมักหมุนเป็นกลุ่ม (sector rotation) — เวลาเงินไหลเข้า sector ใด sector หนึ่งแรงๆ (เช่น AI, biotech, energy ตามข่าวหรือนโยบาย) หุ้นในกลุ่มนั้นมักวิ่งตามกันเป็นขบวน — การจับ sector ที่ \"ร้อน\" ช่วยเพิ่มโอกาสที่หุ้นจะมีแรงหนุนจากกระแสเงินทั้งกลุ่ม",
+    risk: "Sector hype มักมาไวไปไว — ถ้าเข้าช้าเกินไป อาจซื้อตอนที่ sector กำลังจะหมดแรงแล้ว — ใช้ sector ETF เพียงตัวเดียวเป็นตัวแทนทั้ง sector ซึ่งอาจไม่ครอบคลุม sub-sector ย่อยที่ต่างกันมาก",
+  },
+  {
+    num: "6", icon: "📈", title: "Earnings Surprise Momentum ⭐", hold: "2-5 วัน",
+    formula: "บริษัท beat earnings estimate เกิน 5% ภายใน 5 วันซื้อขายล่าสุด + ราคายัง react เป็นบวกอยู่ (ไม่ได้ sell-the-news กลับลงเกิน -2%)",
+    why: "มีงานวิจัยทางการเงินเรื่อง \"Post-Earnings Announcement Drift (PEAD)\" ที่พบว่าหุ้นที่ beat earnings estimate ชัดเจน มักมี momentum ต่อเนื่องไปอีกหลายวันถึงหลายสัปดาห์ เพราะตลาดมักไม่ได้ปรับราคาให้สะท้อนข่าวดีเต็มที่ในทันที (under-reaction)",
+    risk: "Earnings surprise เป็นข้อมูล public ที่รู้พร้อมกันทั้งตลาดทันทีที่ประกาศ — เงื่อนไขนี้จับช่วงที่ตลาดยัง \"digest\" ข่าวไม่เต็มที่ ไม่ใช่การรู้ข้อมูลก่อนใคร — Guidance มีน้ำหนักมากกว่าตัวเลข earnings ที่ผ่านมาแล้ว",
+  },
+];
+
+const FUNDAMENTAL_TABLE_FILTER = [
+  { k: "Debt/Equity ≤ 300%", v: "หนี้ไม่เกิน 3 เท่าของทุน — กันหุ้นที่มีโครงสร้างหนี้เสี่ยงเกินไป" },
+  { k: "Current Ratio ≥ 0.5", v: "สินทรัพย์หมุนเวียนพอจ่ายหนี้ระยะสั้นได้ในระดับหนึ่ง — กันหุ้นที่เสี่ยงขาดสภาพคล่อง" },
+];
+const FUNDAMENTAL_TABLE_SCORE = [
+  { k: "Profitability (25%)", v: "Profit margin, ROE — บริษัททำกำไรได้จริงแค่ไหน" },
+  { k: "Growth (25%)", v: "Revenue/earnings growth — กำลังโตหรือหดตัว" },
+  { k: "Financial Health (25%)", v: "Debt/equity, current ratio — โครงสร้างการเงินมั่นคงแค่ไหน" },
+  { k: "Valuation (25%)", v: "P/E เทียบ sector — ถูกหรือแพงเทียบเพื่อนร่วม sector" },
+];
+
+function condCardHTML(c) {
+  return `
+    <div class="cond-card" data-num="${c.num}">
+      <div class="cond-head">
+        <div class="cond-num">${c.num}</div>
+        <span class="cond-icon">${c.icon}</span>
+        <div class="cond-title">${c.title}</div>
+        <span class="cond-hold-tag">ถือ ${c.hold}</span>
+        <span class="cond-chevron">▾</span>
+      </div>
+      <div class="cond-body">
+        <div class="cond-body-inner">
+          <div class="cond-section">
+            <h4>คำนวณ</h4>
+            <div class="cond-formula">${c.formula}</div>
+          </div>
+          <div class="cond-section">
+            <h4>ทำไมน่าสนใจ</h4>
+            <p>${c.why}</p>
+          </div>
+          <div class="cond-section risk">
+            <h4>⚠️ ความเสี่ยงที่ต้องรู้</h4>
+            <p>${c.risk}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function fundamentalCardHTML() {
+  const filterRows = FUNDAMENTAL_TABLE_FILTER.map(r => `<tr><td class="k">${r.k}</td><td>${r.v}</td></tr>`).join("");
+  const scoreRows = FUNDAMENTAL_TABLE_SCORE.map(r => `<tr><td class="k">${r.k}</td><td>${r.v}</td></tr>`).join("");
+  return `
+    <div class="cond-card" data-num="fund">
+      <div class="cond-head">
+        <div class="cond-num fundamental">🧮</div>
+        <span class="cond-icon"></span>
+        <div class="cond-title">Fundamental Layer — ไม่ใช่ Setup แต่เป็น "ตัวกรองความเสี่ยง"</div>
+        <span class="cond-hold-tag">Risk Filter</span>
+        <span class="cond-chevron">▾</span>
+      </div>
+      <div class="cond-body">
+        <div class="cond-body-inner">
+          <div class="cond-section">
+            <h4>Fundamental Filter (กรองออกถ้าไม่ผ่าน)</h4>
+            <table class="fund-table"><tbody>${filterRows}</tbody></table>
+          </div>
+          <div class="cond-section">
+            <h4>Fundamental Score (0-100, ไม่ใช้กรอง แค่แสดงประกอบการพิจารณา)</h4>
+            <table class="fund-table"><tbody>${scoreRows}</tbody></table>
+          </div>
+          <div class="cond-section risk">
+            <h4>⚠️ ย้ำอีกครั้ง</h4>
+            <p>คะแนนสูงไม่ได้แปลว่าหุ้นจะ "ทำผลตอบแทนดีกว่าตลาด" สำหรับ swing trade 1-5 วัน — มันบอกแค่ว่าบริษัทมีพื้นฐานมั่นคงระดับไหน ซึ่งช่วยลดความเสี่ยงเจอหุ้นที่ "ซิ่งแล้วร่วงหนักเพราะงบแย่จริงๆ" เท่านั้น ข้อมูลนี้เป็น public ที่ทุกคนเข้าถึงได้เหมือนกัน ไม่ใช่ edge ที่ทำให้ชนะตลาดได้</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderConditions() {
+  const list = document.getElementById("cond-list");
+  if (list.dataset.rendered) return; // render ครั้งเดียวพอ ไม่ต้องสร้างใหม่ทุกครั้งที่สลับ tab
+  list.innerHTML = CONDITIONS_DATA.map(condCardHTML).join("") + fundamentalCardHTML();
+  list.dataset.rendered = "true";
+
+  list.querySelectorAll(".cond-head").forEach(head => {
+    head.addEventListener("click", () => {
+      head.closest(".cond-card").classList.toggle("open");
+    });
+  });
+}
+
+// =========================================================================
+// 🗂️ Tab switching
+// =========================================================================
+
+document.querySelectorAll(".tab-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById(`panel-${btn.dataset.tab}`).classList.add("active");
+    if (btn.dataset.tab === "conditions") renderConditions();
+  });
+});
 
 loadData();
 </script>
