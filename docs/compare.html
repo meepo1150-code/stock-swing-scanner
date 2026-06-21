@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compare ย้อนหลัง — Swing Scanner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0E1117;
+  --bg-elevated:#161B22;
+  --bg-card:#1A2029;
+  --border:#2A3140;
+  --border-soft:#212733;
+  --text-primary:#F0F4F8;
+  --text-secondary:#9BA3AF;
+  --text-tertiary:#6B7280;
+  --green:#3DDC84;
+  --green-dim:#1F4A33;
+  --red:#FF5D5D;
+  --red-dim:#4A1F24;
+  --gold:#E8B339;
+  --gold-dim:#4A3A1A;
+  --blue:#5B9DFF;
+  --font-display:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;
+  --font-mono:'JetBrains Mono','SF Mono',Consolas,'Courier New',monospace;
+  --radius:14px;
+  --radius-sm:8px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+body{
+  background:var(--bg);
+  color:var(--text-primary);
+  font-family:var(--font-display);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.5;
+  min-height:100vh;
+}
+
+/* ---------- Top bar (เหมือน index.html เพื่อให้หน้าตาเข้ากัน) ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(14,17,23,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border-soft);
+}
+.topbar{
+  padding:16px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;
+}
+.brand{display:flex;align-items:center;gap:10px;}
+.brand-mark{
+  width:32px;height:32px;border-radius:8px;
+  background:linear-gradient(135deg,var(--green),var(--blue));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-mono);font-weight:700;font-size:15px;color:#0E1117;
+  flex-shrink:0;
+}
+.brand-text h1{font-size:15px;font-weight:700;letter-spacing:-0.01em;}
+.brand-text p{font-size:12px;color:var(--text-tertiary);font-family:var(--font-mono);}
+.back-link{
+  font-family:var(--font-mono);font-size:12px;color:var(--text-secondary);
+  text-decoration:none;display:flex;align-items:center;gap:6px;
+  padding:7px 12px;border:1px solid var(--border);border-radius:999px;
+  transition:border-color .15s ease,color .15s ease;
+}
+.back-link:hover{border-color:var(--green);color:var(--text-primary);}
+
+/* ---------- Layout ---------- */
+.wrap{max-width:1280px;margin:0 auto;padding:28px 24px 80px;}
+.hero{margin-bottom:24px;}
+.hero-eyebrow{font-family:var(--font-mono);font-size:11px;color:var(--text-tertiary);letter-spacing:0.05em;margin-bottom:8px;}
+.hero h2{font-size:26px;font-weight:800;letter-spacing:-0.02em;margin-bottom:8px;}
+.hero p{color:var(--text-secondary);font-size:14px;max-width:680px;}
+
+/* ---------- Picker card ---------- */
+.picker-card{
+  background:var(--bg-card);border:1px solid var(--border-soft);
+  border-radius:var(--radius);padding:24px;margin-bottom:24px;
+}
+.picker-row{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:18px;}
+.picker-field{flex:1;min-width:180px;}
+.picker-field label{
+  display:block;font-family:var(--font-mono);font-size:11px;
+  color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.05em;
+  margin-bottom:8px;
+}
+.picker-field select{
+  width:100%;font-family:var(--font-mono);font-size:13px;
+  background:var(--bg-elevated);border:1px solid var(--border);
+  color:var(--text-primary);padding:10px 12px;border-radius:var(--radius-sm);
+  cursor:pointer;
+}
+.picker-field select:disabled{opacity:0.4;cursor:not-allowed;}
+
+.mode-toggle{display:flex;gap:8px;margin-bottom:18px;}
+.mode-btn{
+  flex:1;font-family:var(--font-display);font-size:13px;font-weight:600;
+  background:var(--bg-elevated);border:1px solid var(--border);
+  color:var(--text-secondary);padding:12px 16px;border-radius:var(--radius-sm);
+  cursor:pointer;transition:all .15s ease;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.mode-btn:hover{border-color:var(--text-tertiary);}
+.mode-btn.active{
+  background:var(--green-dim);border-color:var(--green);color:var(--text-primary);
+}
+
+.ticker-search-wrap{display:none;margin-bottom:18px;}
+.ticker-search-wrap.visible{display:block;}
+.ticker-search-wrap label{
+  display:block;font-family:var(--font-mono);font-size:11px;
+  color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.05em;
+  margin-bottom:8px;
+}
+.ticker-search-input{
+  width:100%;font-family:var(--font-mono);font-size:13px;
+  background:var(--bg-elevated);border:1px solid var(--border);
+  color:var(--text-primary);padding:10px 12px;border-radius:var(--radius-sm);
+}
+.ticker-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;}
+.ticker-chip{
+  font-family:var(--font-mono);font-size:12px;
+  background:var(--green-dim);color:var(--green);
+  padding:5px 10px;border-radius:999px;
+  display:flex;align-items:center;gap:6px;
+}
+.ticker-chip button{
+  background:none;border:none;color:var(--green);cursor:pointer;
+  font-size:14px;line-height:1;padding:0;
+}
+.ticker-suggestions{
+  display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;
+}
+.ticker-suggest-btn{
+  font-family:var(--font-mono);font-size:11.5px;
+  background:var(--bg-elevated);border:1px solid var(--border);
+  color:var(--text-secondary);padding:5px 10px;border-radius:999px;cursor:pointer;
+}
+.ticker-suggest-btn:hover{border-color:var(--green);color:var(--text-primary);}
+
+.compare-btn{
+  width:100%;font-family:var(--font-display);font-size:14px;font-weight:700;
+  background:var(--green);color:#0E1117;border:none;
+  padding:13px 20px;border-radius:var(--radius-sm);cursor:pointer;
+  transition:filter .15s ease;
+}
+.compare-btn:hover{filter:brightness(1.08);}
+.compare-btn:disabled{background:var(--border);color:var(--text-tertiary);cursor:not-allowed;}
+
+.picker-hint{
+  font-size:12px;color:var(--text-tertiary);margin-top:10px;line-height:1.6;
+}
+.picker-error{
+  font-size:12.5px;color:var(--red);margin-top:10px;
+  display:none;
+}
+.picker-error.visible{display:block;}
+
+/* ---------- Results area ---------- */
+.results-area{display:none;}
+.results-area.visible{display:block;}
+
+.summary-row{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:1px;background:var(--border-soft);
+  border:1px solid var(--border-soft);border-radius:var(--radius);
+  overflow:hidden;margin-bottom:24px;
+}
+.summary-stat{background:var(--bg-elevated);padding:16px 18px;}
+.summary-stat-label{font-size:11px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;}
+.summary-stat-value{font-family:var(--font-mono);font-size:22px;font-weight:700;}
+.summary-stat-value.up{color:var(--green);}
+.summary-stat-value.down{color:var(--red);}
+
+.compare-table-wrap{
+  background:var(--bg-card);border:1px solid var(--border-soft);
+  border-radius:var(--radius);overflow:hidden;
+}
+.compare-table{width:100%;border-collapse:collapse;font-size:13px;}
+.compare-table th{
+  text-align:left;font-family:var(--font-mono);font-size:10.5px;
+  color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.04em;
+  padding:12px 14px;border-bottom:1px solid var(--border-soft);
+  background:var(--bg-elevated);cursor:pointer;user-select:none;
+  white-space:nowrap;
+}
+.compare-table th:hover{color:var(--text-secondary);}
+.compare-table th.sorted::after{content:" ▾";color:var(--green);}
+.compare-table th.sorted.asc::after{content:" ▴";}
+.compare-table td{
+  padding:12px 14px;border-bottom:1px solid var(--border-soft);
+  font-family:var(--font-mono);font-size:12.5px;vertical-align:top;
+}
+.compare-table tr:last-child td{border-bottom:none;}
+.compare-table tr:hover td{background:var(--bg-elevated);}
+.ticker-cell{font-weight:700;font-size:13px;}
+.price-change.up{color:var(--green);}
+.price-change.down{color:var(--red);}
+.price-change.flat{color:var(--text-tertiary);}
+.setup-change-up{color:var(--green);}
+.setup-change-down{color:var(--red);}
+.setup-change-flat{color:var(--text-tertiary);}
+.setup-chip-mini{
+  display:inline-block;font-size:10.5px;font-family:var(--font-mono);
+  background:var(--border-soft);color:var(--text-secondary);
+  padding:2px 6px;border-radius:6px;margin:1px 2px 1px 0;
+}
+.setup-chip-mini.gained{background:var(--green-dim);color:var(--green);}
+.setup-chip-mini.lost{background:var(--red-dim);color:var(--red);text-decoration:line-through;}
+.dq-warn-icon{color:var(--gold);cursor:help;}
+
+.no-data-msg{
+  text-align:center;padding:48px 24px;color:var(--text-tertiary);font-size:13px;
+}
+
+/* ---------- Focus mode detail cards ---------- */
+.focus-cards{display:flex;flex-direction:column;gap:16px;}
+.focus-card{
+  background:var(--bg-card);border:1px solid var(--border-soft);
+  border-radius:var(--radius);padding:20px 22px;
+}
+.focus-card-head{
+  display:flex;justify-content:space-between;align-items:baseline;
+  margin-bottom:14px;flex-wrap:wrap;gap:8px;
+}
+.focus-ticker{font-family:var(--font-mono);font-size:20px;font-weight:700;}
+.focus-company{font-size:12.5px;color:var(--text-secondary);margin-left:8px;}
+.focus-price-compare{
+  display:flex;align-items:center;gap:12px;
+  font-family:var(--font-mono);font-size:14px;
+}
+.focus-price-arrow{color:var(--text-tertiary);}
+.focus-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px;}
+.focus-col h5{
+  font-family:var(--font-mono);font-size:10.5px;color:var(--text-tertiary);
+  text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;
+}
+.focus-setup-list{display:flex;flex-direction:column;gap:6px;}
+.focus-setup-item{
+  font-size:12.5px;padding:6px 10px;border-radius:6px;
+  background:var(--bg-elevated);color:var(--text-tertiary);
+}
+.focus-setup-item.matched{background:var(--green-dim);color:var(--green);}
+.focus-dq-list{margin-top:14px;}
+.focus-dq-item{
+  font-size:11.5px;color:var(--gold);background:var(--gold-dim);
+  padding:6px 10px;border-radius:6px;margin-bottom:6px;
+}
+
+@media (max-width:720px){
+  .picker-row{flex-direction:column;}
+  .mode-toggle{flex-direction:column;}
+  .focus-grid{grid-template-columns:1fr;}
+  .compare-table{font-size:11.5px;}
+  .compare-table th,.compare-table td{padding:9px 8px;}
+}
+</style>
+</head>
+<body>
+
+<div class="site-header">
+<div class="topbar">
+  <div class="brand">
+    <div class="brand-mark">SS</div>
+    <div class="brand-text">
+      <h1>Swing Scanner</h1>
+      <p>COMPARE ย้อนหลัง</p>
+    </div>
+  </div>
+  <a class="back-link" href="index.html">← กลับไป Dashboard</a>
+</div>
+</div>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-eyebrow">เปรียบเทียบผลสแกน 2 วันใดก็ได้ใน 30 วันที่ผ่านมา</div>
+    <h2>Compare ย้อนหลัง</h2>
+    <p>เลือกวันที่ A และวันที่ B จากผลสแกนที่เก็บไว้ — ดูว่าราคาขยับไปกี่% และ setup ที่ match เปลี่ยนไปยังไง
+       ใช้ราคาจาก snapshot ของวันนั้นจริงๆ ไม่ดึงราคาสดเพิ่ม</p>
+  </div>
+
+  <div class="picker-card">
+    <div class="picker-row">
+      <div class="picker-field">
+        <label>วันที่ A (วันเริ่ม)</label>
+        <select id="date-a"><option value="">— เลือกวันที่ —</option></select>
+      </div>
+      <div class="picker-field">
+        <label>วันที่ B (วันเทียบ)</label>
+        <select id="date-b"><option value="">— เลือกวันที่ —</option></select>
+      </div>
+    </div>
+
+    <div class="mode-toggle">
+      <button class="mode-btn" id="mode-list-btn" data-mode="list">📋 ดูทั้งลิสต์</button>
+      <button class="mode-btn" id="mode-focus-btn" data-mode="focus">🎯 เลือกเฉพาะตัว</button>
+    </div>
+
+    <div class="ticker-search-wrap" id="ticker-search-wrap">
+      <label>เลือก Ticker ที่อยากเทียบ (เลือกได้หลายตัว)</label>
+      <input type="text" class="ticker-search-input" id="ticker-search-input" placeholder="พิมพ์ ticker เช่น AAPL แล้ว Enter...">
+      <div class="ticker-chips" id="ticker-chips"></div>
+      <div class="ticker-suggestions" id="ticker-suggestions"></div>
+    </div>
+
+    <button class="compare-btn" id="compare-btn" disabled>เลือกวันที่และโหมดก่อน</button>
+    <div class="picker-error" id="picker-error"></div>
+    <div class="picker-hint" id="picker-hint">
+      ⏳ กำลังโหลดรายชื่อวันที่ที่มีข้อมูล...
+    </div>
+  </div>
+
+  <div class="results-area" id="results-area"></div>
+</div>
+
+<script>
+// =========================================================================
+// State
+// =========================================================================
+let AVAILABLE_DATES = [];      // ["2026-06-15", "2026-06-16", ...] เรียงเก่า->ใหม่
+let SNAPSHOT_CACHE = {};        // { "2026-06-15": {...parsed json...} }
+let CURRENT_MODE = null;        // "list" | "focus"
+let SELECTED_TICKERS = [];      // สำหรับโหมด focus
+let LAST_COMPARE_ROWS = [];     // เก็บผลล่าสุดไว้ sort ใหม่ได้โดยไม่ต้องคำนวณซ้ำ
+let SORT_STATE = { key: "setups_diff", dir: "desc" };
+
+const HISTORY_DIR = "history";
+
+// =========================================================================
+// Init — โหลดรายชื่อวันที่ที่มี snapshot จริง
+// =========================================================================
+async function init() {
+  // วิธีหารายชื่อไฟล์ใน history/: ลองดูว่ามี history/index.json ไหม (ทางลัด)
+  // ถ้าไม่มี ให้ลองไล่ fetch วันที่ย้อนหลัง 35 วัน (เผื่อ retention 30 วัน + กันชนเล็กน้อย)
+  // ทีละวัน แล้วเก็บเฉพาะที่ fetch สำเร็จจริง — เพราะ static file server ส่วนใหญ่ไม่มี
+  // directory listing ให้ใช้ตรงๆ
+  const candidates = [];
+  const today = new Date();
+  for (let i = 0; i < 35; i++) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    candidates.push(d.toISOString().slice(0, 10));
+  }
+
+  const checks = await Promise.all(candidates.map(async (dateStr) => {
+    try {
+      const res = await fetch(`${HISTORY_DIR}/${dateStr}.json`, { cache: "no-store" });
+      if (res.ok) {
+        const data = await res.json();
+        return { dateStr, data };
+      }
+    } catch (e) { /* ไฟล์ไม่มี ข้ามไป ไม่ใช่ error ที่ต้องแสดง */ }
+    return null;
+  }));
+
+  checks.filter(Boolean).forEach(({ dateStr, data }) => {
+    SNAPSHOT_CACHE[dateStr] = data;
+    AVAILABLE_DATES.push(dateStr);
+  });
+  AVAILABLE_DATES.sort(); // เก่า -> ใหม่
+
+  populateDateSelects();
+  setupModeToggle();
+  setupTickerSearch();
+
+  const hint = document.getElementById("picker-hint");
+  if (AVAILABLE_DATES.length === 0) {
+    hint.innerHTML = "⚠️ ยังไม่พบไฟล์ history เลย — ต้องสแกนผ่าน scan_and_open.command อย่างน้อย 1 ครั้งก่อน (เวอร์ชันที่มีการบันทึก history snapshot)";
+  } else if (AVAILABLE_DATES.length === 1) {
+    hint.innerHTML = `📅 พบข้อมูล 1 วัน (${AVAILABLE_DATES[0]}) — ต้องมีอย่างน้อย 2 วันถึงจะเปรียบเทียบได้ สแกนต่ออีกวันแล้วกลับมาดูใหม่`;
+  } else {
+    hint.innerHTML = `📅 พบข้อมูล ${AVAILABLE_DATES.length} วัน (${AVAILABLE_DATES[0]} ถึง ${AVAILABLE_DATES[AVAILABLE_DATES.length - 1]})`;
+  }
+
+  document.getElementById("date-a").addEventListener("change", validateForm);
+  document.getElementById("date-b").addEventListener("change", validateForm);
+  document.getElementById("compare-btn").addEventListener("click", runCompare);
+}
+
+function populateDateSelects() {
+  const optsHTML = AVAILABLE_DATES.map(d => `<option value="${d}">${formatDateThai(d)}</option>`).join("");
+  document.getElementById("date-a").innerHTML = `<option value="">— เลือกวันที่ —</option>` + optsHTML;
+  document.getElementById("date-b").innerHTML = `<option value="">— เลือกวันที่ —</option>` + optsHTML;
+}
+
+function formatDateThai(dateStr) {
+  const d = new Date(dateStr + "T00:00:00Z");
+  const days = ["อา","จ","อ","พ","พฤ","ศ","ส"];
+  return `${dateStr} (${days[d.getUTCDay()]})`;
+}
+
+// =========================================================================
+// Mode toggle
+// =========================================================================
+function setupModeToggle() {
+  document.getElementById("mode-list-btn").addEventListener("click", () => setMode("list"));
+  document.getElementById("mode-focus-btn").addEventListener("click", () => setMode("focus"));
+}
+
+function setMode(mode) {
+  CURRENT_MODE = mode;
+  document.getElementById("mode-list-btn").classList.toggle("active", mode === "list");
+  document.getElementById("mode-focus-btn").classList.toggle("active", mode === "focus");
+  document.getElementById("ticker-search-wrap").classList.toggle("visible", mode === "focus");
+  // เปลี่ยนโหมดแล้วผลเก่าค้างอยู่จะสร้างความสับสน เคลียร์ผลลัพธ์เดิมทิ้ง
+  document.getElementById("results-area").classList.remove("visible");
+  document.getElementById("results-area").innerHTML = "";
+  validateForm();
+}
+
+// =========================================================================
+// Ticker search (โหมด focus)
+// =========================================================================
+function setupTickerSearch() {
+  const input = document.getElementById("ticker-search-input");
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      addTicker(input.value.trim().toUpperCase());
+      input.value = "";
+      renderTickerSuggestions("");
+    }
+  });
+  input.addEventListener("input", () => renderTickerSuggestions(input.value.trim().toUpperCase()));
+}
+
+function getTickerUniverseForSelectedDates() {
+  // รวม ticker จากวันที่ A (และ B ถ้าเลือกแล้ว) เพื่อให้พิมพ์แล้วเจอจริง ไม่เสนอ ticker ที่ไม่มีข้อมูลวันนั้น
+  const dateA = document.getElementById("date-a").value;
+  const dateB = document.getElementById("date-b").value;
+  const tickers = new Set();
+  [dateA, dateB].forEach(d => {
+    if (d && SNAPSHOT_CACHE[d]) {
+      (SNAPSHOT_CACHE[d].results || []).forEach(r => tickers.add(r.ticker));
+    }
+  });
+  return [...tickers].sort();
+}
+
+function renderTickerSuggestions(query) {
+  const universe = getTickerUniverseForSelectedDates();
+  const filtered = query
+    ? universe.filter(t => t.includes(query) && !SELECTED_TICKERS.includes(t)).slice(0, 12)
+    : universe.filter(t => !SELECTED_TICKERS.includes(t)).slice(0, 12);
+
+  const box = document.getElementById("ticker-suggestions");
+  if (!universe.length) {
+    box.innerHTML = `<span style="font-size:11.5px;color:var(--text-tertiary);">เลือกวันที่ A ก่อน ระบบจะแสดง ticker ที่มีข้อมูลให้เลือก</span>`;
+    return;
+  }
+  box.innerHTML = filtered.map(t => `<button class="ticker-suggest-btn" data-ticker="${t}">+ ${t}</button>`).join("");
+  box.querySelectorAll(".ticker-suggest-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      addTicker(btn.dataset.ticker);
+      document.getElementById("ticker-search-input").value = "";
+      renderTickerSuggestions("");
+    });
+  });
+}
+
+function addTicker(ticker) {
+  if (!ticker || SELECTED_TICKERS.includes(ticker)) return;
+  SELECTED_TICKERS.push(ticker);
+  renderTickerChips();
+  validateForm();
+}
+
+function removeTicker(ticker) {
+  SELECTED_TICKERS = SELECTED_TICKERS.filter(t => t !== ticker);
+  renderTickerChips();
+  validateForm();
+}
+
+function renderTickerChips() {
+  const box = document.getElementById("ticker-chips");
+  box.innerHTML = SELECTED_TICKERS.map(t => `
+    <span class="ticker-chip">${t} <button data-remove="${t}">&times;</button></span>
+  `).join("");
+  box.querySelectorAll("button[data-remove]").forEach(btn => {
+    btn.addEventListener("click", () => removeTicker(btn.dataset.remove));
+  });
+}
+
+// =========================================================================
+// Validation
+// =========================================================================
+function validateForm() {
+  const dateA = document.getElementById("date-a").value;
+  const dateB = document.getElementById("date-b").value;
+  const btn = document.getElementById("compare-btn");
+  const err = document.getElementById("picker-error");
+  err.classList.remove("visible");
+
+  if (!dateA || !dateB) {
+    btn.disabled = true;
+    btn.textContent = "เลือกวันที่ทั้งสองวันก่อน";
+    return;
+  }
+  if (dateA === dateB) {
+    btn.disabled = true;
+    btn.textContent = "เลือกวันที่ A และ B ให้ต่างกัน";
+    return;
+  }
+  if (!CURRENT_MODE) {
+    btn.disabled = true;
+    btn.textContent = "เลือกโหมดก่อน (ดูทั้งลิสต์ / เลือกเฉพาะตัว)";
+    return;
+  }
+  if (CURRENT_MODE === "focus" && SELECTED_TICKERS.length === 0) {
+    btn.disabled = true;
+    btn.textContent = "เลือก ticker อย่างน้อย 1 ตัวก่อน";
+    return;
+  }
+
+  btn.disabled = false;
+  btn.textContent = `เปรียบเทียบ ${dateA} กับ ${dateB}`;
+}
+
+// =========================================================================
+// Core compare logic — ใช้ร่วมกันทั้ง 2 โหมด
+// =========================================================================
+function matchCountOf(r) {
+  return (r.setups_matched || []).filter(s => s.matched).length;
+}
+
+function matchedSetupNamesOf(r) {
+  return new Set((r.setups_matched || []).filter(s => s.matched).map(s => s.setup_name));
+}
+
+function buildCompareRows(snapA, snapB, tickerFilter) {
+  const mapA = {};
+  (snapA.results || []).forEach(r => { mapA[r.ticker] = r; });
+  const mapB = {};
+  (snapB.results || []).forEach(r => { mapB[r.ticker] = r; });
+
+  let tickers;
+  if (tickerFilter && tickerFilter.length) {
+    tickers = tickerFilter;
+  } else {
+    // โหมดดูทั้งลิสต์: เอาทุก ticker ที่ match setup ใดๆในวันที่ A (ตามที่ตกลงไว้ —
+    // วันที่ A คือ baseline ของการเทียบ ไม่ใช่รวมทุก ticker ที่เคยมีทั้งสองวัน)
+    tickers = Object.values(mapA)
+      .filter(r => matchCountOf(r) > 0)
+      .map(r => r.ticker);
+  }
+
+  return tickers.map(ticker => {
+    const a = mapA[ticker] || null;
+    const b = mapB[ticker] || null;
+
+    const priceA = a ? a.price : null;
+    const priceB = b ? b.price : null;
+    const pctChange = (priceA && priceB && priceA > 0) ? ((priceB - priceA) / priceA) * 100 : null;
+
+    const matchedA = a ? matchedSetupNamesOf(a) : new Set();
+    const matchedB = b ? matchedSetupNamesOf(b) : new Set();
+    const gained = [...matchedB].filter(s => !matchedA.has(s));
+    const lost = [...matchedA].filter(s => !matchedB.has(s));
+    const kept = [...matchedA].filter(s => matchedB.has(s));
+
+    return {
+      ticker,
+      companyName: (a && a.company_name) || (b && b.company_name) || "",
+      sector: (a && a.sector) || (b && b.sector) || "",
+      presentInA: !!a,
+      presentInB: !!b,
+      priceA, priceB, pctChange,
+      setupCountA: a ? matchCountOf(a) : 0,
+      setupCountB: b ? matchCountOf(b) : 0,
+      setupsDiff: (b ? matchCountOf(b) : 0) - (a ? matchCountOf(a) : 0),
+      keptSetups: kept, gainedSetups: gained, lostSetups: lost,
+      fundScoreA: a ? a.fundamental_score : null,
+      fundScoreB: b ? b.fundamental_score : null,
+      dqFlagsA: (a && a.data_quality_flags) || [],
+      dqFlagsB: (b && b.data_quality_flags) || [],
+    };
+  });
+}
+
+// =========================================================================
+// Run compare — entry point จากปุ่ม
+// =========================================================================
+function runCompare() {
+  const dateA = document.getElementById("date-a").value;
+  const dateB = document.getElementById("date-b").value;
+  const snapA = SNAPSHOT_CACHE[dateA];
+  const snapB = SNAPSHOT_CACHE[dateB];
+
+  const rows = buildCompareRows(snapA, snapB, CURRENT_MODE === "focus" ? SELECTED_TICKERS : null);
+  LAST_COMPARE_ROWS = rows;
+
+  const area = document.getElementById("results-area");
+  area.classList.add("visible");
+
+  if (!rows.length) {
+    area.innerHTML = `<div class="no-data-msg">ไม่พบ ticker ที่ตรงเงื่อนไข — ${CURRENT_MODE === "list" ? "วันที่ A ไม่มี ticker ที่ match setup ใดเลย" : "ตรวจสอบว่าเลือก ticker ที่มีข้อมูลในวันที่เลือกแล้ว"}</div>`;
+    return;
+  }
+
+  if (CURRENT_MODE === "list") {
+    renderListMode(rows, dateA, dateB);
+  } else {
+    renderFocusMode(rows, dateA, dateB);
+  }
+}
+
+// =========================================================================
+// โหมดดูทั้งลิสต์
+// =========================================================================
+function renderListMode(rows, dateA, dateB) {
+  const area = document.getElementById("results-area");
+
+  const ups = rows.filter(r => r.pctChange !== null && r.pctChange > 0).length;
+  const downs = rows.filter(r => r.pctChange !== null && r.pctChange < 0).length;
+  const avgChange = (() => {
+    const valid = rows.filter(r => r.pctChange !== null);
+    if (!valid.length) return null;
+    return valid.reduce((s, r) => s + r.pctChange, 0) / valid.length;
+  })();
+
+  const summaryHTML = `
+    <div class="summary-row">
+      <div class="summary-stat">
+        <div class="summary-stat-label">Ticker ที่เทียบ</div>
+        <div class="summary-stat-value">${rows.length}</div>
+      </div>
+      <div class="summary-stat">
+        <div class="summary-stat-label">ราคาขึ้น</div>
+        <div class="summary-stat-value up">${ups}</div>
+      </div>
+      <div class="summary-stat">
+        <div class="summary-stat-label">ราคาลง</div>
+        <div class="summary-stat-value down">${downs}</div>
+      </div>
+      <div class="summary-stat">
+        <div class="summary-stat-label">เฉลี่ย % เปลี่ยนแปลง</div>
+        <div class="summary-stat-value ${avgChange === null ? "" : (avgChange >= 0 ? "up" : "down")}">
+          ${avgChange === null ? "—" : (avgChange >= 0 ? "+" : "") + avgChange.toFixed(1) + "%"}
+        </div>
+      </div>
+    </div>
+  `;
+
+  area.innerHTML = summaryHTML + `<div class="compare-table-wrap"><table class="compare-table">
+    <thead><tr>
+      <th data-key="ticker">Ticker</th>
+      <th data-key="priceA">ราคา ${dateA}</th>
+      <th data-key="priceB">ราคา ${dateB}</th>
+      <th data-key="pctChange">% เปลี่ยนแปลง</th>
+      <th data-key="setupsDiff">Setup (${dateA} → ${dateB})</th>
+      <th>รายละเอียด Setup</th>
+    </tr></thead>
+    <tbody id="compare-tbody"></tbody>
+  </table></div>`;
+
+  document.querySelectorAll(".compare-table th[data-key]").forEach(th => {
+    th.addEventListener("click", () => {
+      const key = th.dataset.key;
+      if (SORT_STATE.key === key) {
+        SORT_STATE.dir = SORT_STATE.dir === "desc" ? "asc" : "desc";
+      } else {
+        SORT_STATE.key = key;
+        SORT_STATE.dir = "desc";
+      }
+      renderTableBody();
+    });
+  });
+
+  renderTableBody();
+}
+
+function renderTableBody() {
+  const rows = [...LAST_COMPARE_ROWS];
+  const { key, dir } = SORT_STATE;
+  rows.sort((a, b) => {
+    let va = a[key], vb = b[key];
+    if (key === "ticker") {
+      return dir === "asc" ? a.ticker.localeCompare(b.ticker) : b.ticker.localeCompare(a.ticker);
+    }
+    va = va === null || va === undefined ? -Infinity : va;
+    vb = vb === null || vb === undefined ? -Infinity : vb;
+    return dir === "asc" ? va - vb : vb - va;
+  });
+
+  document.querySelectorAll(".compare-table th[data-key]").forEach(th => {
+    th.classList.toggle("sorted", th.dataset.key === key);
+    th.classList.toggle("asc", th.dataset.key === key && dir === "asc");
+  });
+
+  document.getElementById("compare-tbody").innerHTML = rows.map(r => {
+    const pctClass = r.pctChange === null ? "flat" : (r.pctChange > 0 ? "up" : (r.pctChange < 0 ? "down" : "flat"));
+    const pctText = r.pctChange === null ? "—" : (r.pctChange >= 0 ? "+" : "") + r.pctChange.toFixed(1) + "%";
+
+    const diffClass = r.setupsDiff > 0 ? "setup-change-up" : (r.setupsDiff < 0 ? "setup-change-down" : "setup-change-flat");
+    const diffText = r.setupsDiff > 0 ? `+${r.setupsDiff}` : r.setupsDiff;
+
+    const setupDetail = [
+      ...r.keptSetups.map(s => `<span class="setup-chip-mini">${s}</span>`),
+      ...r.gainedSetups.map(s => `<span class="setup-chip-mini gained">+${s}</span>`),
+      ...r.lostSetups.map(s => `<span class="setup-chip-mini lost">${s}</span>`),
+    ].join("") || `<span style="color:var(--text-tertiary);">ไม่ match เลยทั้งสองวัน</span>`;
+
+    const dqIcon = (r.dqFlagsA.length || r.dqFlagsB.length)
+      ? `<span class="dq-warn-icon" title="${[...r.dqFlagsA, ...r.dqFlagsB].join(' | ')}">🩺</span>`
+      : "";
+
+    return `
+      <tr>
+        <td class="ticker-cell">${r.ticker} ${dqIcon}</td>
+        <td>${r.priceA !== null ? "$" + r.priceA.toFixed(2) : "—"}${!r.presentInA ? ' <span style="color:var(--text-tertiary);">(ไม่มีข้อมูล)</span>' : ""}</td>
+        <td>${r.priceB !== null ? "$" + r.priceB.toFixed(2) : "—"}${!r.presentInB ? ' <span style="color:var(--text-tertiary);">(ไม่มีข้อมูล)</span>' : ""}</td>
+        <td class="price-change ${pctClass}">${pctText}</td>
+        <td class="${diffClass}">${r.setupCountA} → ${r.setupCountB} (${diffText})</td>
+        <td>${setupDetail}</td>
+      </tr>
+    `;
+  }).join("");
+}
+
+// =========================================================================
+// โหมดเลือกเฉพาะตัว
+// =========================================================================
+function renderFocusMode(rows, dateA, dateB) {
+  const area = document.getElementById("results-area");
+  area.innerHTML = `<div class="focus-cards">${rows.map(r => renderFocusCard(r, dateA, dateB)).join("")}</div>`;
+}
+
+function renderFocusCard(r, dateA, dateB) {
+  const pctClass = r.pctChange === null ? "flat" : (r.pctChange > 0 ? "up" : (r.pctChange < 0 ? "down" : "flat"));
+  const pctText = r.pctChange === null ? "ไม่สามารถคำนวณได้ (ไม่มีข้อมูลวันใดวันหนึ่ง)" : (r.pctChange >= 0 ? "+" : "") + r.pctChange.toFixed(1) + "%";
+
+  const allSetupsA = r.presentInA ? [...r.keptSetups, ...r.lostSetups] : [];
+  const allSetupsB = r.presentInB ? [...r.keptSetups, ...r.gainedSetups] : [];
+
+  const dqSection = (r.dqFlagsA.length || r.dqFlagsB.length) ? `
+    <div class="focus-dq-list">
+      ${r.dqFlagsA.map(f => `<div class="focus-dq-item">🩺 [${dateA}] ${f}</div>`).join("")}
+      ${r.dqFlagsB.map(f => `<div class="focus-dq-item">🩺 [${dateB}] ${f}</div>`).join("")}
+    </div>
+  ` : "";
+
+  return `
+    <div class="focus-card">
+      <div class="focus-card-head">
+        <div>
+          <span class="focus-ticker">${r.ticker}</span>
+          <span class="focus-company">${r.companyName || "—"} · ${r.sector || "Unknown"}</span>
+        </div>
+        <div class="focus-price-compare">
+          <span>${r.priceA !== null ? "$" + r.priceA.toFixed(2) : "—"}</span>
+          <span class="focus-price-arrow">→</span>
+          <span>${r.priceB !== null ? "$" + r.priceB.toFixed(2) : "—"}</span>
+          <span class="price-change ${pctClass}">(${pctText})</span>
+        </div>
+      </div>
+      <div class="focus-grid">
+        <div class="focus-col">
+          <h5>วันที่ A — ${dateA} ${!r.presentInA ? "(ไม่มีข้อมูลวันนี้)" : `· Fundamental ${r.fundScoreA !== null && r.fundScoreA !== undefined ? r.fundScoreA.toFixed(0) + "/100" : "—"}`}</h5>
+          <div class="focus-setup-list">
+            ${allSetupsA.length ? allSetupsA.map(s => `<div class="focus-setup-item matched">✅ ${s}</div>`).join("") : `<div class="focus-setup-item">ไม่ match setup ใดเลย</div>`}
+          </div>
+        </div>
+        <div class="focus-col">
+          <h5>วันที่ B — ${dateB} ${!r.presentInB ? "(ไม่มีข้อมูลวันนี้)" : `· Fundamental ${r.fundScoreB !== null && r.fundScoreB !== undefined ? r.fundScoreB.toFixed(0) + "/100" : "—"}`}</h5>
+          <div class="focus-setup-list">
+            ${allSetupsB.length ? allSetupsB.map(s => `<div class="focus-setup-item matched">✅ ${s}</div>`).join("") : `<div class="focus-setup-item">ไม่ match setup ใดเลย</div>`}
+          </div>
+        </div>
+      </div>
+      ${dqSection}
+    </div>
+  `;
+}
+
+init();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Setup Performance Scorecard — Swing Scanner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0E1117;
+  --bg-elevated:#161B22;
+  --bg-card:#1A2029;
+  --border:#2A3140;
+  --border-soft:#212733;
+  --text-primary:#F0F4F8;
+  --text-secondary:#9BA3AF;
+  --text-tertiary:#6B7280;
+  --green:#3DDC84;
+  --green-dim:#1F4A33;
+  --red:#FF5D5D;
+  --red-dim:#4A1F24;
+  --gold:#E8B339;
+  --gold-dim:#4A3A1A;
+  --blue:#5B9DFF;
+  --font-display:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;
+  --font-mono:'JetBrains Mono','SF Mono',Consolas,'Courier New',monospace;
+  --radius:14px;
+  --radius-sm:8px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+body{
+  background:var(--bg);
+  color:var(--text-primary);
+  font-family:var(--font-display);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.5;
+  min-height:100vh;
+}
+
+/* ---------- Top bar ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(14,17,23,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border-soft);
+}
+.topbar{
+  padding:16px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;
+}
+.brand{display:flex;align-items:center;gap:10px;}
+.brand-mark{
+  width:32px;height:32px;border-radius:8px;
+  background:linear-gradient(135deg,var(--green),var(--blue));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-mono);font-weight:700;font-size:15px;color:#0E1117;
+  flex-shrink:0;
+}
+.brand-text h1{font-size:15px;font-weight:700;letter-spacing:-0.01em;}
+.brand-text p{font-size:12px;color:var(--text-tertiary);font-family:var(--font-mono);}
+.back-link{
+  font-family:var(--font-mono);font-size:12px;color:var(--text-secondary);
+  text-decoration:none;display:flex;align-items:center;gap:6px;
+  padding:7px 12px;border:1px solid var(--border);border-radius:999px;
+  transition:border-color .15s ease,color .15s ease;
+}
+.back-link:hover{border-color:var(--green);color:var(--text-primary);}
+
+/* ---------- Layout ---------- */
+.wrap{max-width:1280px;margin:0 auto;padding:28px 24px 80px;}
+.hero{margin-bottom:24px;}
+.hero-eyebrow{font-family:var(--font-mono);font-size:11px;color:var(--text-tertiary);letter-spacing:0.05em;margin-bottom:8px;}
+.hero h2{font-size:26px;font-weight:800;letter-spacing:-0.02em;margin-bottom:8px;}
+.hero p{color:var(--text-secondary);font-size:14px;max-width:680px;}
+
+.status-banner{
+  background:var(--bg-card);border:1px solid var(--border-soft);
+  border-radius:var(--radius-sm);padding:14px 18px;margin-bottom:24px;
+  font-size:13px;color:var(--text-secondary);line-height:1.6;
+}
+.status-banner strong{color:var(--text-primary);}
+
+/* ---------- Overview stats ---------- */
+.overview-row{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:1px;background:var(--border-soft);
+  border:1px solid var(--border-soft);border-radius:var(--radius);
+  overflow:hidden;margin-bottom:28px;
+}
+.overview-stat{background:var(--bg-elevated);padding:16px 18px;}
+.overview-stat-label{font-size:11px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;}
+.overview-stat-value{font-family:var(--font-mono);font-size:22px;font-weight:700;}
+
+/* ---------- Setup scorecard cards ---------- */
+.section-title{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.section-title h3{font-size:15px;font-weight:700;}
+.section-title .sub{font-size:11.5px;color:var(--text-tertiary);font-family:var(--font-mono);}
+
+.setup-cards{display:flex;flex-direction:column;gap:14px;margin-bottom:32px;}
+.setup-card{
+  background:var(--bg-card);border:1px solid var(--border-soft);
+  border-radius:var(--radius);padding:20px 22px;
+}
+.setup-card-head{
+  display:flex;justify-content:space-between;align-items:baseline;
+  margin-bottom:16px;flex-wrap:wrap;gap:8px;
+}
+.setup-card-title{font-size:15px;font-weight:700;}
+.setup-card-count{font-family:var(--font-mono);font-size:11.5px;color:var(--text-tertiary);}
+.setup-metrics-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.setup-metric-col{
+  background:var(--bg-elevated);border-radius:var(--radius-sm);padding:14px 16px;
+}
+.setup-metric-col h5{
+  font-family:var(--font-mono);font-size:10.5px;color:var(--text-tertiary);
+  text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;
+}
+.metric-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;}
+.metric-row:last-child{margin-bottom:0;}
+.metric-label{font-size:12px;color:var(--text-secondary);}
+.metric-value{font-family:var(--font-mono);font-size:16px;font-weight:700;}
+.metric-value.win-high{color:var(--green);}
+.metric-value.win-mid{color:var(--gold);}
+.metric-value.win-low{color:var(--red);}
+.no-data-text{font-size:12px;color:var(--text-tertiary);font-style:italic;}
+
+/* ---------- Monthly breakdown table ---------- */
+.monthly-table-wrap{
+  background:var(--bg-card);border:1px solid var(--border-soft);
+  border-radius:var(--radius);overflow:hidden;margin-bottom:32px;
+}
+.monthly-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+.monthly-table th{
+  text-align:left;font-family:var(--font-mono);font-size:10.5px;
+  color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.04em;
+  padding:11px 14px;border-bottom:1px solid var(--border-soft);
+  background:var(--bg-elevated);white-space:nowrap;
+}
+.monthly-table td{
+  padding:11px 14px;border-bottom:1px solid var(--border-soft);
+  font-family:var(--font-mono);font-size:12px;
+}
+.monthly-table tr:last-child td{border-bottom:none;}
+.monthly-table tr:hover td{background:var(--bg-elevated);}
+
+.disclaimer{
+  background:rgba(232,179,57,0.06);border:1px solid var(--gold-dim);
+  border-radius:var(--radius-sm);padding:16px 18px;
+  font-size:12.5px;color:var(--text-secondary);line-height:1.7;
+}
+.disclaimer strong{color:var(--gold);}
+
+.no-history-msg{
+  text-align:center;padding:60px 24px;color:var(--text-tertiary);font-size:13px;line-height:1.8;
+}
+
+@media (max-width:720px){
+  .setup-metrics-grid{grid-template-columns:1fr;}
+  .monthly-table{font-size:11px;}
+  .monthly-table th,.monthly-table td{padding:8px 10px;}
+}
+</style>
+</head>
+<body>
+
+<div class="site-header">
+<div class="topbar">
+  <div class="brand">
+    <div class="brand-mark">SS</div>
+    <div class="brand-text">
+      <h1>Swing Scanner</h1>
+      <p>SETUP PERFORMANCE SCORECARD</p>
+    </div>
+  </div>
+  <a class="back-link" href="index.html">← กลับไป Dashboard</a>
+</div>
+</div>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-eyebrow">Backtest จากผลสแกนจริงที่เก็บไว้ — ไม่ใช่ทฤษฎี</div>
+    <h2>Setup Performance Scorecard</h2>
+    <p>หุ้นที่ match setup แต่ละข้อในวันที่ผ่านมา ราคาขึ้น/ลงจริงกี่% ในวันถัดๆไป —
+       เทียบราคาจาก snapshot ที่บันทึกไว้จริง ไม่ใช่ข้อมูลสมมติ ใช้ดูว่า setup ไหน
+       ผลงานจริงดีกว่ากัน</p>
+  </div>
+
+  <div id="content-area"></div>
+</div>
+
+<script>
+const HISTORY_DIR = "history";
+const MAX_LOOKBACK_DAYS = 35; // เผื่อ retention 30 วัน + กันชน
+
+// =========================================================================
+// Init — โหลดทุก snapshot จาก history/ แล้วคำนวณ scorecard
+// =========================================================================
+async function init() {
+  const candidates = [];
+  const today = new Date();
+  for (let i = 0; i < MAX_LOOKBACK_DAYS; i++) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    candidates.push(d.toISOString().slice(0, 10));
+  }
+
+  const checks = await Promise.all(candidates.map(async (dateStr) => {
+    try {
+      const res = await fetch(`${HISTORY_DIR}/${dateStr}.json`, { cache: "no-store" });
+      if (res.ok) {
+        const data = await res.json();
+        return { dateStr, data };
+      }
+    } catch (e) { /* ไฟล์ไม่มี ข้ามไป ไม่ใช่ error */ }
+    return null;
+  }));
+
+  const snapshots = checks.filter(Boolean).sort((a, b) => a.dateStr.localeCompare(b.dateStr));
+
+  if (snapshots.length < 2) {
+    renderNoHistory(snapshots.length);
+    return;
+  }
+
+  const setupNames = snapshots[snapshots.length - 1].data.setup_names || [];
+  const results = computeScorecard(snapshots, setupNames);
+  renderScorecard(snapshots, setupNames, results);
+}
+
+// =========================================================================
+// Parse "2-5 วัน" -> {min: 2, max: 5}
+// =========================================================================
+function parseHoldDays(text) {
+  if (!text) return null;
+  const match = text.match(/(\d+)\s*-\s*(\d+)/);
+  if (!match) return null;
+  return { min: parseInt(match[1], 10), max: parseInt(match[2], 10) };
+}
+
+// =========================================================================
+// คำนวณ scorecard — ใช้ลำดับ snapshot ที่มีจริง (ไม่นับปฏิทิน) ตามที่ตกลงกัน
+// =========================================================================
+function computeScorecard(snapshots, setupNames) {
+  // ผลลัพธ์ต่อ setup: { occurrences: [{date, ticker, pctAtMin, pctAtMax, winMin, winMax}, ...] }
+  const perSetup = {};
+  setupNames.forEach(name => { perSetup[name] = []; });
+
+  for (let i = 0; i < snapshots.length; i++) {
+    const dayA = snapshots[i].data;
+    const priceMapA = {};
+    (dayA.results || []).forEach(r => { priceMapA[r.ticker] = r.price; });
+
+    (dayA.results || []).forEach(r => {
+      (r.setups_matched || []).forEach(s => {
+        if (!s.matched) return;
+        const holdDays = parseHoldDays(s.suggested_hold_days);
+        if (!holdDays) return;
+
+        const priceA = priceMapA[r.ticker];
+        if (priceA === null || priceA === undefined || priceA <= 0) return;
+
+        const entry = { date: snapshots[i].dateStr, ticker: r.ticker, priceA };
+
+        // หาราคาที่ index i+min และ i+max (ตามลำดับ snapshot จริง ไม่ใช่ปฏิทิน)
+        const idxMin = i + holdDays.min;
+        const idxMax = i + holdDays.max;
+
+        if (idxMin < snapshots.length) {
+          const priceAtMin = findTickerPrice(snapshots[idxMin].data, r.ticker);
+          if (priceAtMin !== null) {
+            entry.pctAtMin = ((priceAtMin - priceA) / priceA) * 100;
+            entry.dateAtMin = snapshots[idxMin].dateStr;
+          }
+        }
+        if (idxMax < snapshots.length) {
+          const priceAtMax = findTickerPrice(snapshots[idxMax].data, r.ticker);
+          if (priceAtMax !== null) {
+            entry.pctAtMax = ((priceAtMax - priceA) / priceA) * 100;
+            entry.dateAtMax = snapshots[idxMax].dateStr;
+          }
+        }
+
+        if (entry.pctAtMin !== undefined || entry.pctAtMax !== undefined) {
+          entry.holdDays = holdDays;
+          perSetup[s.setup_name] = perSetup[s.setup_name] || [];
+          perSetup[s.setup_name].push(entry);
+        }
+      });
+    });
+  }
+
+  return perSetup;
+}
+
+function findTickerPrice(snapshotData, ticker) {
+  const r = (snapshotData.results || []).find(x => x.ticker === ticker);
+  if (!r || r.price === null || r.price === undefined || r.price <= 0) return null;
+  return r.price;
+}
+
+// =========================================================================
+// สรุปสถิติจาก entries: win rate, เฉลี่ย % ที่ min และ max
+// =========================================================================
+function summarizeEntries(entries) {
+  const atMin = entries.filter(e => e.pctAtMin !== undefined);
+  const atMax = entries.filter(e => e.pctAtMax !== undefined);
+
+  function summarizeSide(arr, key) {
+    if (!arr.length) return null;
+    const wins = arr.filter(e => e[key] > 0).length;
+    const avgPct = arr.reduce((s, e) => s + e[key], 0) / arr.length;
+    return {
+      count: arr.length,
+      winRate: (wins / arr.length) * 100,
+      avgPct,
+    };
+  }
+
+  return {
+    totalOccurrences: entries.length,
+    holdDays: entries.length ? entries[0].holdDays : null,
+    atMin: summarizeSide(atMin, "pctAtMin"),
+    atMax: summarizeSide(atMax, "pctAtMax"),
+  };
+}
+
+// =========================================================================
+// Render — ไม่มี history พอ
+// =========================================================================
+function renderNoHistory(count) {
+  document.getElementById("content-area").innerHTML = `
+    <div class="no-history-msg">
+      ${count === 0
+        ? "⚠️ ยังไม่พบไฟล์ history เลย — ต้องสแกนผ่าน scan_and_open.command อย่างน้อย 2 ครั้งก่อน (เวอร์ชันที่มีการบันทึก history snapshot)"
+        : `📅 พบข้อมูลแค่ ${count} วัน — ต้องมีอย่างน้อย 2 วันถึงจะเริ่มคำนวณ scorecard ได้ สแกนต่ออีกสักพักแล้วกลับมาดูใหม่`}
+    </div>
+  `;
+}
+
+// =========================================================================
+// Render — scorecard เต็มรูปแบบ
+// =========================================================================
+function renderScorecard(snapshots, setupNames, perSetup) {
+  const totalOccurrencesAll = Object.values(perSetup).reduce((s, arr) => s + arr.length, 0);
+
+  const overviewHTML = `
+    <div class="status-banner">
+      📊 คำนวณจาก <strong>${snapshots.length} วัน</strong> ของข้อมูลที่เก็บไว้
+      (${snapshots[0].dateStr} ถึง ${snapshots[snapshots.length - 1].dateStr})
+      — ยิ่งสะสมข้อมูลนานขึ้น ผลลัพธ์จะแม่นยำขึ้น
+    </div>
+    <div class="overview-row">
+      <div class="overview-stat">
+        <div class="overview-stat-label">วันที่มีข้อมูล</div>
+        <div class="overview-stat-value">${snapshots.length}</div>
+      </div>
+      <div class="overview-stat">
+        <div class="overview-stat-label">รวมจำนวนครั้งที่ match (ทุก setup)</div>
+        <div class="overview-stat-value">${totalOccurrencesAll}</div>
+      </div>
+    </div>
+  `;
+
+  const setupCardsHTML = setupNames.map(name => {
+    const entries = perSetup[name] || [];
+    const summary = summarizeEntries(entries);
+    return setupCardHTML(name, summary);
+  }).join("");
+
+  const monthlyHTML = renderMonthlyBreakdown(setupNames, perSetup);
+
+  document.getElementById("content-area").innerHTML = `
+    ${overviewHTML}
+    <div class="section-title">
+      <h3>🏆 สรุปผลรวมแต่ละ Setup</h3>
+      <span class="sub">เช็คราคาทั้งจุดต่ำสุดและสูงสุดของช่วงถือที่แนะนำ แยกกัน</span>
+    </div>
+    <div class="setup-cards">${setupCardsHTML}</div>
+
+    ${monthlyHTML}
+
+    <div class="disclaimer">
+      <strong>⚠️ ข้อจำกัดของ Scorecard นี้:</strong> คำนวณจากข้อมูลที่สแกนสะสมไว้เท่านั้น
+      ถ้าสแกนไม่ต่อเนื่องทุกวัน (ขาดบางวัน) การนับ "วันถัดไป" จะใช้ลำดับ snapshot ที่มีจริง
+      ไม่ใช่นับตามปฏิทิน ดังนั้น "+2 วัน" อาจหมายถึง 3-4 วันจริงถ้าระหว่างนั้นไม่ได้สแกน
+      ตัวเลขนี้ไม่ใช่การันตีผลในอนาคต เป็นแค่ผลย้อนหลังของช่วงเวลาที่มีข้อมูลเท่านั้น —
+      ยิ่งสะสมข้อมูลนานขึ้น (หลายเดือน) ตัวเลขจะมีความหมายมากขึ้น
+    </div>
+  `;
+}
+
+function winRateClass(winRate) {
+  if (winRate >= 60) return "win-high";
+  if (winRate >= 45) return "win-mid";
+  return "win-low";
+}
+
+function setupCardHTML(name, summary) {
+  if (summary.totalOccurrences === 0) {
+    return `
+      <div class="setup-card">
+        <div class="setup-card-head">
+          <span class="setup-card-title">${name}</span>
+          <span class="setup-card-count">0 ครั้งที่ match (และมีข้อมูลราคาตามมาเช็คได้)</span>
+        </div>
+        <div class="no-data-text">ยังไม่มีข้อมูลพอจะสรุปผล — รอสะสม history เพิ่ม</div>
+      </div>
+    `;
+  }
+
+  const hd = summary.holdDays;
+  const minCol = summary.atMin
+    ? `
+      <div class="metric-row">
+        <span class="metric-label">Win Rate</span>
+        <span class="metric-value ${winRateClass(summary.atMin.winRate)}">${summary.atMin.winRate.toFixed(0)}%</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">เฉลี่ย % เปลี่ยนแปลง</span>
+        <span class="metric-value" style="color:${summary.atMin.avgPct >= 0 ? 'var(--green)' : 'var(--red)'}">${summary.atMin.avgPct >= 0 ? "+" : ""}${summary.atMin.avgPct.toFixed(1)}%</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">จำนวนครั้งที่เช็คได้</span>
+        <span class="metric-value" style="font-size:13px;color:var(--text-tertiary);">${summary.atMin.count}</span>
+      </div>
+    `
+    : `<div class="no-data-text">ยังไม่มีข้อมูลพอเช็คจุดนี้</div>`;
+
+  const maxCol = summary.atMax
+    ? `
+      <div class="metric-row">
+        <span class="metric-label">Win Rate</span>
+        <span class="metric-value ${winRateClass(summary.atMax.winRate)}">${summary.atMax.winRate.toFixed(0)}%</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">เฉลี่ย % เปลี่ยนแปลง</span>
+        <span class="metric-value" style="color:${summary.atMax.avgPct >= 0 ? 'var(--green)' : 'var(--red)'}">${summary.atMax.avgPct >= 0 ? "+" : ""}${summary.atMax.avgPct.toFixed(1)}%</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">จำนวนครั้งที่เช็คได้</span>
+        <span class="metric-value" style="font-size:13px;color:var(--text-tertiary);">${summary.atMax.count}</span>
+      </div>
+    `
+    : `<div class="no-data-text">ยังไม่มีข้อมูลพอเช็คจุดนี้</div>`;
+
+  return `
+    <div class="setup-card">
+      <div class="setup-card-head">
+        <span class="setup-card-title">${name}</span>
+        <span class="setup-card-count">match ${summary.totalOccurrences} ครั้ง · ระยะถือแนะนำ ${hd ? hd.min + "-" + hd.max : "?"} วัน</span>
+      </div>
+      <div class="setup-metrics-grid">
+        <div class="setup-metric-col">
+          <h5>ที่ +${hd ? hd.min : "?"} วัน (ถือสั้น)</h5>
+          ${minCol}
+        </div>
+        <div class="setup-metric-col">
+          <h5>ที่ +${hd ? hd.max : "?"} วัน (ถือยาว)</h5>
+          ${maxCol}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// =========================================================================
+// Monthly breakdown — เสริม จะมีความหมายมากขึ้นเมื่อสะสมข้อมูลหลายเดือน
+// =========================================================================
+function renderMonthlyBreakdown(setupNames, perSetup) {
+  // รวม entries ทุก setup เข้าด้วยกัน group ตามเดือนของวัน A
+  const monthlyData = {}; // { "2026-06": { setupName: {wins, total, sumPct} } }
+
+  setupNames.forEach(name => {
+    (perSetup[name] || []).forEach(entry => {
+      // ใช้จุด max เป็นตัวแทนสรุปรายเดือน (ถือยาวตามคำแนะนำเต็มที่)
+      const pct = entry.pctAtMax !== undefined ? entry.pctAtMax : entry.pctAtMin;
+      if (pct === undefined) return;
+      const month = entry.date.slice(0, 7); // "YYYY-MM"
+      monthlyData[month] = monthlyData[month] || {};
+      monthlyData[month][name] = monthlyData[month][name] || { wins: 0, total: 0, sumPct: 0 };
+      monthlyData[month][name].total += 1;
+      monthlyData[month][name].sumPct += pct;
+      if (pct > 0) monthlyData[month][name].wins += 1;
+    });
+  });
+
+  const months = Object.keys(monthlyData).sort();
+  if (!months.length) return "";
+
+  const rows = months.map(month => {
+    const cells = setupNames.map(name => {
+      const d = monthlyData[month][name];
+      if (!d || d.total === 0) return `<td style="color:var(--text-tertiary);">—</td>`;
+      const winRate = (d.wins / d.total) * 100;
+      const avgPct = d.sumPct / d.total;
+      const color = winRate >= 60 ? "var(--green)" : (winRate >= 45 ? "var(--gold)" : "var(--red)");
+      return `<td style="color:${color}">${winRate.toFixed(0)}% <span style="color:var(--text-tertiary);">(n=${d.total}, ${avgPct >= 0 ? "+" : ""}${avgPct.toFixed(1)}%)</span></td>`;
+    }).join("");
+    return `<tr><td style="font-weight:700;">${month}</td>${cells}</tr>`;
+  }).join("");
+
+  const headerCells = setupNames.map(name => `<th>${name}</th>`).join("");
+
+  return `
+    <div class="section-title">
+      <h3>📅 Breakdown รายเดือน</h3>
+      <span class="sub">Win rate ที่จุดถือยาวสุดของแต่ละ setup — จะเริ่มมีความหมายมากขึ้นเมื่อสะสมข้อมูลหลายเดือน</span>
+    </div>
+    <div class="monthly-table-wrap">
+      <table class="monthly-table">
+        <thead><tr><th>เดือน</th>${headerCells}</tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+  `;
+}
+
+init();
+</script>
+</body>
+</html>
