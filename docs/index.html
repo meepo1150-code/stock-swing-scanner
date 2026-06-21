@@ -153,6 +153,38 @@ body{
 }
 .top10-score{font-family:var(--font-mono);font-size:11px;}
 
+/* ---------- Top 10 summary ---------- */
+.top10-section{margin-bottom:24px;}
+.top10-header{display:flex;align-items:center;gap:8px;margin-bottom:12px;}
+.top10-header h3{font-size:14px;font-weight:700;}
+.top10-header .top10-sub{font-size:11.5px;color:var(--text-tertiary);font-family:var(--font-mono);}
+.top10-scroll{
+  display:flex;gap:12px;overflow-x:auto;padding-bottom:6px;
+  scrollbar-width:thin;
+}
+.top10-scroll::-webkit-scrollbar{height:6px;}
+.top10-scroll::-webkit-scrollbar-thumb{background:var(--border);border-radius:999px;}
+.top10-card{
+  flex:0 0 200px;background:var(--bg-card);border:1px solid var(--border-soft);
+  border-radius:var(--radius-sm);padding:14px;cursor:pointer;
+  transition:border-color .15s ease,transform .15s ease;position:relative;
+}
+.top10-card:hover{border-color:var(--green);transform:translateY(-2px);}
+.top10-rank{
+  position:absolute;top:-9px;left:12px;
+  background:var(--green);color:#0E1117;font-family:var(--font-mono);
+  font-size:11px;font-weight:700;width:22px;height:22px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+}
+.top10-ticker{font-family:var(--font-mono);font-size:16px;font-weight:700;margin-top:4px;}
+.top10-price{font-family:var(--font-mono);font-size:12px;color:var(--text-secondary);margin-top:2px;}
+.top10-meta{display:flex;justify-content:space-between;align-items:center;margin-top:10px;}
+.top10-setups{
+  font-family:var(--font-mono);font-size:11px;color:var(--green);
+  background:var(--green-dim);padding:3px 8px;border-radius:999px;
+}
+.top10-score{font-family:var(--font-mono);font-size:11px;}
+
 /* ---------- Disclaimer banner ---------- */
 .disclaimer{
   background:var(--bg-card);
