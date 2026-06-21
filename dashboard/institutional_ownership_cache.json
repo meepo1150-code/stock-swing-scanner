@@ -1,0 +1,5224 @@
+{
+  "AAON": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 38.9,
+      "top_holder_names": [
+        "Wellington Management Group, LLP",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "Wasatch Advisors LP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:45.912286+00:00"
+  },
+  "A": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 42.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "Massachusetts Financial Services Co."
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:46.009734+00:00"
+  },
+  "ABBV": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 34.8,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "JPMORGAN CHASE & CO",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:46.019463+00:00"
+  },
+  "ABNB": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 34.8,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Harris Associates L.P.",
+        "State Street Corporation",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:46.030274+00:00"
+  },
+  "ABT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 35.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Capital Research Global Investors",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:46.522105+00:00"
+  },
+  "ACMR": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 35.5,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "WCM Investment Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:46.690632+00:00"
+  },
+  "ADI": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 37.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "JPMORGAN CHASE & CO",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:47.410394+00:00"
+  },
+  "AEE": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 45.7,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Price (T.Rowe) Associates Inc",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:47.605556+00:00"
+  },
+  "AEM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 28.5,
+      "top_holder_names": [
+        "Capital World Investors",
+        "Van Eck Associates Corporation",
+        "FMR, LLC",
+        "Royal Bank of Canada",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:47.668717+00:00"
+  },
+  "AEG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 6.3,
+      "top_holder_names": [
+        "Dodge & Cox Inc.",
+        "Dimensional Fund Advisors LP",
+        "Morgan Stanley",
+        "Arrowstreet Capital, Limited Partnership",
+        "Blackrock Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:47.671653+00:00"
+  },
+  "AER": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 31.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Eagle Capital Management LLC",
+        "Harris Associates L.P.",
+        "State Street Corporation",
+        "Price (T.Rowe) Associates Inc"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:48.070688+00:00"
+  },
+  "AG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 29.0,
+      "top_holder_names": [
+        "Van Eck Associates Corporation",
+        "Tidal Investments LLC",
+        "Mirae Asset Global ETFs Holdings Ltd.",
+        "Vanguard Capital Management LLC",
+        "Arrowstreet Capital, Limited Partnership"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:48.459818+00:00"
+  },
+  "AGI": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 25.4,
+      "top_holder_names": [
+        "Van Eck Associates Corporation",
+        "FMR, LLC",
+        "Vanguard Capital Management LLC",
+        "Royal Bank of Canada",
+        "Franklin Resources, Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:48.486300+00:00"
+  },
+  "AJG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 48.7,
+      "top_holder_names": [
+        "JPMORGAN CHASE & CO",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "FMR, LLC",
+        "Capital World Investors"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:48.944523+00:00"
+  },
+  "ALAB": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 39.0,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "Atreides Management, LP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:49.089192+00:00"
+  },
+  "ALGM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 50.3,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Blackrock Inc.",
+        "Capital Research Global Investors",
+        "Invesco Ltd.",
+        "JPMORGAN CHASE & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:49.229249+00:00"
+  },
+  "ALHC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 49.4,
+      "top_holder_names": [
+        "Wellington Management Group, LLP",
+        "FMR, LLC",
+        "Blackrock Inc.",
+        "T. Rowe Price Investment Management, Inc.",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:49.766827+00:00"
+  },
+  "AMAT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 34.9,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Capital Research Global Investors",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:50.555207+00:00"
+  },
+  "AME": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 36.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC",
+        "Price (T.Rowe) Associates Inc"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:50.642309+00:00"
+  },
+  "AMD": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 31.7,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Geode Capital Management, LLC",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:50.642357+00:00"
+  },
+  "AMKR": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 24.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Dimensional Fund Advisors LP",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "JPMORGAN CHASE & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:50.851856+00:00"
+  },
+  "AOS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 50.2,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:51.559443+00:00"
+  },
+  "ANET": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 31.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "FMR, LLC",
+        "State Street Corporation",
+        "Price (T.Rowe) Associates Inc"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:51.660456+00:00"
+  },
+  "APGE": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 77.9,
+      "top_holder_names": [
+        "T. Rowe Price Investment Management, Inc.",
+        "FMR, LLC",
+        "Venrock Adviser, LLC",
+        "Wellington Management Group, LLP",
+        "Blackrock Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:51.852786+00:00"
+  },
+  "APLD": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 43.1,
+      "top_holder_names": [
+        "Hood River Capital Management LLC",
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Situational Awareness Partners LP",
+        "Situational Awareness LP                          "
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:52.185366+00:00"
+  },
+  "APH": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 42.5,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "FMR, LLC",
+        "State Street Corporation",
+        "JPMORGAN CHASE & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:52.269611+00:00"
+  },
+  "APP": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 34.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "FMR, LLC",
+        "State Street Corporation",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:52.423488+00:00"
+  },
+  "ARMK": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 52.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Janus Henderson Group PLC",
+        "Massachusetts Financial Services Co.",
+        "Morgan Stanley",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:52.934196+00:00"
+  },
+  "ARE": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 47.6,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Apg Asset Management US Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:52.947416+00:00"
+  },
+  "ARWR": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 49.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Avoro Capital Advisors LLC",
+        "FMR, LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:53.021504+00:00"
+  },
+  "ARXS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 6.9,
+      "top_holder_names": [
+        "JANUS INVESTMENT FUND-Janus Henderson Contrarian Fund",
+        "JANUS INVESTMENT FUND-Janus Henderson Enterprise Fund",
+        "Fidelity Securities Fund-Fidelity Blue Chip Growth Fund",
+        "Fidelity Mt. Vernon Street Trust-Fidelity Growth Company Fund",
+        "Voya Investors TRT-VY(R) T. Rowe Price Capital Appreciation PORT."
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:53.136005+00:00"
+  },
+  "ASB": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 42.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Dimensional Fund Advisors LP",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:53.236754+00:00"
+  },
+  "AUB": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 48.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Dimensional Fund Advisors LP",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:53.762044+00:00"
+  },
+  "AU": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 30.5,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Van Eck Associates Corporation",
+        "FMR, LLC",
+        "Vanguard Capital Management LLC",
+        "Ninety One SA (PTY) Ltd"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:53.779681+00:00"
+  },
+  "ATI": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 46.9,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Capital Research Global Investors",
+        "Vanguard Capital Management LLC",
+        "Capital International Investors",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:53.788378+00:00"
+  },
+  "AUGO": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 15.6,
+      "top_holder_names": [
+        "Capital World Investors",
+        "Blackrock Inc.",
+        "Van Eck Associates Corporation",
+        "Bank of America Corporation",
+        "FIL LTD"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:53.812760+00:00"
+  },
+  "AVGO": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 34.9,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC",
+        "FMR, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:54.320864+00:00"
+  },
+  "AVTR": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 54.7,
+      "top_holder_names": [
+        "Dodge & Cox Inc.",
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "Wellington Management Group, LLP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:54.544475+00:00"
+  },
+  "B": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 25.9,
+      "top_holder_names": [
+        "Van Eck Associates Corporation",
+        "Capital International Investors",
+        "Blackrock Inc.",
+        "Arrowstreet Capital, Limited Partnership",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:55.327636+00:00"
+  },
+  "BAC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 37.5,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Berkshire Hathaway, Inc",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "FMR, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:55.455920+00:00"
+  },
+  "BAX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 70.9,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Pzena Investment Management LLC",
+        "Dodge & Cox Inc.",
+        "FMR, LLC",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:55.752303+00:00"
+  },
+  "BBY": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 45.6,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:56.090598+00:00"
+  },
+  "BIRK": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 77.5,
+      "top_holder_names": [
+        "Catterton Management Company, L.L.C.",
+        "T. Rowe Price Investment Management, Inc.",
+        "BAMCO Inc.",
+        "FMR, LLC",
+        "Dimensional Fund Advisors LP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:56.877330+00:00"
+  },
+  "BIIB": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 53.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Primecap Management Company",
+        "FMR, LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:56.949951+00:00"
+  },
+  "BKNG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 39.9,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Price (T.Rowe) Associates Inc",
+        "JPMORGAN CHASE & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:57.438024+00:00"
+  },
+  "BMRN": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 49.6,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Dodge & Cox Inc.",
+        "Primecap Management Company",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:57.906081+00:00"
+  },
+  "BNY": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 39.8,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "FMR, LLC",
+        "Dodge & Cox Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:57.945791+00:00"
+  },
+  "BRO": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 42.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Capital World Investors",
+        "FMR, LLC",
+        "Principal Financial Group, Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:58.472239+00:00"
+  },
+  "BROS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 44.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "FMR, LLC",
+        "Price (T.Rowe) Associates Inc",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:58.487114+00:00"
+  },
+  "BRX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 46.8,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC",
+        "CenterSquare Investment Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:58.686487+00:00"
+  },
+  "BTDR": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 49.3,
+      "top_holder_names": [
+        "Sachem Head Capital Management, LP",
+        "Fund Resources Investment Holding Group Co Ltd",
+        "Blackrock Inc.",
+        "UBS Group AG",
+        "Barclays Plc"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:58.893299+00:00"
+  },
+  "BVN": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 27.4,
+      "top_holder_names": [
+        "Van Eck Associates Corporation",
+        "Westwood Global Investments, LLC",
+        "FIL LTD",
+        "Blackrock Inc.",
+        "Mirae Asset Global ETFs Holdings Ltd."
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:59.269071+00:00"
+  },
+  "BWA": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 47.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Dimensional Fund Advisors LP",
+        "Vanguard Capital Management LLC",
+        "AQR Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:59.317184+00:00"
+  },
+  "BX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 35.5,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Morgan Stanley",
+        "State Street Corporation",
+        "Charles Schwab Investment Management, Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:59.516400+00:00"
+  },
+  "BYD": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 32.9,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Boston Partners",
+        "Cohen & Steers Inc.",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:59.603018+00:00"
+  },
+  "BXP": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 63.6,
+      "top_holder_names": [
+        "Cohen & Steers Inc.",
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:54:59.627602+00:00"
+  },
+  "CAI": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 37.9,
+      "top_holder_names": [
+        "FMR, LLC",
+        "J. H. Whitney Equity Partners VI, LLC",
+        "Sixth Street Partners Management Company, L.P.",
+        "Coatue Management LLC",
+        "Braidwell LP                          "
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:00.102790+00:00"
+  },
+  "CAH": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 41.5,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:00.199817+00:00"
+  },
+  "CARR": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 49.1,
+      "top_holder_names": [
+        "Capital Research Global Investors",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "JPMORGAN CHASE & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:00.303923+00:00"
+  },
+  "CAT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 36.7,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC",
+        "State Farm Mutual Automobile Insurance Co",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:00.602153+00:00"
+  },
+  "CBRS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 1.4,
+      "top_holder_names": [
+        "ARK ETF Trust-ARK Innovation ETF",
+        "ARK ETF Trust-ARK Next Generation Internet ETF",
+        "JANUS INVESTMENT Fd.-Janus Henderson Global Technology and Innovation ",
+        "Fidelity Commonwealth Trust-Fidelity Nasdaq Composite Index ETF",
+        "JANUS ASPEN SERIES-Janus Henderson Global Technology and Innovation PO"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:01.059409+00:00"
+  },
+  "CBSH": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 41.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "Commerce Bank",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:01.121997+00:00"
+  },
+  "CCEP": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 15.8,
+      "top_holder_names": [
+        "Invesco Ltd.",
+        "Blackrock Inc.",
+        "Goldman Sachs Group Inc",
+        "Vanguard Capital Management LLC",
+        "Boston Partners"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:01.301432+00:00"
+  },
+  "CCJ": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 21.4,
+      "top_holder_names": [
+        "Mirae Asset Global ETFs Holdings Ltd.",
+        "Capital World Investors",
+        "Vanguard Capital Management LLC",
+        "Royal Bank of Canada",
+        "FMR, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:01.405860+00:00"
+  },
+  "CDE": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 40.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Van Eck Associates Corporation",
+        "State Street Corporation",
+        "FMR, LLC",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:01.621081+00:00"
+  },
+  "CDNS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 37.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "FMR, LLC",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:01.672952+00:00"
+  },
+  "CDW": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 46.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "Harris Associates L.P."
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:01.870992+00:00"
+  },
+  "CEG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 40.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "ECP ControlCo, LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:02.137952+00:00"
+  },
+  "CFG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 48.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Capital World Investors",
+        "Vanguard Capital Management LLC",
+        "Invesco Ltd.",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:02.437304+00:00"
+  },
+  "CGNX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 41.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "Pictet Asset Management Holding SA",
+        "Nordea Investment Management AB"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:02.755855+00:00"
+  },
+  "CHRW": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 46.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC",
+        "First Eagle Investment Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:03.215162+00:00"
+  },
+  "CLSK": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 0.0,
+      "top_holder_names": [
+        "Dimensional Fund Advisors LP",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "Blackrock Inc.",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:03.724355+00:00"
+  },
+  "CNC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 41.6,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "AQR Capital Management, LLC",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:04.446611+00:00"
+  },
+  "CMS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 47.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "JPMORGAN CHASE & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:04.679178+00:00"
+  },
+  "CNP": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 58.1,
+      "top_holder_names": [
+        "Capital Research Global Investors",
+        "T. Rowe Price Investment Management, Inc.",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:05.243168+00:00"
+  },
+  "COGT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 52.6,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Blackrock Inc.",
+        "Deerfield Management Company, L.P",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:05.308494+00:00"
+  },
+  "COF": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 34.9,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Capital World Investors",
+        "JPMORGAN CHASE & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:05.379753+00:00"
+  },
+  "COLB": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 48.6,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "T. Rowe Price Investment Management, Inc.",
+        "Wellington Management Group, LLP",
+        "Vanguard Portfolio Management LLC",
+        "Dimensional Fund Advisors LP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:05.498205+00:00"
+  },
+  "COHR": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 47.1,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "Nvidia Corp                          "
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:05.514073+00:00"
+  },
+  "COMP": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 46.8,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Vanguard Portfolio Management LLC",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "SB Investment Advisers (UK) LTD"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:05.604344+00:00"
+  },
+  "COO": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 44.9,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "T. Rowe Price Investment Management, Inc.",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:05.821868+00:00"
+  },
+  "CORT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 46.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Ingalls & Snyder LLC",
+        "Renaissance Technologies, LLC",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:06.143228+00:00"
+  },
+  "CORZ": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 61.7,
+      "top_holder_names": [
+        "Situational Awareness Partners LP",
+        "Situational Awareness LP                          ",
+        "UBS Group AG",
+        "Pentwater Capital Management Lp",
+        "Blackrock Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:06.294981+00:00"
+  },
+  "CPB": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 34.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Invesco Ltd.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Dimensional Fund Advisors LP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:06.513379+00:00"
+  },
+  "CRSP": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 48.1,
+      "top_holder_names": [
+        "ARK Investment Management, LLC",
+        "Blackrock Inc.",
+        "Orbis Allan Gray Ltd",
+        "Capital World Investors",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:07.333301+00:00"
+  },
+  "CRWD": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 32.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Morgan Stanley",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:07.423999+00:00"
+  },
+  "CROX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 45.5,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "FMR, LLC",
+        "WIT Partners Advisory Pte. Ltd.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:07.433345+00:00"
+  },
+  "CSTM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 41.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Bpifrance SA",
+        "FMR, LLC",
+        "T. Rowe Price Investment Management, Inc.",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:07.873088+00:00"
+  },
+  "CSCO": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 34.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:07.937648+00:00"
+  },
+  "CVS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 42.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Capital World Investors",
+        "State Street Corporation",
+        "Dodge & Cox Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:08.968592+00:00"
+  },
+  "CX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 19.5,
+      "top_holder_names": [
+        "Dodge & Cox Inc.",
+        "Orbis Allan Gray Ltd",
+        "FMR, LLC",
+        "Schroder Investment Management Group",
+        "PointState Capital LP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:09.146362+00:00"
+  },
+  "D": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 47.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Capital Research Global Investors",
+        "Wellington Management Group, LLP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:09.641402+00:00"
+  },
+  "DB": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 19.2,
+      "top_holder_names": [
+        "Deutsche Bank AG",
+        "Amundi",
+        "Vanguard Capital Management LLC",
+        "UBS Group AG",
+        "Fisher Asset Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:09.761212+00:00"
+  },
+  "DDOG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 42.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "FMR, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:09.967814+00:00"
+  },
+  "DECK": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 41.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "FMR, LLC",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:10.436490+00:00"
+  },
+  "DELL": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 36.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Bank of America Corporation",
+        "State Street Corporation",
+        "Invesco Ltd."
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:10.587037+00:00"
+  },
+  "DG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 42.8,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC",
+        "Pzena Investment Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:10.618607+00:00"
+  },
+  "DHR": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 32.8,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "FMR, LLC",
+        "JPMORGAN CHASE & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:10.775682+00:00"
+  },
+  "DIS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 34.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "JPMORGAN CHASE & CO",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:11.083006+00:00"
+  },
+  "DOCN": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 40.9,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "JPMORGAN CHASE & CO",
+        "Hood River Capital Management LLC",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:11.487521+00:00"
+  },
+  "DKS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 56.2,
+      "top_holder_names": [
+        "Wellington Management Group, LLP",
+        "Blackrock Inc.",
+        "FMR, LLC",
+        "Bank of America Corporation",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:11.499167+00:00"
+  },
+  "DLTR": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 54.6,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Mantle Ridge LP",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:11.574795+00:00"
+  },
+  "DT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 45.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Pictet Asset Management Holding SA",
+        "Vanguard Capital Management LLC",
+        "UBS Group AG"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:12.168073+00:00"
+  },
+  "DXCM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 43.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "BAILLIE GIFFORD & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:12.580565+00:00"
+  },
+  "DUK": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 33.6,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:12.644807+00:00"
+  },
+  "DTE": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 48.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Capital Research Global Investors",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:12.654270+00:00"
+  },
+  "EA": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 50.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Public Investment Fund",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Pentwater Capital Management Lp"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:12.666954+00:00"
+  },
+  "EBC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 44.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "FMR, LLC",
+        "T. Rowe Price Investment Management, Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:13.105228+00:00"
+  },
+  "ECL": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 33.7,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "JPMORGAN CHASE & CO",
+        "State Street Corporation",
+        "Morgan Stanley"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:13.326403+00:00"
+  },
+  "EGO": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 34.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Van Eck Associates Corporation",
+        "L1 Capital Pty Ltd",
+        "Capital Research Global Investors",
+        "Jennison Associates LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:13.402220+00:00"
+  },
+  "ED": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 39.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:13.628168+00:00"
+  },
+  "EL": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 48.5,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "FMR, LLC",
+        "Vanguard Capital Management LLC",
+        "Bank of America Corporation",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:13.730936+00:00"
+  },
+  "EIX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 48.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "AQR Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:13.735641+00:00"
+  },
+  "ELAN": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 69.4,
+      "top_holder_names": [
+        "Dodge & Cox Inc.",
+        "FMR, LLC",
+        "Blackrock Inc.",
+        "Primecap Management Company",
+        "T. Rowe Price Investment Management, Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:13.800886+00:00"
+  },
+  "EMBJ": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 22.8,
+      "top_holder_names": [
+        "GQG Partners LLC",
+        "Brandes Investment Partners L.P.",
+        "Jennison Associates LLC",
+        "Morgan Stanley",
+        "Bank of America Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:14.219853+00:00"
+  },
+  "EMN": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 48.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "Dimensional Fund Advisors LP",
+        "Capital Research Global Investors"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:14.434762+00:00"
+  },
+  "ENTG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 53.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Price (T.Rowe) Associates Inc",
+        "Capital Research Global Investors",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:14.629269+00:00"
+  },
+  "ENPH": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 50.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Alyeska Investment Group, L.p.",
+        "Vanguard Capital Management LLC",
+        "Two Sigma Investments, LP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:14.638394+00:00"
+  },
+  "EMR": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 35.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Bank of America Corporation",
+        "JPMORGAN CHASE & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:14.718403+00:00"
+  },
+  "EQPT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 31.7,
+      "top_holder_names": [
+        "Anchorage Capital Group, LLC",
+        "Insight Holdings Group, LLC",
+        "BDT Capital Partners, LLC",
+        "Price (T.Rowe) Associates Inc",
+        "Wellington Management Group, LLP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:15.338049+00:00"
+  },
+  "EQX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 30.7,
+      "top_holder_names": [
+        "Van Eck Associates Corporation",
+        "FIL LTD",
+        "L1 Capital Pty Ltd",
+        "Franklin Resources, Inc.",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:15.490770+00:00"
+  },
+  "ES": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 43.8,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "FMR, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:15.716622+00:00"
+  },
+  "ESTC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 43.0,
+      "top_holder_names": [
+        "AQR Capital Management, LLC",
+        "Blackrock Inc.",
+        "Pictet Asset Management Holding SA",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:15.782810+00:00"
+  },
+  "ETN": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 38.5,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "JPMORGAN CHASE & CO",
+        "State Street Corporation",
+        "Morgan Stanley"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:16.205208+00:00"
+  },
+  "ETSY": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 57.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Renaissance Technologies, LLC",
+        "Vanguard Portfolio Management LLC",
+        "Elliott Investment Management L.P.",
+        "Barclays Plc"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:16.323241+00:00"
+  },
+  "EW": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 42.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "Wellington Management Group, LLP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:16.331035+00:00"
+  },
+  "EXC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 47.6,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "Capital World Investors"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:16.789710+00:00"
+  },
+  "EXEL": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 51.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Renaissance Technologies, LLC",
+        "Farallon Capital Management LLC",
+        "AQR Capital Management, LLC",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:16.789894+00:00"
+  },
+  "EXPD": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 44.9,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC",
+        "First Eagle Investment Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:16.900897+00:00"
+  },
+  "FAST": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 40.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "Charles Schwab Investment Management, Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:17.352258+00:00"
+  },
+  "FER": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 0.3,
+      "top_holder_names": [
+        "TCI Fund Management Ltd",
+        "Vanguard Capital Management LLC",
+        "Amundi",
+        "Lazard Asset Management LLC",
+        "Bank of America Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:17.765499+00:00"
+  },
+  "FCX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 38.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Fisher Asset Management, LLC",
+        "State Street Corporation",
+        "Bank of America Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:17.813065+00:00"
+  },
+  "FERG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 36.6,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "Wellington Management Group, LLP",
+        "FMR, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:17.828249+00:00"
+  },
+  "FE": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 54.2,
+      "top_holder_names": [
+        "Capital World Investors",
+        "Blackrock Inc.",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC",
+        "Blackstone Inc"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:17.845287+00:00"
+  },
+  "FDX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 37.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Dodge & Cox Inc.",
+        "State Street Corporation",
+        "Primecap Management Company"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:17.845311+00:00"
+  },
+  "FHN": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 45.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Bank Of New York Mellon Corporation",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:18.401195+00:00"
+  },
+  "FLEX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 54.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Primecap Management Company",
+        "Janus Henderson Group PLC",
+        "Wellington Management Group, LLP",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:18.658908+00:00"
+  },
+  "FITB": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 46.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "Price (T.Rowe) Associates Inc",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:18.901869+00:00"
+  },
+  "FLG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 62.7,
+      "top_holder_names": [
+        "Liberty 77 Capital L.P.                          ",
+        "Blackrock Inc.",
+        "Reverence Capital Partners, LP",
+        "Hudson Bay Capital Management Lp",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:18.929808+00:00"
+  },
+  "FNB": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 51.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "FMR, LLC",
+        "Dimensional Fund Advisors LP",
+        "Vanguard Portfolio Management LLC",
+        "Fuller & Thaler Asset Management Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:19.452139+00:00"
+  },
+  "FLS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 41.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "D1 Capital Partners, LP",
+        "Vanguard Capital Management LLC",
+        "UBS Group AG"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:19.463519+00:00"
+  },
+  "FLR": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 46.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:19.473486+00:00"
+  },
+  "FORM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 51.8,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Earnest Partners LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:19.918123+00:00"
+  },
+  "FRMI": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 5.7,
+      "top_holder_names": [
+        "UBS Group AG",
+        "Citadel Advisors Llc",
+        "Goldman Sachs Group Inc",
+        "Barclays Plc",
+        "T. Rowe Price Investment Management, Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:20.273782+00:00"
+  },
+  "FPS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 19.0,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Janus Henderson Group PLC",
+        "Invesco Ltd.",
+        "Blackrock Inc.",
+        "BAMCO Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:20.273824+00:00"
+  },
+  "FROG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 33.1,
+      "top_holder_names": [
+        "Vanguard Portfolio Management LLC",
+        "Whale Rock Capital Management LLC",
+        "Optimus Prime Fund Management Co., Ltd.",
+        "BNP Paribas Asset Management Holding S.A.",
+        "Wasatch Advisors LP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:20.519208+00:00"
+  },
+  "FTV": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 65.0,
+      "top_holder_names": [
+        "Dodge & Cox Inc.",
+        "Blackrock Inc.",
+        "Price (T.Rowe) Associates Inc",
+        "Viking Global Investors, L.P.",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:21.019196+00:00"
+  },
+  "FWONK": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 38.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Janus Henderson Group PLC",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "Principal Financial Group, Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:21.066037+00:00"
+  },
+  "FULT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 51.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Dimensional Fund Advisors LP",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:21.131090+00:00"
+  },
+  "FTNT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 31.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:21.146335+00:00"
+  },
+  "GFS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 94.6,
+      "top_holder_names": [
+        "Mubadala Investment Co PJSC",
+        "FMR, LLC",
+        "JPMORGAN CHASE & CO",
+        "Marshall Wace LLP",
+        "Slate Path Capital, LP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:22.063006+00:00"
+  },
+  "GEV": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 37.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "FMR, LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "JPMORGAN CHASE & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:22.075146+00:00"
+  },
+  "GD": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 43.9,
+      "top_holder_names": [
+        "Longview Asset Management, LLC",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Newport Trust Company, LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:22.090121+00:00"
+  },
+  "GLBE": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 32.1,
+      "top_holder_names": [
+        "Dragoneer Investment Group, LLC",
+        "Capital World Investors",
+        "DARLINGTON PARTNERS CAPITAL MANAGEMENT, LP",
+        "Wasatch Advisors LP",
+        "Price (T.Rowe) Associates Inc"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:22.805527+00:00"
+  },
+  "GLW": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 34.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC",
+        "FMR, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:23.127956+00:00"
+  },
+  "GM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 38.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC",
+        "Franklin Resources, Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:23.192410+00:00"
+  },
+  "GPC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 39.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC",
+        "Harris Associates L.P."
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:23.759294+00:00"
+  },
+  "GTES": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 50.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "FMR, LLC",
+        "Vanguard Portfolio Management LLC",
+        "Allspring Global Investments Holdings, LLC",
+        "Dimensional Fund Advisors LP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:24.199038+00:00"
+  },
+  "HBAN": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 45.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Wellington Management Group, LLP",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:25.227702+00:00"
+  },
+  "HBM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 37.0,
+      "top_holder_names": [
+        "FIL LTD",
+        "GMT Capital Corp",
+        "Mirae Asset Global ETFs Holdings Ltd.",
+        "Hancock Prospecting Pty Ltd",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:25.238012+00:00"
+  },
+  "HL": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 45.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "State Street Corporation",
+        "Van Eck Associates Corporation",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:25.749123+00:00"
+  },
+  "HIMS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 39.7,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "Morgan Stanley",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:25.763420+00:00"
+  },
+  "HLT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 44.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "FMR, LLC",
+        "JPMORGAN CHASE & CO",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:25.790257+00:00"
+  },
+  "HMC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 2.2,
+      "top_holder_names": [
+        "Fisher Asset Management, LLC",
+        "Mondrian Investment Partners Ltd",
+        "Donald Smith & Co., Inc.",
+        "Morgan Stanley",
+        "Bank of America Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:25.940171+00:00"
+  },
+  "HMY": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 10.8,
+      "top_holder_names": [
+        "Van Eck Associates Corporation",
+        "Blackrock Inc.",
+        "AQR Capital Management, LLC",
+        "Dimensional Fund Advisors LP",
+        "Acadian Asset Management. LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:25.982785+00:00"
+  },
+  "HNGE": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 50.0,
+      "top_holder_names": [
+        "Insight Holdings Group, LLC",
+        "11.2 Capital Management, LLC",
+        "Deer Management Co. LLC",
+        "BIT Capital GmbH",
+        "RTW Investments LP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:26.023247+00:00"
+  },
+  "HOMB": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 42.5,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC",
+        "T. Rowe Price Investment Management, Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:26.159466+00:00"
+  },
+  "HON": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 32.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Morgan Stanley",
+        "Wellington Management Group, LLP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:26.746094+00:00"
+  },
+  "HPE": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 49.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Bank of America Corporation",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:26.801795+00:00"
+  },
+  "HRL": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 25.6,
+      "top_holder_names": [
+        "State Street Corporation",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Invesco Ltd.",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:27.224210+00:00"
+  },
+  "HSIC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 55.3,
+      "top_holder_names": [
+        "Kohlberg Kravis Roberts & Co. L.P.",
+        "Blackrock Inc.",
+        "Artisan Partners Limited Partnership",
+        "Vanguard Capital Management LLC",
+        "FMR, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:27.252770+00:00"
+  },
+  "HST": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 51.8,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Cohen & Steers Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:27.437854+00:00"
+  },
+  "HUM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 50.6,
+      "top_holder_names": [
+        "Dodge & Cox Inc.",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "Pzena Investment Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:27.856426+00:00"
+  },
+  "IAG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 32.2,
+      "top_holder_names": [
+        "Van Eck Associates Corporation",
+        "FMR, LLC",
+        "FIL LTD",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:27.922503+00:00"
+  },
+  "ICLR": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 52.0,
+      "top_holder_names": [
+        "Artisan Partners Limited Partnership",
+        "Wellington Management Group, LLP",
+        "Harris Associates L.P.",
+        "FMR, LLC",
+        "Invesco Ltd."
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:28.449492+00:00"
+  },
+  "INDV": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 53.9,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Oaktree Capital Management LP",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:28.920645+00:00"
+  },
+  "IFF": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 60.2,
+      "top_holder_names": [
+        "Dodge & Cox Inc.",
+        "Freemont Capital Pte Ltd.",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:28.934931+00:00"
+  },
+  "ILMN": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 49.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Capital World Investors",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:28.945757+00:00"
+  },
+  "INGM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 93.3,
+      "top_holder_names": [
+        "Platinum Equity Advisors, LLC/DE",
+        "Victory Capital Management Inc.",
+        "Capital World Investors",
+        "Lind Value II ApS",
+        "American Century Companies Inc"
+      ]
+    },
+    "cached_at": "2026-06-21T13:55:29.068530+00:00"
+  },
+  "INTC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 33.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Nvidia Corp                          ",
+        "State Street Corporation",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:56:58.790536+00:00"
+  },
+  "JCI": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 45.7,
+      "top_holder_names": [
+        "Dodge & Cox Inc.",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:56:59.707923+00:00"
+  },
+  "JPM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 31.7,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Morgan Stanley",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:56:59.745680+00:00"
+  },
+  "JHX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 28.1,
+      "top_holder_names": [
+        "Wellington Management Group, LLP",
+        "FMR, LLC",
+        "D1 Capital Partners, LP",
+        "Massachusetts Financial Services Co.",
+        "JPMORGAN CHASE & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T13:56:59.764537+00:00"
+  },
+  "JHG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 52.7,
+      "top_holder_names": [
+        "Trian Fund Management, LP",
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:56:59.770537+00:00"
+  },
+  "KDP": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 57.5,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Blackrock Inc.",
+        "Capital World Investors",
+        "Harris Associates L.P.",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:00.132559+00:00"
+  },
+  "JNJ": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 34.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC",
+        "JPMORGAN CHASE & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:00.242764+00:00"
+  },
+  "KEYS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 45.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Price (T.Rowe) Associates Inc",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:00.591529+00:00"
+  },
+  "KEY": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 49.9,
+      "top_holder_names": [
+        "Bank of Nova Scotia",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:00.636189+00:00"
+  },
+  "KGC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 26.3,
+      "top_holder_names": [
+        "Van Eck Associates Corporation",
+        "Boston Partners",
+        "Vanguard Capital Management LLC",
+        "Royal Bank of Canada",
+        "FIL LTD"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:00.641809+00:00"
+  },
+  "KKR": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 28.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Capital International Investors",
+        "State Street Corporation",
+        "Principal Financial Group, Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:01.114752+00:00"
+  },
+  "KLAC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 386.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "FMR, LLC",
+        "Capital World Investors"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:01.297660+00:00"
+  },
+  "KLAR": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 34.5,
+      "top_holder_names": [
+        "Sc Us (ttgp), Ltd.",
+        "Commonwealth Bank of Australia",
+        "Softbank Group Corporation",
+        "Silver Lake Group, LLC",
+        "Dragoneer Investment Group, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:01.472858+00:00"
+  },
+  "KRG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 65.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Cohen & Steers Inc.",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:01.972471+00:00"
+  },
+  "JOBY": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 38.1,
+      "top_holder_names": [
+        "TOYOTA MOTOR CORP/",
+        "BAILLIE GIFFORD & CO",
+        "Blackrock Inc.",
+        "Capricorn Investment Group LLC",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:02.225354+00:00"
+  },
+  "KVUE": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 44.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "FMR, LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:02.689496+00:00"
+  },
+  "LEVI": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 39.3,
+      "top_holder_names": [
+        "JPMORGAN CHASE & CO",
+        "Bank Of New York Mellon Corporation",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "Goldman Sachs Group Inc"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:03.038983+00:00"
+  },
+  "LEN": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 47.5,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Eagle Capital Management LLC",
+        "Greenhaven Associates, Inc.",
+        "Berkshire Hathaway, Inc"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:03.201546+00:00"
+  },
+  "LIN": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 32.9,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Capital Research Global Investors",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:03.447737+00:00"
+  },
+  "LMND": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 33.3,
+      "top_holder_names": [
+        "JPMORGAN CHASE & CO",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "BAILLIE GIFFORD & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:04.210213+00:00"
+  },
+  "LLY": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 43.2,
+      "top_holder_names": [
+        "Lilly Endowment, Inc",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "PNC Financial Services Group, Inc.",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:04.233191+00:00"
+  },
+  "LNT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 52.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "Janus Henderson Group PLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:04.303799+00:00"
+  },
+  "LNC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 45.7,
+      "top_holder_names": [
+        "Bain Capital Prairie, LLC",
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "Dimensional Fund Advisors LP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:04.420664+00:00"
+  },
+  "LPX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 49.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Berkshire Hathaway, Inc",
+        "Price (T.Rowe) Associates Inc",
+        "59 North Capital Management, LP",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:04.835258+00:00"
+  },
+  "LOW": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 40.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "JPMORGAN CHASE & CO",
+        "Vanguard Capital Management LLC",
+        "FMR, LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:04.860229+00:00"
+  },
+  "LSCC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 61.5,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "T. Rowe Price Investment Management, Inc.",
+        "Price (T.Rowe) Associates Inc",
+        "Vanguard Portfolio Management LLC",
+        "Invesco Ltd."
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:05.066144+00:00"
+  },
+  "LTH": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 49.5,
+      "top_holder_names": [
+        "Leonard Green & Partners, L.P.",
+        "Blackrock Inc.",
+        "TPG GP A, LLC",
+        "Vanguard Portfolio Management LLC",
+        "Dimensional Fund Advisors LP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:05.103692+00:00"
+  },
+  "LRCX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 38.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:05.254772+00:00"
+  },
+  "LW": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 50.6,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Price (T.Rowe) Associates Inc",
+        "Vanguard Portfolio Management LLC",
+        "JPMORGAN CHASE & CO",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:05.652120+00:00"
+  },
+  "M": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 48.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Dimensional Fund Advisors LP",
+        "Vanguard Portfolio Management LLC",
+        "American Century Companies Inc",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:06.331099+00:00"
+  },
+  "MARA": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 42.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:06.384452+00:00"
+  },
+  "LYFT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 55.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Ameriprise Financial, Inc.",
+        "Millennium Management Llc",
+        "Vanguard Portfolio Management LLC",
+        "FMR, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:06.408576+00:00"
+  },
+  "MCD": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 36.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "JPMORGAN CHASE & CO",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:06.943714+00:00"
+  },
+  "MCHP": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 42.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "Boston Partners"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:06.991302+00:00"
+  },
+  "MCO": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 49.7,
+      "top_holder_names": [
+        "Berkshire Hathaway, Inc",
+        "TCI Fund Management Ltd",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:07.376090+00:00"
+  },
+  "MDT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 37.5,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "JPMORGAN CHASE & CO",
+        "Capital Research Global Investors"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:07.477891+00:00"
+  },
+  "MDU": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 50.8,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Barrow, Hanley Mewhinney & Strauss, LLC",
+        "Vanguard Portfolio Management LLC",
+        "Dimensional Fund Advisors LP",
+        "Earnest Partners LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:07.773338+00:00"
+  },
+  "MFC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 23.7,
+      "top_holder_names": [
+        "Royal Bank of Canada",
+        "Bank of Montreal /CAN/",
+        "Vanguard Capital Management LLC",
+        "TD Asset Management, Inc",
+        "Mackenzie Financial Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:07.945196+00:00"
+  },
+  "MGA": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 30.2,
+      "top_holder_names": [
+        "Pzena Investment Management LLC",
+        "Royal Bank of Canada",
+        "Hotchkis & Wiley Capital Management, LLC",
+        "Vanguard Capital Management LLC",
+        "Bank of Montreal /CAN/"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:07.960626+00:00"
+  },
+  "MET": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 40.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Dodge & Cox Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:08.016504+00:00"
+  },
+  "MIR": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 50.5,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "T. Rowe Price Investment Management, Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:08.505583+00:00"
+  },
+  "MMYT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 51.7,
+      "top_holder_names": [
+        "BAILLIE GIFFORD & CO",
+        "Schroder Investment Management Group",
+        "JPMORGAN CHASE & CO",
+        "Royal Bank of Canada",
+        "Wellington Management Group, LLP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:08.914973+00:00"
+  },
+  "MNST": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 29.8,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Alliancebernstein L.P.",
+        "JPMORGAN CHASE & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:09.035421+00:00"
+  },
+  "MKSI": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 42.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Invesco Ltd.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "JPMORGAN CHASE & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:09.047798+00:00"
+  },
+  "MOD": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 35.6,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "Price (T.Rowe) Associates Inc",
+        "Capital Research Global Investors"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:09.114533+00:00"
+  },
+  "MRP": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 50.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Brave Warrior Advisors, LLC",
+        "Vanguard Capital Management LLC",
+        "FMR, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:09.804846+00:00"
+  },
+  "MRVL": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 40.9,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:10.079092+00:00"
+  },
+  "MRNA": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 49.0,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "BAILLIE GIFFORD & CO",
+        "Capital World Investors"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:10.090878+00:00"
+  },
+  "MTB": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 52.9,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Blackrock Inc.",
+        "Wellington Management Group, LLP",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:10.848163+00:00"
+  },
+  "MTSI": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 53.7,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Blackrock Inc.",
+        "T. Rowe Price Investment Management, Inc.",
+        "Invesco Ltd.",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:11.110964+00:00"
+  },
+  "MTZ": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 33.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Peconic Partners, LLC",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "Hill City Capital, Lp"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:11.176143+00:00"
+  },
+  "MU": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 36.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Capital World Investors",
+        "FMR, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:57:11.378019+00:00"
+  },
+  "MXL": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 82.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "FMR, LLC",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:40.721609+00:00"
+  },
+  "NTRA": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 45.5,
+      "top_holder_names": [
+        "JPMORGAN CHASE & CO",
+        "Price (T.Rowe) Associates Inc",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:41.878131+00:00"
+  },
+  "NTRS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 44.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "FMR, LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:42.472737+00:00"
+  },
+  "NVT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 34.9,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "Millennium Management Llc"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:42.883363+00:00"
+  },
+  "NVTS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 28.6,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Capricorn Investment Group LLC",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:43.150960+00:00"
+  },
+  "NXE": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 28.3,
+      "top_holder_names": [
+        "Mirae Asset Global ETFs Holdings Ltd.",
+        "L1 Capital Pty Ltd",
+        "Van Eck Associates Corporation",
+        "Alps Advisors Inc.",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:43.343814+00:00"
+  },
+  "NBIS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 26.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Fred Alger Management, LLC",
+        "Orbis Allan Gray Ltd",
+        "Value Aligned Research Advisors, LLC                          ",
+        "Altshuler Shaham Ltd"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:43.529899+00:00"
+  },
+  "OC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 43.8,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Dimensional Fund Advisors LP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:44.128382+00:00"
+  },
+  "NXT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 57.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "FMR, LLC",
+        "Primecap Management Company",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:44.349801+00:00"
+  },
+  "NTAP": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 45.5,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Primecap Management Company"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:44.660014+00:00"
+  },
+  "OKTA": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 43.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "FMR, LLC",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:45.024687+00:00"
+  },
+  "ON": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 55.4,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:45.393682+00:00"
+  },
+  "ONB": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 58.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Old National Bancorp/IN/",
+        "FMR, LLC",
+        "Vanguard Portfolio Management LLC",
+        "Dimensional Fund Advisors LP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:45.484875+00:00"
+  },
+  "ONON": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 36.3,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Morgan Stanley",
+        "Platinum Paramount Investment Ltd.",
+        "BAMCO Inc.",
+        "Sinvest Investments II Ltd."
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:45.572508+00:00"
+  },
+  "ONTO": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 36.6,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:45.580957+00:00"
+  },
+  "ORKA": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 52.0,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Venrock Adviser, LLC",
+        "Fairmount Funds Management LLC",
+        "Blackrock Inc.",
+        "Viking Global Investors, L.P."
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:46.032944+00:00"
+  },
+  "OTIS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 40.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "Morgan Stanley"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:46.338810+00:00"
+  },
+  "OZK": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 47.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Dimensional Fund Advisors LP",
+        "State Street Corporation",
+        "Wasatch Advisors LP",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:46.981979+00:00"
+  },
+  "PAAS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 20.4,
+      "top_holder_names": [
+        "Van Eck Associates Corporation",
+        "Mirae Asset Global ETFs Holdings Ltd.",
+        "Vanguard Capital Management LLC",
+        "Blackrock Inc.",
+        "Jane Street Group, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:47.021310+00:00"
+  },
+  "P": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 46.5,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:47.082086+00:00"
+  },
+  "PAYX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 40.4,
+      "top_holder_names": [
+        "Capital International Investors",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:48.051185+00:00"
+  },
+  "PCG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 38.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "FMR, LLC",
+        "Massachusetts Financial Services Co."
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:48.118547+00:00"
+  },
+  "PCAR": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 36.8,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "Wellington Management Group, LLP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:48.139106+00:00"
+  },
+  "PCVX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 65.8,
+      "top_holder_names": [
+        "Janus Henderson Group PLC",
+        "FMR, LLC",
+        "T. Rowe Price Investment Management, Inc.",
+        "RA Capital Management, L.P.",
+        "Blackrock Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:48.158451+00:00"
+  },
+  "PEG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 40.6,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "Bank of America Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:48.650912+00:00"
+  },
+  "PFGC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 56.9,
+      "top_holder_names": [
+        "Capital World Investors",
+        "Blackrock Inc.",
+        "FMR, LLC",
+        "JPMORGAN CHASE & CO",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:48.908992+00:00"
+  },
+  "PFG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 37.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Nippon Life Insurance Company",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:49.120843+00:00"
+  },
+  "PG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 32.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Geode Capital Management, LLC",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:49.187027+00:00"
+  },
+  "PHG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 21.7,
+      "top_holder_names": [
+        "Exor N.V.",
+        "Mondrian Investment Partners Ltd",
+        "Fiduciary Management, Inc.",
+        "Dimensional Fund Advisors LP",
+        "FMR, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:49.354334+00:00"
+  },
+  "PNC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 35.8,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "FMR, LLC",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:50.220374+00:00"
+  },
+  "POR": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 49.7,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "ClearBridge Investments, LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:50.469868+00:00"
+  },
+  "PNW": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 59.6,
+      "top_holder_names": [
+        "Capital Research Global Investors",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Barrow, Hanley Mewhinney & Strauss, LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:50.642348+00:00"
+  },
+  "POWI": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 61.9,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Neuberger Berman Group, LLC",
+        "Wellington Management Group, LLP",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:50.714960+00:00"
+  },
+  "PRIM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 51.9,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Fuller & Thaler Asset Management Inc.",
+        "First Trust Advisors LP",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:51.223686+00:00"
+  },
+  "PPG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 48.5,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "Wellington Management Group, LLP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:51.233622+00:00"
+  },
+  "PRM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 49.2,
+      "top_holder_names": [
+        "Windacre Partnership LLC",
+        "Principal Financial Group, Inc.",
+        "Blackrock Inc.",
+        "FMR, LLC",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:51.257213+00:00"
+  },
+  "PRU": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 35.8,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:51.689811+00:00"
+  },
+  "PRMB": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 70.1,
+      "top_holder_names": [
+        "One Rock Capital Partners, LLC",
+        "FMR, LLC",
+        "Sachem Head Capital Management, LP",
+        "Samlyn Capital, LLC",
+        "Ameriprise Financial, Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:51.721000+00:00"
+  },
+  "PWR": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 41.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "JPMORGAN CHASE & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:52.550041+00:00"
+  },
+  "Q": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 35.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:52.560144+00:00"
+  },
+  "QBTS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 30.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "UBS Group AG",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:52.560169+00:00"
+  },
+  "QGEN": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 28.8,
+      "top_holder_names": [
+        "Wellington Management Group, LLP",
+        "Price (T.Rowe) Associates Inc",
+        "Vanguard Capital Management LLC",
+        "Deutsche Bank AG",
+        "Blackrock Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:52.762074+00:00"
+  },
+  "QCOM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 36.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC",
+        "Charles Schwab Investment Management, Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:52.830893+00:00"
+  },
+  "QS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 23.9,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Shaw D.E. & Co., Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Two Sigma Investments, LP"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:53.100635+00:00"
+  },
+  "QXO": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 50.9,
+      "top_holder_names": [
+        "Morgan Stanley",
+        "Orbis Allan Gray Ltd",
+        "Invesco Ltd.",
+        "Affinity Partners Gp LP                          ",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:53.307795+00:00"
+  },
+  "RBA": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 45.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Massachusetts Financial Services Co.",
+        "Edgepoint Investment Group Inc.",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:53.358465+00:00"
+  },
+  "RAL": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 53.9,
+      "top_holder_names": [
+        "Dodge & Cox Inc.",
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "Millennium Management Llc"
+      ]
+    },
+    "cached_at": "2026-06-21T13:58:53.367471+00:00"
+  },
+  "RBRK": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 32.6,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "FMR, LLC",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "First Trust Advisors LP"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:23.089795+00:00"
+  },
+  "RCI": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 33.0,
+      "top_holder_names": [
+        "Royal Bank of Canada",
+        "FIL LTD",
+        "Bank of Montreal /CAN/",
+        "CIBC World Market, Inc.",
+        "National Bank of Canada/FI/"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:23.097981+00:00"
+  },
+  "RDDT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 35.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "BAILLIE GIFFORD & CO",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "Alliancebernstein L.P."
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:23.353186+00:00"
+  },
+  "RJF": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 41.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Wellington Management Group, LLP",
+        "Primecap Management Company",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:23.937783+00:00"
+  },
+  "RIOT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 39.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Starboard Value LP",
+        "FMR, LLC",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:24.423130+00:00"
+  },
+  "RMBS": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 48.8,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Invesco Ltd.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:24.577826+00:00"
+  },
+  "ROST": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 39.6,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "JPMORGAN CHASE & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:25.514737+00:00"
+  },
+  "RTX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 39.5,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC",
+        "Capital Research Global Investors",
+        "JPMORGAN CHASE & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:26.268050+00:00"
+  },
+  "RY": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 22.6,
+      "top_holder_names": [
+        "Royal Bank of Canada",
+        "Bank of Montreal /CAN/",
+        "Vanguard Capital Management LLC",
+        "TD Asset Management, Inc",
+        "FIL LTD"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:26.320750+00:00"
+  },
+  "RVTY": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 71.2,
+      "top_holder_names": [
+        "T. Rowe Price Investment Management, Inc.",
+        "Price (T.Rowe) Associates Inc",
+        "Edgepoint Investment Group Inc.",
+        "Janus Henderson Group PLC",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:26.507603+00:00"
+  },
+  "RYN": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 49.8,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Cohen & Steers Inc.",
+        "Price (T.Rowe) Associates Inc",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:26.751819+00:00"
+  },
+  "SARO": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 67.4,
+      "top_holder_names": [
+        "Carlyle Group Inc.",
+        "Price (T.Rowe) Associates Inc",
+        "Blackrock Inc.",
+        "Allspring Global Investments Holdings, LLC",
+        "T. Rowe Price Investment Management, Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:27.560166+00:00"
+  },
+  "SBSW": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 10.4,
+      "top_holder_names": [
+        "Lingotto Investment Management LLP",
+        "Arrowstreet Capital, Limited Partnership",
+        "Acadian Asset Management. LLC",
+        "Morgan Stanley",
+        "Two Sigma Investments, LP"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:27.677893+00:00"
+  },
+  "SCHW": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 37.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Dodge & Cox Inc.",
+        "JPMORGAN CHASE & CO",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:28.156096+00:00"
+  },
+  "RIVN": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 33.0,
+      "top_holder_names": [
+        "Amazon.com, Inc.",
+        "Blackrock Inc.",
+        "BAILLIE GIFFORD & CO",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:28.397551+00:00"
+  },
+  "SF": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 42.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "AQR Capital Management, LLC",
+        "FMR, LLC",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:28.408949+00:00"
+  },
+  "SJM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 42.3,
+      "top_holder_names": [
+        "Vanguard Capital Management LLC",
+        "Blackrock Inc.",
+        "State Street Corporation",
+        "UBS Group AG",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:29.428042+00:00"
+  },
+  "SMTC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 54.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Ameriprise Financial, Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Capital Research Global Investors",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:29.781048+00:00"
+  },
+  "SNDK": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 37.9,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:29.906279+00:00"
+  },
+  "SNDR": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 41.7,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Blueprint Financial Advisors LLC",
+        "Blueprint Investment Partners, LLC",
+        "Dimensional Fund Advisors LP",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:30.127721+00:00"
+  },
+  "SNOW": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 31.7,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "JPMORGAN CHASE & CO",
+        "FMR, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:30.342905+00:00"
+  },
+  "SON": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 45.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Fuller & Thaler Asset Management Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:30.830118+00:00"
+  },
+  "SRAD": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 68.8,
+      "top_holder_names": [
+        "Canada Pension Plan Investment Board",
+        "Technology Crossover Management IX, Ltd.",
+        "Radcliff Management Llc",
+        "T. Rowe Price Investment Management, Inc.",
+        "Greenhouse Funds, LLLP"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:31.299904+00:00"
+  },
+  "SRRK": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 63.9,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Siren, L.L.C.",
+        "Redmile Group, LLC",
+        "Blackrock Inc.",
+        "Samsara BioCapital, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:31.316048+00:00"
+  },
+  "SSRM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 32.9,
+      "top_holder_names": [
+        "Van Eck Associates Corporation",
+        "Blackrock Inc.",
+        "Mirae Asset Global ETFs Holdings Ltd.",
+        "Arrowstreet Capital, Limited Partnership",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:31.588778+00:00"
+  },
+  "ST": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 53.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Janus Henderson Group PLC",
+        "Price (T.Rowe) Associates Inc",
+        "Vanguard Portfolio Management LLC",
+        "Artisan Partners Limited Partnership"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:31.800404+00:00"
+  },
+  "STEP": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 61.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Millennium Management Llc",
+        "Wellington Management Group, LLP",
+        "Price (T.Rowe) Associates Inc",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:31.989230+00:00"
+  },
+  "STUB": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 54.6,
+      "top_holder_names": [
+        "Madrone Advisors, LLC                          ",
+        "Westcap Management, Llc",
+        "Deer Management Co. LLC",
+        "PointState Capital LP",
+        "Capital World Investors"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:32.340192+00:00"
+  },
+  "STT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 43.7,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "FMR, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:32.452699+00:00"
+  },
+  "SUNB": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 40.3,
+      "top_holder_names": [
+        "Dodge & Cox Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "Abrams Bison Investments, LLC",
+        "Harris Associates L.P."
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:32.791337+00:00"
+  },
+  "SWK": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 48.7,
+      "top_holder_names": [
+        "Capital Research Global Investors",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Price (T.Rowe) Associates Inc",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:33.462796+00:00"
+  },
+  "SYRE": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 49.9,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Blackrock Inc.",
+        "RTW Investments LP",
+        "Fairmount Funds Management LLC",
+        "Perceptive Advisors Llc"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:33.509823+00:00"
+  },
+  "TEL": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 42.8,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "Dodge & Cox Inc.",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:34.395184+00:00"
+  },
+  "TECK": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 24.7,
+      "top_holder_names": [
+        "Principal Financial Group, Inc.",
+        "Royal Bank of Canada",
+        "UBS Group AG",
+        "Vanguard Capital Management LLC",
+        "Davis Selected Advisers"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:34.395697+00:00"
+  },
+  "TEX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 54.5,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "Dimensional Fund Advisors LP"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:34.621695+00:00"
+  },
+  "TER": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 35.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:34.686593+00:00"
+  },
+  "TGTX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 41.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "Soleus Capital Management, L.P."
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:34.891027+00:00"
+  },
+  "TGT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 42.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "FMR, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:34.961199+00:00"
+  },
+  "TFC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 38.7,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Capital International Investors",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Bank of America Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:34.961235+00:00"
+  },
+  "TJX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 35.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Geode Capital Management, LLC",
+        "FMR, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:35.484274+00:00"
+  },
+  "TKO": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 51.2,
+      "top_holder_names": [
+        "State Street Corporation",
+        "Blackrock Inc.",
+        "Morgan Stanley",
+        "Vanguard Capital Management LLC",
+        "Ninety One UK Ltd"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:35.585850+00:00"
+  },
+  "TMHC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 50.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Dimensional Fund Advisors LP",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:00:35.915115+00:00"
+  },
+  "TROW": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 44.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "Goldman Sachs Group Inc"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:05.859520+00:00"
+  },
+  "TTMI": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 48.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Invesco Ltd.",
+        "Vanguard Capital Management LLC",
+        "Dimensional Fund Advisors LP"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:06.684578+00:00"
+  },
+  "TTWO": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 46.9,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "State Street Corporation",
+        "Saudi Electronic Games Holding Co",
+        "Vanguard Capital Management LLC",
+        "JPMORGAN CHASE & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:06.869419+00:00"
+  },
+  "TWST": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 67.3,
+      "top_holder_names": [
+        "Artisan Partners Limited Partnership",
+        "ARK Investment Management, LLC",
+        "Blackrock Inc.",
+        "Edgepoint Investment Group Inc.",
+        "William Blair Investment Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:07.276236+00:00"
+  },
+  "TXN": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 38.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "JPMORGAN CHASE & CO",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:07.659557+00:00"
+  },
+  "UCTT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 48.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Frontier Capital Management Company LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:08.169575+00:00"
+  },
+  "UEC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 54.9,
+      "top_holder_names": [
+        "Price (T.Rowe) Associates Inc",
+        "Blackrock Inc.",
+        "Mirae Asset Global ETFs Holdings Ltd.",
+        "State Street Corporation",
+        "Van Eck Associates Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:08.350306+00:00"
+  },
+  "TRV": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 42.6,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC",
+        "FMR, LLC",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:08.418127+00:00"
+  },
+  "UNM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 39.7,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "FMR, LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:08.867521+00:00"
+  },
+  "USB": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 37.7,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "JPMORGAN CHASE & CO",
+        "FMR, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:09.337348+00:00"
+  },
+  "USFD": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 51.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Boston Partners",
+        "Wellington Management Group, LLP",
+        "FMR, LLC",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:09.348121+00:00"
+  },
+  "VECO": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 66.9,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "FMR, LLC",
+        "Vanguard Portfolio Management LLC",
+        "Neuberger Berman Group, LLC",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:09.747087+00:00"
+  },
+  "VFC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 64.4,
+      "top_holder_names": [
+        "PNC Financial Services Group, Inc.",
+        "Dodge & Cox Inc.",
+        "Blackrock Inc.",
+        "M&G Plc",
+        "Northern Trust Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:09.862247+00:00"
+  },
+  "VLY": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 69.8,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Dimensional Fund Advisors LP",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:10.573942+00:00"
+  },
+  "VOYA": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 58.5,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Price (T.Rowe) Associates Inc",
+        "Wellington Management Group, LLP",
+        "Vanguard Portfolio Management LLC",
+        "Bank Of New York Mellon Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:10.636992+00:00"
+  },
+  "VNO": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 52.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Franklin Resources, Inc.",
+        "Price (T.Rowe) Associates Inc",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:10.892644+00:00"
+  },
+  "VRT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 37.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:11.125584+00:00"
+  },
+  "VSH": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 51.7,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Dimensional Fund Advisors LP",
+        "Vanguard Capital Management LLC",
+        "Woodline Partners LP"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:11.402666+00:00"
+  },
+  "VRTX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 49.7,
+      "top_holder_names": [
+        "Capital World Investors",
+        "Blackrock Inc.",
+        "Capital Research Global Investors",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:11.427677+00:00"
+  },
+  "WAL": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 47.7,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Price (T.Rowe) Associates Inc",
+        "Invesco Ltd.",
+        "Vanguard Portfolio Management LLC",
+        "Wellington Management Group, LLP"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:12.194926+00:00"
+  },
+  "WDC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 51.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "FMR, LLC",
+        "Vanguard Capital Management LLC",
+        "JPMORGAN CHASE & CO",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:12.946154+00:00"
+  },
+  "WEC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 41.4,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "State Street Corporation",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "Geode Capital Management, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:12.990363+00:00"
+  },
+  "WFC": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 39.7,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "FMR, LLC",
+        "State Street Corporation",
+        "JPMORGAN CHASE & CO"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:13.132840+00:00"
+  },
+  "WMB": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 39.6,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Bank of America Corporation",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:13.561732+00:00"
+  },
+  "WSE": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 0.2,
+      "top_holder_names": [
+        "Goldman Sachs ETF TRT-Goldman Sachs ActiveBeta(R) Intl Eqy. ETF",
+        "RBB Fund, Inc.-Aquarius International Fund",
+        "Fidelity Commonwealth Trust-Fidelity Nasdaq Composite Index ETF",
+        "American Century ETF Trust-Avantis International Equity ETF",
+        "Franklin Templeton ETF Trust-Franklin FTSE United Kingdom ETF"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:14.022726+00:00"
+  },
+  "WPM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 31.0,
+      "top_holder_names": [
+        "Capital World Investors",
+        "FMR, LLC",
+        "Van Eck Associates Corporation",
+        "First Eagle Investment Management, LLC",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:14.262287+00:00"
+  },
+  "WULF": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 27.2,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Lone Pine Capital Llc",
+        "Vanguard Capital Management LLC",
+        "Marshall Wace LLP"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:14.466546+00:00"
+  },
+  "XE": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 2.4,
+      "top_holder_names": [
+        "ARK ETF Trust-ARK Innovation ETF",
+        "Manager Directed Portfolios-Hood River Small-Cap Growth Fund",
+        "ARK ETF Trust-ARK Autonomous Technology & Robotics ETF",
+        "ARK ETF Trust-ARK Space & Defense Innovation ETF",
+        "Fidelity Contrafund-Fidelity Advisor New Insights Fund"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:14.574427+00:00"
+  },
+  "WYNN": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 39.7,
+      "top_holder_names": [
+        "Capital World Investors",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "FMR, LLC",
+        "Barrow, Hanley Mewhinney & Strauss, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:14.582247+00:00"
+  },
+  "WY": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 50.5,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "First Eagle Investment Management, LLC",
+        "Wellington Management Group, LLP"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:14.589567+00:00"
+  },
+  "XYZ": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 44.3,
+      "top_holder_names": [
+        "Price (T.Rowe) Associates Inc",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:15.574423+00:00"
+  },
+  "YUM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 48.6,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "JPMORGAN CHASE & CO",
+        "Vanguard Capital Management LLC",
+        "Capital International Investors",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:15.762728+00:00"
+  },
+  "ZBH": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 56.9,
+      "top_holder_names": [
+        "Dodge & Cox Inc.",
+        "Blackrock Inc.",
+        "Harris Associates L.P.",
+        "Vanguard Capital Management LLC",
+        "Capital International Investors"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:16.128350+00:00"
+  },
+  "ZION": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 40.9,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Dimensional Fund Advisors LP",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T14:02:16.558891+00:00"
+  },
+  "IREN": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 22.0,
+      "top_holder_names": [
+        "Defiance Etfs, LLC",
+        "Situational Awareness Partners LP",
+        "Situational Awareness LP                          ",
+        "Citigroup Inc.",
+        "BIT Capital GmbH"
+      ]
+    },
+    "cached_at": "2026-06-21T14:03:21.691555+00:00"
+  },
+  "IR": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 56.9,
+      "top_holder_names": [
+        "Capital World Investors",
+        "Capital Research Global Investors",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "FMR, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:03:21.768821+00:00"
+  },
+  "ITW": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 47.1,
+      "top_holder_names": [
+        "Briar Hall Management LLC",
+        "Blackrock Inc.",
+        "State Farm Mutual Automobile Insurance Co",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T14:03:21.791253+00:00"
+  },
+  "IRM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 47.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Portfolio Management LLC",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Cohen & Steers Inc."
+      ]
+    },
+    "cached_at": "2026-06-21T14:03:21.800769+00:00"
+  },
+  "IVZ": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 59.7,
+      "top_holder_names": [
+        "Massachusetts Mutual Life Insurance Co.",
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Millennium Management Llc",
+        "Dimensional Fund Advisors LP"
+      ]
+    },
+    "cached_at": "2026-06-21T14:03:22.207778+00:00"
+  },
+  "J": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 42.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC",
+        "Primecap Management Company"
+      ]
+    },
+    "cached_at": "2026-06-21T14:03:22.228698+00:00"
+  },
+  "JAN": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 13.5,
+      "top_holder_names": [
+        "Massachusetts Financial Services Co.",
+        "Prudential Financial, Inc.",
+        "Long Pond Capital, LP",
+        "Blackrock Inc.",
+        "Deutsche Bank AG"
+      ]
+    },
+    "cached_at": "2026-06-21T14:03:22.263045+00:00"
+  },
+  "NBIX": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 50.1,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Dodge & Cox Inc.",
+        "JPMORGAN CHASE & CO",
+        "AQR Capital Management, LLC",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:03:22.624658+00:00"
+  },
+  "JBL": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 45.7,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "Texas Yale Capital Corp.",
+        "Vanguard Portfolio Management LLC",
+        "State Street Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T14:03:22.715806+00:00"
+  },
+  "NEM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 38.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC",
+        "Van Eck Associates Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T14:03:23.243973+00:00"
+  },
+  "NKE": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 36.5,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Capital World Investors",
+        "Wellington Management Group, LLP"
+      ]
+    },
+    "cached_at": "2026-06-21T14:03:23.686492+00:00"
+  },
+  "NI": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 49.6,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "T. Rowe Price Investment Management, Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:03:23.686568+00:00"
+  },
+  "RELY": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 42.6,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Naspers Ltd.",
+        "BAILLIE GIFFORD & CO",
+        "FMR, LLC",
+        "Generation Investment Management LLP"
+      ]
+    },
+    "cached_at": "2026-06-21T14:03:23.745901+00:00"
+  },
+  "REYN": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 17.3,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Fuller & Thaler Asset Management Inc.",
+        "Dimensional Fund Advisors LP",
+        "Vanguard Portfolio Management LLC",
+        "FMR, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:03:23.973425+00:00"
+  },
+  "RF": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 43.0,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "Vanguard Portfolio Management LLC",
+        "Wellington Management Group, LLP"
+      ]
+    },
+    "cached_at": "2026-06-21T14:03:24.307322+00:00"
+  },
+  "TSEM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 29.3,
+      "top_holder_names": [
+        "Price (T.Rowe) Associates Inc",
+        "Blackrock Inc.",
+        "Clal Insurance Enterprises Holdings Ltd",
+        "Phoenix Financial Ltd.",
+        "Vanguard Capital Management LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:03:24.347767+00:00"
+  },
+  "TSM": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 4.7,
+      "top_holder_names": [
+        "FMR, LLC",
+        "Capital World Investors",
+        "Sanders Capital, LLC",
+        "JPMORGAN CHASE & CO",
+        "Van Eck Associates Corporation"
+      ]
+    },
+    "cached_at": "2026-06-21T14:03:24.749646+00:00"
+  },
+  "TT": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 41.8,
+      "top_holder_names": [
+        "Blackrock Inc.",
+        "JPMORGAN CHASE & CO",
+        "Vanguard Capital Management LLC",
+        "State Street Corporation",
+        "FMR, LLC"
+      ]
+    },
+    "cached_at": "2026-06-21T14:03:24.813177+00:00"
+  },
+  "TPG": {
+    "data": {
+      "num_institutions_reported": 10,
+      "top_holders_pct_combined": 42.8,
+      "top_holder_names": [
+        "Temasek Holdings (Private) Ltd",
+        "DARLINGTON PARTNERS CAPITAL MANAGEMENT, LP",
+        "Wellington Management Group, LLP",
+        "Blackrock Inc.",
+        "Millennium Management Llc"
+      ]
+    },
+    "cached_at": "2026-06-21T14:17:39.985303+00:00"
+  }
+}

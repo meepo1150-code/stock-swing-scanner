@@ -119,6 +119,39 @@ body{
 .stat-value{font-family:var(--font-mono);font-size:24px;font-weight:600;}
 .stat-value.accent-green{color:var(--green);}
 .stat-value.accent-gold{color:var(--gold);}
+.stat-value.accent-red{color:var(--red);}
+
+/* ---------- Top 10 summary ---------- */
+.top10-section{margin-bottom:24px;}
+.top10-header{display:flex;align-items:center;gap:8px;margin-bottom:12px;}
+.top10-header h3{font-size:14px;font-weight:700;}
+.top10-header .top10-sub{font-size:11.5px;color:var(--text-tertiary);font-family:var(--font-mono);}
+.top10-scroll{
+  display:flex;gap:12px;overflow-x:auto;padding-bottom:6px;
+  scrollbar-width:thin;
+}
+.top10-scroll::-webkit-scrollbar{height:6px;}
+.top10-scroll::-webkit-scrollbar-thumb{background:var(--border);border-radius:999px;}
+.top10-card{
+  flex:0 0 200px;background:var(--bg-card);border:1px solid var(--border-soft);
+  border-radius:var(--radius-sm);padding:14px;cursor:pointer;
+  transition:border-color .15s ease,transform .15s ease;position:relative;
+}
+.top10-card:hover{border-color:var(--green);transform:translateY(-2px);}
+.top10-rank{
+  position:absolute;top:-9px;left:12px;
+  background:var(--green);color:#0E1117;font-family:var(--font-mono);
+  font-size:11px;font-weight:700;width:22px;height:22px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+}
+.top10-ticker{font-family:var(--font-mono);font-size:16px;font-weight:700;margin-top:4px;}
+.top10-price{font-family:var(--font-mono);font-size:12px;color:var(--text-secondary);margin-top:2px;}
+.top10-meta{display:flex;justify-content:space-between;align-items:center;margin-top:10px;}
+.top10-setups{
+  font-family:var(--font-mono);font-size:11px;color:var(--green);
+  background:var(--green-dim);padding:3px 8px;border-radius:999px;
+}
+.top10-score{font-family:var(--font-mono);font-size:11px;}
 
 /* ---------- Top 10 summary ---------- */
 .top10-section{margin-bottom:24px;}
@@ -272,6 +305,54 @@ body{
 .fund-completeness{font-size:11px;color:var(--text-tertiary);margin-top:8px;font-family:var(--font-mono);}
 
 .no-fund-data{font-size:11px;color:var(--text-tertiary);font-style:italic;}
+
+/* ---------- Data quality warning ---------- */
+.data-quality-banner{
+  display:flex;align-items:flex-start;gap:6px;
+  background:rgba(255,93,93,0.08);border:1px solid var(--red-dim);
+  border-radius:var(--radius-sm);padding:8px 10px;margin-top:10px;
+  font-size:10.5px;color:var(--text-secondary);line-height:1.5;
+}
+.data-quality-banner .icon{flex-shrink:0;}
+.data-quality-banner strong{color:var(--red);}
+
+/* ---------- Earnings calendar warning ---------- */
+.earnings-banner{
+  display:flex;align-items:flex-start;gap:6px;
+  border-radius:var(--radius-sm);padding:8px 10px;margin-top:10px;
+  font-size:10.5px;line-height:1.5;
+}
+.earnings-banner.severity-red{background:rgba(255,93,93,0.08);border:1px solid var(--red-dim);color:var(--text-secondary);}
+.earnings-banner.severity-red strong{color:var(--red);}
+.earnings-banner.severity-yellow{background:rgba(232,179,57,0.08);border:1px solid var(--gold-dim);color:var(--text-secondary);}
+.earnings-banner.severity-yellow strong{color:var(--gold);}
+.earnings-banner.severity-white{background:var(--bg-elevated);border:1px solid var(--border);color:var(--text-tertiary);}
+.earnings-banner.severity-white strong{color:var(--text-secondary);}
+.earnings-banner .icon{flex-shrink:0;}
+
+/* ---------- Insider buying & Institutional ownership (modal only) ---------- */
+.confirmation-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.confirmation-card{
+  background:var(--bg-elevated);border:1px solid var(--border-soft);
+  border-radius:var(--radius-sm);padding:14px;
+}
+.confirmation-card h5{
+  font-family:var(--font-mono);font-size:10.5px;color:var(--text-tertiary);
+  text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;
+  display:flex;align-items:center;gap:6px;
+}
+.confirmation-stat{font-family:var(--font-mono);font-size:18px;font-weight:700;color:var(--green);}
+.confirmation-detail{font-size:11.5px;color:var(--text-secondary);margin-top:6px;line-height:1.5;}
+.confirmation-empty{font-size:11.5px;color:var(--text-tertiary);font-style:italic;}
+.insider-names{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;}
+.insider-name-chip{
+  font-size:10.5px;font-family:var(--font-mono);
+  background:var(--green-dim);color:var(--green);
+  padding:2px 7px;border-radius:6px;
+}
+@media (max-width:520px){
+  .confirmation-grid{grid-template-columns:1fr;}
+}
 
 /* ---------- Empty state ---------- */
 .empty-state{
@@ -447,6 +528,8 @@ footer a{color:var(--blue);text-decoration:none;}
 <div class="tabbar">
   <button class="tab-btn active" data-tab="results">📊 ผลสแกน</button>
   <button class="tab-btn" data-tab="conditions">📖 เงื่อนไข Setup</button>
+  <a class="tab-btn" href="compare.html" style="text-decoration:none;">🔄 Compare ย้อนหลัง</a>
+  <a class="tab-btn" href="scorecard.html" style="text-decoration:none;">🏆 Setup Performance</a>
 </div>
 </div>
 
@@ -617,6 +700,12 @@ function renderStats() {
     { label: "ผ่าน Fundamental Filter", value: d.total_passed_fundamental_filter ?? "—", accent: "accent-gold" },
     { label: "Match อย่างน้อย 1 Setup", value: d.total_matched_any_setup, accent: "accent-green" },
   ];
+  if (d.total_with_data_quality_flags) {
+    stats.push({ label: "🩺 ข้อมูลน่าสงสัย", value: d.total_with_data_quality_flags, accent: "accent-red" });
+  }
+  if (d.total_with_upcoming_earnings) {
+    stats.push({ label: "📅 ใกล้ประกาศผลประกอบการ", value: d.total_with_upcoming_earnings, accent: "accent-gold" });
+  }
   document.getElementById("stats-row").innerHTML = stats.map(s => `
     <div class="stat">
       <div class="stat-label">${s.label}</div>
@@ -645,15 +734,35 @@ function scoreColor(score) {
   return "var(--red)";
 }
 
+// แสดง earnings calendar warning — ใช้ร่วมกันทั้ง card และ modal
+// (ออกแบบ severity ตามจำนวนวันที่เหลือ: red=1-2วัน, yellow=3-5วัน, white=6-7วัน)
+function earningsBannerHTML(warning) {
+  if (!warning) return "";
+  const sevLabel = { red: "เสี่ยงสูง", yellow: "ต้องวางแผน", white: "ข้อมูลอ้างอิง" };
+  return `
+    <div class="earnings-banner severity-${warning.severity}">
+      <span class="icon">📅</span>
+      <span><strong>${warning.message}</strong> (${sevLabel[warning.severity] || ""} · วันที่คาดการณ์: ${warning.earnings_date})</span>
+    </div>
+  `;
+}
+
 function cardHTML(r, idx) {
   const matched = (r.setups_matched || []).filter(s => s.matched);
   const hasMatch = matched.length > 0;
   const fundScore = r.fundamental_score;
   const sparkPts = r._spark_prices ? sparklinePath(r._spark_prices) : null;
+  const dqFlags = r.data_quality_flags || [];
 
   const chips = matched.length
     ? matched.map(s => `<span class="match-chip">${SETUP_ICONS[s.setup_name] || "•"} ${s.setup_name}</span>`).join("")
     : `<span class="no-match-text">ไม่ match setup ใดในขณะนี้</span>`;
+
+  const dqBanner = dqFlags.length
+    ? `<div class="data-quality-banner"><span class="icon">🩺</span><span><strong>ข้อมูลน่าสงสัย:</strong> ${dqFlags[0]}${dqFlags.length > 1 ? ` (และอีก ${dqFlags.length - 1} ข้อ — ดูรายละเอียดในป๊อปอัพ)` : ""}</span></div>`
+    : "";
+
+  const earningsBanner = earningsBannerHTML(r.upcoming_earnings_warning);
 
   let fundSection = `<div class="no-fund-data">ไม่มีข้อมูล fundamental เพียงพอ</div>`;
   if (fundScore !== null && fundScore !== undefined) {
@@ -686,6 +795,8 @@ function cardHTML(r, idx) {
           </div>
         </div>
         <div class="match-row">${chips}</div>
+        ${dqBanner}
+        ${earningsBanner}
       </div>
       <div class="perf-divider"></div>
       <div class="card-bottom">
@@ -865,10 +976,94 @@ function openModal(r) {
     `;
   }
 
+  const dqFlags = r.data_quality_flags || [];
+  const dqSection = dqFlags.length
+    ? `
+      <div class="modal-section">
+        <h4>🩺 ข้อมูลน่าสงสัย (${dqFlags.length} ข้อ)</h4>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          ${dqFlags.map(f => `<div class="data-quality-banner" style="margin-top:0;"><span class="icon">⚠️</span><span>${f}</span></div>`).join("")}
+        </div>
+      </div>
+    `
+    : "";
+
+  const earningsSection = r.upcoming_earnings_warning
+    ? `
+      <div class="modal-section">
+        <h4>📅 Earnings Calendar Warning</h4>
+        ${earningsBannerHTML(r.upcoming_earnings_warning).replace('margin-top:10px;', 'margin-top:0;')}
+      </div>
+    `
+    : "";
+
+  // หมายเหตุ: second-pass (insider/institutional) รันแค่กับ ticker ที่ match setup
+  // อย่างน้อย 1 ข้อเท่านั้น — ถ้าไม่ match อะไรเลย แปลว่า "ไม่ได้เช็ค" ไม่ใช่ "เช็คแล้วไม่เจอ"
+  const wasSecondPassRun = setups.some(s => s.matched);
+
+  const insider = r.insider_buying_signal;
+  const insiderCardHTML = insider
+    ? `
+      <div class="confirmation-card">
+        <h5>👔 Insider Buying</h5>
+        <div class="confirmation-stat">${insider.count} purchase${insider.count > 1 ? "s" : ""}</div>
+        <div class="confirmation-detail">
+          ภายใน ${insider.lookback_days} วันที่ผ่านมา
+          ${insider.total_value !== null && insider.total_value !== undefined ? ` · มูลค่ารวม ${fmtUSD(insider.total_value)}` : ""}
+        </div>
+        ${insider.insiders && insider.insiders.length ? `<div class="insider-names">${insider.insiders.map(n => `<span class="insider-name-chip">${n}</span>`).join("")}</div>` : ""}
+      </div>
+    `
+    : `
+      <div class="confirmation-card">
+        <h5>👔 Insider Buying</h5>
+        <div class="confirmation-empty">${wasSecondPassRun ? "ไม่มี open-market purchase ภายในช่วงที่เช็ค" : "ไม่ได้เช็ค (ไม่ match setup ใด)"}</div>
+      </div>
+    `;
+
+  const inst = r.institutional_ownership;
+  const institutionalCardHTML = inst
+    ? `
+      <div class="confirmation-card">
+        <h5>🏦 Institutional Ownership</h5>
+        <div class="confirmation-stat">${inst.num_institutions_reported} สถาบัน</div>
+        <div class="confirmation-detail">
+          ${inst.top_holders_pct_combined !== null && inst.top_holders_pct_combined !== undefined ? `ถือรวมกันราว ${inst.top_holders_pct_combined}% ของหุ้นที่หมุนเวียน` : "ไม่มีข้อมูล % ที่ถือ"}
+        </div>
+        ${inst.top_holder_names && inst.top_holder_names.length ? `<div class="insider-names">${inst.top_holder_names.map(n => `<span class="insider-name-chip">${n}</span>`).join("")}</div>` : ""}
+      </div>
+    `
+    : `
+      <div class="confirmation-card">
+        <h5>🏦 Institutional Ownership</h5>
+        <div class="confirmation-empty">${wasSecondPassRun ? "ไม่มีข้อมูล (อาจยังไม่ถึงรอบรีเฟรช หรือไม่มีรายงาน 13F)" : "ไม่ได้เช็ค (ไม่ match setup ใด)"}</div>
+      </div>
+    `;
+
+  // Section นี้แสดงเสมอ (ไม่ซ่อนแม้ทั้งสองเป็น empty state) เพราะ "เช็คแล้วไม่พบ"
+  // ต่างจาก "ไม่ได้เช็ค" — second-pass นี้รันแค่กับ ticker ที่ match setup เท่านั้น
+  // (เห็น modal นี้แปลว่า match แล้วแน่นอน ดังนั้นเช็ค confirmation มาแล้วเสมอ)
+  const confirmationSection = `
+      <div class="modal-section">
+        <h4>🔍 Confirmation Signals</h4>
+        <div class="confirmation-grid">
+          ${insiderCardHTML}
+          ${institutionalCardHTML}
+        </div>
+        <div style="font-size:11px;color:var(--text-tertiary);margin-top:10px;line-height:1.5;">
+          ข้อมูลเสริมความมั่นใจ ไม่ใช่สัญญาณซื้อขายหลัก — insider buying คือผู้บริหารซื้อหุ้นตัวเองในตลาดเปิด
+          (ไม่ใช่ grant/award) ส่วน institutional ownership อิงจาก 13F filing ซึ่งรายงานล่าช้าเป็นไตรมาส
+        </div>
+      </div>
+    `;
+
   modal.innerHTML = `
     <button class="modal-close" id="modal-close-btn">&times;</button>
     <h3>${r.ticker}</h3>
     <div class="modal-sub">${r.company_name || "—"} · ${r.sector || "Unknown"} · ${fmtUSD(r.price)}</div>
+
+    ${dqSection}
+    ${earningsSection}
 
     <div class="modal-section">
       <h4>Setup ที่เช็ค (6 เงื่อนไข)</h4>
@@ -879,6 +1074,8 @@ function openModal(r) {
       <h4>Fundamental Score Breakdown</h4>
       ${fundDetail}
     </div>
+
+    ${confirmationSection}
 
     <div class="modal-section" style="margin-bottom:0;">
       <h4>⚠️ ก่อนตัดสินใจ</h4>
