@@ -153,38 +153,6 @@ body{
 }
 .top10-score{font-family:var(--font-mono);font-size:11px;}
 
-/* ---------- Top 10 summary ---------- */
-.top10-section{margin-bottom:24px;}
-.top10-header{display:flex;align-items:center;gap:8px;margin-bottom:12px;}
-.top10-header h3{font-size:14px;font-weight:700;}
-.top10-header .top10-sub{font-size:11.5px;color:var(--text-tertiary);font-family:var(--font-mono);}
-.top10-scroll{
-  display:flex;gap:12px;overflow-x:auto;padding-bottom:6px;
-  scrollbar-width:thin;
-}
-.top10-scroll::-webkit-scrollbar{height:6px;}
-.top10-scroll::-webkit-scrollbar-thumb{background:var(--border);border-radius:999px;}
-.top10-card{
-  flex:0 0 200px;background:var(--bg-card);border:1px solid var(--border-soft);
-  border-radius:var(--radius-sm);padding:14px;cursor:pointer;
-  transition:border-color .15s ease,transform .15s ease;position:relative;
-}
-.top10-card:hover{border-color:var(--green);transform:translateY(-2px);}
-.top10-rank{
-  position:absolute;top:-9px;left:12px;
-  background:var(--green);color:#0E1117;font-family:var(--font-mono);
-  font-size:11px;font-weight:700;width:22px;height:22px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-}
-.top10-ticker{font-family:var(--font-mono);font-size:16px;font-weight:700;margin-top:4px;}
-.top10-price{font-family:var(--font-mono);font-size:12px;color:var(--text-secondary);margin-top:2px;}
-.top10-meta{display:flex;justify-content:space-between;align-items:center;margin-top:10px;}
-.top10-setups{
-  font-family:var(--font-mono);font-size:11px;color:var(--green);
-  background:var(--green-dim);padding:3px 8px;border-radius:999px;
-}
-.top10-score{font-family:var(--font-mono);font-size:11px;}
-
 /* ---------- Disclaimer banner ---------- */
 .disclaimer{
   background:var(--bg-card);
@@ -266,6 +234,12 @@ body{
 }
 .match-chip.fundamental{background:var(--gold-dim);color:var(--gold);border-color:rgba(232,179,57,0.25);}
 .no-match-text{font-size:11px;color:var(--text-tertiary);font-style:italic;}
+.near-miss-chip{
+  font-size:10.5px;font-family:var(--font-mono);
+  padding:4px 9px;border-radius:999px;
+  background:var(--gold-dim);color:var(--gold);
+  border:1px solid rgba(232,179,57,0.25);
+}
 
 /* ---------- Perforated divider (signature element) ---------- */
 .perf-divider{
@@ -352,6 +326,54 @@ body{
 }
 @media (max-width:520px){
   .confirmation-grid{grid-template-columns:1fr;}
+}
+
+/* ---------- Watchlist star ---------- */
+.watch-star{
+  background:none;border:none;cursor:pointer;
+  font-size:18px;line-height:1;padding:2px;flex-shrink:0;
+  color:var(--text-tertiary);transition:transform .12s ease,color .12s ease;
+}
+.watch-star:hover{transform:scale(1.18);}
+.watch-star.active{color:var(--gold);}
+.card-head-row{display:flex;align-items:flex-start;gap:6px;}
+.top10-card .watch-star{position:absolute;top:6px;right:8px;font-size:15px;}
+.modal h3{display:flex;align-items:center;gap:8px;}
+.modal .watch-star{font-size:20px;}
+
+/* ---------- Setup combo badge ---------- */
+.combo-badge{
+  position:absolute;top:-9px;right:14px;
+  font-family:var(--font-mono);font-size:10.5px;font-weight:700;
+  background:linear-gradient(135deg,var(--gold),#ff9d3d);
+  color:#1a1305;padding:3px 10px;border-radius:999px;
+  display:flex;align-items:center;gap:4px;
+  box-shadow:0 2px 8px rgba(232,179,57,0.35);
+}
+.card.combo-strong{border-color:var(--gold-dim);}
+.card.combo-strong:hover{border-color:var(--gold);}
+
+/* ---------- Sector heatmap ---------- */
+.heatmap-section{margin-bottom:24px;}
+.heatmap-header{display:flex;align-items:center;gap:8px;margin-bottom:12px;}
+.heatmap-header h3{font-size:14px;font-weight:700;}
+.heatmap-header .heatmap-sub{font-size:11.5px;color:var(--text-tertiary);font-family:var(--font-mono);}
+.heatmap-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+  gap:10px;
+}
+.heatmap-tile{
+  border-radius:var(--radius-sm);padding:12px 14px;cursor:pointer;
+  border:1px solid var(--border-soft);transition:transform .12s ease,border-color .12s ease;
+  position:relative;overflow:hidden;
+}
+.heatmap-tile:hover{transform:translateY(-2px);border-color:var(--text-tertiary);}
+.heatmap-tile.heatmap-active{border-color:var(--text-primary);}
+.heatmap-tile-name{font-size:12.5px;font-weight:700;color:var(--text-primary);margin-bottom:4px;position:relative;z-index:1;}
+.heatmap-tile-count{font-family:var(--font-mono);font-size:18px;font-weight:700;position:relative;z-index:1;}
+.heatmap-tile-sub{font-size:10.5px;color:var(--text-tertiary);position:relative;z-index:1;margin-top:2px;}
+.heatmap-heat-fill{
+  position:absolute;inset:0;opacity:0.16;z-index:0;
 }
 
 /* ---------- Empty state ---------- */
@@ -449,6 +471,76 @@ body{
 .cond-reading-tips li{font-size:13.5px;color:var(--text-secondary);line-height:1.65;}
 .cond-reading-tips li strong{color:var(--text-primary);}
 
+/* ---------- Trade Journal ---------- */
+.journal-intro{
+  background:var(--bg-card);border:1px solid var(--border-soft);
+  border-radius:var(--radius-sm);padding:14px 18px;margin-bottom:20px;
+  font-size:13px;color:var(--text-secondary);line-height:1.6;
+}
+.journal-add-btn{
+  font-family:var(--font-mono);font-size:13px;font-weight:600;
+  background:var(--green-dim);border:1px solid var(--green);color:var(--green);
+  padding:9px 16px;border-radius:var(--radius-sm);cursor:pointer;
+  margin-bottom:20px;display:inline-flex;align-items:center;gap:6px;
+}
+.journal-add-btn:hover{background:rgba(61,220,132,0.25);}
+.journal-stats{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:1px;background:var(--border-soft);border:1px solid var(--border-soft);
+  border-radius:var(--radius);overflow:hidden;margin-bottom:20px;
+}
+.journal-stat{background:var(--bg-elevated);padding:14px 16px;}
+.journal-stat .jlabel{font-size:10.5px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:5px;}
+.journal-stat .jvalue{font-family:var(--font-mono);font-size:20px;font-weight:600;}
+
+.journal-table-wrap{overflow-x:auto;}
+.journal-table{width:100%;border-collapse:collapse;font-size:13px;}
+.journal-table th{
+  text-align:left;color:var(--text-tertiary);font-weight:600;font-size:10.5px;
+  text-transform:uppercase;letter-spacing:0.04em;padding:10px 12px;
+  border-bottom:1px solid var(--border);white-space:nowrap;
+}
+.journal-table td{padding:11px 12px;border-bottom:1px solid var(--border-soft);color:var(--text-secondary);white-space:nowrap;}
+.journal-table tr:last-child td{border-bottom:none;}
+.journal-table .j-ticker{font-family:var(--font-mono);font-weight:700;color:var(--text-primary);}
+.journal-table .j-pnl-pos{color:var(--green);font-family:var(--font-mono);font-weight:600;}
+.journal-table .j-pnl-neg{color:var(--red);font-family:var(--font-mono);font-weight:600;}
+.journal-table .j-pnl-pending{color:var(--text-tertiary);font-family:var(--font-mono);}
+.journal-del-btn{
+  background:none;border:none;color:var(--text-tertiary);cursor:pointer;
+  font-size:15px;padding:2px 6px;
+}
+.journal-del-btn:hover{color:var(--red);}
+.journal-status-tag{
+  font-family:var(--font-mono);font-size:10px;padding:2px 8px;border-radius:999px;
+}
+.journal-status-tag.open{background:var(--blue);background:rgba(91,157,255,0.15);color:var(--blue);}
+.journal-status-tag.closed{background:var(--bg-card);color:var(--text-tertiary);}
+
+/* ---------- Journal form modal ---------- */
+.jform-row{display:flex;flex-direction:column;gap:5px;margin-bottom:14px;}
+.jform-row label{font-size:11.5px;color:var(--text-tertiary);font-family:var(--font-mono);}
+.jform-row input,.jform-row select,.jform-row textarea{
+  background:var(--bg-elevated);border:1px solid var(--border);color:var(--text-primary);
+  border-radius:var(--radius-sm);padding:9px 12px;font-size:13px;font-family:var(--font-display);
+}
+.jform-row input:focus,.jform-row select:focus,.jform-row textarea:focus{outline:none;border-color:var(--green);}
+.jform-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.jform-actions{display:flex;gap:10px;margin-top:18px;}
+.jform-btn-primary{
+  flex:1;background:var(--green);color:#0E1117;border:none;
+  font-weight:700;padding:11px;border-radius:var(--radius-sm);cursor:pointer;font-size:13.5px;
+}
+.jform-btn-secondary{
+  flex:1;background:none;border:1px solid var(--border);color:var(--text-secondary);
+  padding:11px;border-radius:var(--radius-sm);cursor:pointer;font-size:13.5px;
+}
+.jform-error{color:var(--red);font-size:12px;margin-top:-6px;margin-bottom:10px;min-height:14px;}
+
+@media (max-width:640px){
+  .jform-grid{grid-template-columns:1fr;}
+}
+
 /* ---------- Footer ---------- */
 footer{
   text-align:center;padding:32px 24px;color:var(--text-tertiary);
@@ -488,6 +580,13 @@ footer a{color:var(--blue);text-decoration:none;}
   font-family:var(--font-mono);font-size:10px;color:var(--text-tertiary);
   margin-top:4px;display:inline-block;
 }
+.modal-setup-item .near-miss-bar-wrap{margin-top:8px;}
+.modal-setup-item .near-miss-label{
+  font-size:10.5px;color:var(--text-tertiary);font-family:var(--font-mono);
+  display:flex;justify-content:space-between;margin-bottom:4px;
+}
+.modal-setup-item .near-miss-bar{height:5px;border-radius:999px;background:var(--bg-elevated);overflow:hidden;}
+.modal-setup-item .near-miss-bar-fill{height:100%;border-radius:999px;background:var(--gold);transition:width .3s ease;}
 
 @media (max-width:640px){
   .topbar{padding:12px 16px;}
@@ -501,6 +600,7 @@ footer a{color:var(--blue);text-decoration:none;}
   .select-group{flex-direction:column;}
   .sector-select{width:100%;}
   .top10-card{flex:0 0 160px;}
+  .heatmap-grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr));}
 }
 
 @media (prefers-reduced-motion:reduce){
@@ -528,6 +628,7 @@ footer a{color:var(--blue);text-decoration:none;}
 <div class="tabbar">
   <button class="tab-btn active" data-tab="results">📊 ผลสแกน</button>
   <button class="tab-btn" data-tab="conditions">📖 เงื่อนไข Setup</button>
+  <button class="tab-btn" data-tab="journal">📝 Trade Journal</button>
   <a class="tab-btn" href="compare.html" style="text-decoration:none;">🔄 Compare ย้อนหลัง</a>
   <a class="tab-btn" href="scorecard.html" style="text-decoration:none;">🏆 Setup Performance</a>
 </div>
@@ -551,6 +652,14 @@ footer a{color:var(--blue);text-decoration:none;}
     <div class="top10-scroll" id="top10-scroll"></div>
   </div>
 
+  <div class="heatmap-section" id="heatmap-section">
+    <div class="heatmap-header">
+      <h3>🌡️ Sector Heatmap</h3>
+      <span class="heatmap-sub">ยิ่งสีเข้ม = sector นั้น match setup รวมกันเยอะวันนี้ · คลิกเพื่อ filter</span>
+    </div>
+    <div class="heatmap-grid" id="heatmap-grid"></div>
+  </div>
+
   <div class="disclaimer">
     <span class="icon">⚠️</span>
     <div>
@@ -564,6 +673,7 @@ footer a{color:var(--blue);text-decoration:none;}
     <div class="filter-group" id="filter-group">
       <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
       <button class="filter-btn" data-filter="matched">Match Setup</button>
+      <button class="filter-btn" data-filter="watchlist">⭐ Watchlist</button>
     </div>
     <div class="select-group">
       <select class="sector-select" id="sector-select">
@@ -571,6 +681,7 @@ footer a{color:var(--blue);text-decoration:none;}
       </select>
       <select class="sort-select" id="sort-select">
         <option value="setups_desc">เรียงตาม: Setup ที่ match มากสุด</option>
+        <option value="combo_desc">เรียงตาม: Combo Strength (จำนวน setup match)</option>
         <option value="fund_score_desc">เรียงตาม: Fundamental Score สูงสุด</option>
         <option value="dollar_volume_desc">เรียงตาม: Dollar Volume สูงสุด</option>
         <option value="ticker_asc">เรียงตาม: ชื่อ Ticker (A-Z)</option>
@@ -611,6 +722,43 @@ footer a{color:var(--blue);text-decoration:none;}
 </div>
 </div>
 
+<div class="tab-panel" id="panel-journal">
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-eyebrow">บันทึกของฉัน — ไม่เกี่ยวกับผลสแกน</div>
+    <h2>📝 Trade Journal</h2>
+    <p>บันทึกว่าซื้อตัวไหนจาก setup อะไร เข้า/ออกราคาเท่าไหร่ แล้วเทียบกับ Setup Performance Scorecard ของระบบได้ว่า performance จริงของคุณตรงกับ backtest ไหม</p>
+  </div>
+
+  <div class="journal-intro">
+    ⚠️ <strong>ข้อมูลนี้เก็บในเบราว์เซอร์นี้เท่านั้น</strong> (localStorage) ไม่ sync ข้ามเครื่อง/มือถือ และไม่ส่งขึ้น GitHub
+    — ถ้าเปลี่ยนเบราว์เซอร์หรือล้าง cache ข้อมูลจะหายไป แนะนำให้กด "Export CSV" เก็บสำรองเป็นระยะ
+  </div>
+
+  <button class="journal-add-btn" id="journal-add-btn">➕ บันทึก Trade ใหม่</button>
+  <button class="journal-add-btn" id="journal-export-btn" style="margin-left:8px;border-color:var(--border);background:var(--bg-card);color:var(--text-secondary);">⬇️ Export CSV</button>
+
+  <div class="journal-stats" id="journal-stats"></div>
+
+  <div class="journal-table-wrap">
+    <table class="journal-table" id="journal-table">
+      <thead>
+        <tr>
+          <th>Ticker</th><th>Setup</th><th>วันเข้า</th><th>ราคาเข้า</th>
+          <th>วันออก</th><th>ราคาออก</th><th>ผลตอบแทน</th><th>สถานะ</th><th>โน้ต</th><th></th>
+        </tr>
+      </thead>
+      <tbody id="journal-tbody"></tbody>
+    </table>
+  </div>
+  <div id="journal-empty" style="display:none;" class="empty-state">
+    <div class="big">📝</div>
+    <h3>ยังไม่มีบันทึก Trade</h3>
+    <p>กด "➕ บันทึก Trade ใหม่" เพื่อเริ่มเก็บประวัติการเทรดของคุณ</p>
+  </div>
+</div>
+</div>
+
 <footer>
   Stock Swing Scanner Dashboard — สร้างด้วย <a href="https://claude.ai" target="_blank">Claude</a> ·
   ข้อมูลจาก scanner_results.json (รันบนเครื่อง local แล้ว push ขึ้น repo)
@@ -618,6 +766,10 @@ footer a{color:var(--blue);text-decoration:none;}
 
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal" id="modal-content"></div>
+</div>
+
+<div class="modal-overlay" id="jform-overlay">
+  <div class="modal" id="jform-content"></div>
 </div>
 
 <script>
@@ -632,6 +784,299 @@ const SETUP_ICONS = {
 
 let SCAN_DATA = null;
 let CURRENT_FILTER = "all";
+
+// =========================================================================
+// ⭐ Watchlist — เก็บใน localStorage ของเบราว์เซอร์ (ไม่มี backend, ไม่ sync
+// ข้ามเครื่อง/อุปกรณ์ — ติดดาวจากมือถือ จะไม่เห็นจาก Mac และกลับกัน)
+// =========================================================================
+const WATCHLIST_KEY = "swing_scanner_watchlist_v1";
+
+function loadWatchlist() {
+  try {
+    const raw = localStorage.getItem(WATCHLIST_KEY);
+    if (!raw) return new Set();
+    return new Set(JSON.parse(raw));
+  } catch {
+    return new Set();
+  }
+}
+
+function saveWatchlist(set) {
+  try {
+    localStorage.setItem(WATCHLIST_KEY, JSON.stringify([...set]));
+  } catch {
+    // localStorage อาจไม่พร้อมใช้ (private mode บางเบราว์เซอร์) — เงียบไว้ ไม่ทำให้แอปพัง
+  }
+}
+
+let WATCHLIST = loadWatchlist();
+
+function isWatched(ticker) {
+  return WATCHLIST.has(ticker);
+}
+
+function toggleWatch(ticker) {
+  if (WATCHLIST.has(ticker)) {
+    WATCHLIST.delete(ticker);
+  } else {
+    WATCHLIST.add(ticker);
+  }
+  saveWatchlist(WATCHLIST);
+}
+
+function watchStarHTML(ticker, extraClass = "") {
+  const active = isWatched(ticker);
+  return `<button class="watch-star ${active ? "active" : ""} ${extraClass}" data-watch-ticker="${ticker}" title="${active ? "เอาออกจาก Watchlist" : "เพิ่มเข้า Watchlist"}">${active ? "★" : "☆"}</button>`;
+}
+
+// =========================================================================
+// 📝 Trade Journal — เก็บใน localStorage ทั้งหมด (ไม่มี backend, ไม่ sync ข้าม
+// เครื่อง) entry ที่มี exit_price = null ถือว่า "เปิดอยู่" (ยังไม่ปิด position)
+// =========================================================================
+const JOURNAL_KEY = "swing_scanner_journal_v1";
+
+function loadJournal() {
+  try {
+    const raw = localStorage.getItem(JOURNAL_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveJournal(entries) {
+  try {
+    localStorage.setItem(JOURNAL_KEY, JSON.stringify(entries));
+  } catch {
+    // private mode หรือ storage เต็ม — เงียบไว้ ไม่ทำให้แอปพัง
+  }
+}
+
+let JOURNAL = loadJournal();
+
+function journalAddEntry(entry) {
+  entry.id = "j" + Date.now() + Math.random().toString(36).slice(2, 7);
+  JOURNAL.push(entry);
+  saveJournal(JOURNAL);
+}
+
+function journalDeleteEntry(id) {
+  JOURNAL = JOURNAL.filter(e => e.id !== id);
+  saveJournal(JOURNAL);
+}
+
+function journalPnlPct(entry) {
+  if (entry.exit_price === null || entry.exit_price === undefined || entry.exit_price === "") return null;
+  const entryP = Number(entry.entry_price);
+  const exitP = Number(entry.exit_price);
+  if (!entryP) return null;
+  return ((exitP - entryP) / entryP) * 100;
+}
+
+function renderJournalStats() {
+  const closed = JOURNAL.filter(e => journalPnlPct(e) !== null);
+  const open = JOURNAL.filter(e => journalPnlPct(e) === null);
+  const wins = closed.filter(e => journalPnlPct(e) > 0);
+  const winRate = closed.length ? (wins.length / closed.length * 100) : null;
+  const avgPnl = closed.length
+    ? closed.reduce((sum, e) => sum + journalPnlPct(e), 0) / closed.length
+    : null;
+
+  const stats = [
+    { label: "บันทึกทั้งหมด", value: JOURNAL.length },
+    { label: "ปิดแล้ว", value: closed.length },
+    { label: "ยังเปิดอยู่", value: open.length },
+    { label: "Win Rate", value: winRate === null ? "—" : `${winRate.toFixed(0)}%` },
+    { label: "เฉลี่ย % ต่อ Trade", value: avgPnl === null ? "—" : `${avgPnl >= 0 ? "+" : ""}${avgPnl.toFixed(1)}%` },
+  ];
+  document.getElementById("journal-stats").innerHTML = stats.map(s => `
+    <div class="journal-stat">
+      <div class="jlabel">${s.label}</div>
+      <div class="jvalue">${s.value}</div>
+    </div>
+  `).join("");
+}
+
+function renderJournalTable() {
+  const tbody = document.getElementById("journal-tbody");
+  const emptyState = document.getElementById("journal-empty");
+  const tableWrap = document.querySelector(".journal-table-wrap");
+
+  if (!JOURNAL.length) {
+    tableWrap.style.display = "none";
+    emptyState.style.display = "";
+    return;
+  }
+  tableWrap.style.display = "";
+  emptyState.style.display = "none";
+
+  const sorted = [...JOURNAL].sort((a, b) => (b.entry_date || "").localeCompare(a.entry_date || ""));
+
+  tbody.innerHTML = sorted.map(e => {
+    const pnl = journalPnlPct(e);
+    let pnlHTML = `<span class="j-pnl-pending">รอปิด</span>`;
+    if (pnl !== null) {
+      const cls = pnl >= 0 ? "j-pnl-pos" : "j-pnl-neg";
+      pnlHTML = `<span class="${cls}">${pnl >= 0 ? "+" : ""}${pnl.toFixed(1)}%</span>`;
+    }
+    const statusTag = pnl !== null
+      ? `<span class="journal-status-tag closed">ปิดแล้ว</span>`
+      : `<span class="journal-status-tag open">เปิดอยู่</span>`;
+    return `
+      <tr>
+        <td class="j-ticker">${e.ticker}</td>
+        <td>${e.setup_name || "—"}</td>
+        <td>${e.entry_date || "—"}</td>
+        <td>${e.entry_price !== undefined && e.entry_price !== "" ? fmtUSD(e.entry_price) : "—"}</td>
+        <td>${e.exit_date || "—"}</td>
+        <td>${e.exit_price !== null && e.exit_price !== undefined && e.exit_price !== "" ? fmtUSD(e.exit_price) : "—"}</td>
+        <td>${pnlHTML}</td>
+        <td>${statusTag}</td>
+        <td style="max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${(e.note || "").replace(/"/g, "&quot;")}">${e.note || "—"}</td>
+        <td><button class="journal-del-btn" data-journal-id="${e.id}" title="ลบบันทึกนี้">🗑️</button></td>
+      </tr>
+    `;
+  }).join("");
+
+  tbody.querySelectorAll(".journal-del-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (!confirm("ลบบันทึกนี้? ลบแล้วกู้คืนไม่ได้")) return;
+      journalDeleteEntry(btn.dataset.journalId);
+      renderJournalAll();
+    });
+  });
+}
+
+function renderJournalAll() {
+  renderJournalStats();
+  renderJournalTable();
+}
+
+// รายชื่อ setup สำหรับ dropdown ในฟอร์ม — ใช้ SETUP_ICONS keys (6 setup เดิม) เป็นฐาน
+function journalSetupOptions(selected) {
+  const names = Object.keys(SETUP_ICONS);
+  return names.map(n => `<option value="${n}" ${n === selected ? "selected" : ""}>${n}</option>`).join("");
+}
+
+function openJournalForm(prefillTicker = "", prefillSetup = "") {
+  const overlay = document.getElementById("jform-overlay");
+  const content = document.getElementById("jform-content");
+  const today = new Date().toISOString().slice(0, 10);
+
+  content.innerHTML = `
+    <button class="modal-close" id="jform-close-btn">&times;</button>
+    <h3 style="font-size:18px;">📝 บันทึก Trade ใหม่</h3>
+    <div class="modal-sub">เก็บไว้ในเบราว์เซอร์นี้เท่านั้น ไม่ส่งขึ้น GitHub</div>
+
+    <div class="jform-row">
+      <label>TICKER *</label>
+      <input type="text" id="jf-ticker" placeholder="เช่น NVDA" value="${prefillTicker}" style="text-transform:uppercase;">
+    </div>
+    <div class="jform-row">
+      <label>SETUP ที่ใช้เข้า</label>
+      <select id="jf-setup">
+        <option value="">— ไม่ระบุ —</option>
+        ${journalSetupOptions(prefillSetup)}
+      </select>
+    </div>
+    <div class="jform-grid">
+      <div class="jform-row">
+        <label>วันเข้า *</label>
+        <input type="date" id="jf-entry-date" value="${today}">
+      </div>
+      <div class="jform-row">
+        <label>ราคาเข้า ($) *</label>
+        <input type="number" id="jf-entry-price" step="0.01" placeholder="0.00">
+      </div>
+    </div>
+    <div class="jform-grid">
+      <div class="jform-row">
+        <label>วันออก (เว้นว่างถ้ายังไม่ปิด)</label>
+        <input type="date" id="jf-exit-date">
+      </div>
+      <div class="jform-row">
+        <label>ราคาออก ($)</label>
+        <input type="number" id="jf-exit-price" step="0.01" placeholder="0.00">
+      </div>
+    </div>
+    <div class="jform-row">
+      <label>โน้ต</label>
+      <textarea id="jf-note" rows="2" placeholder="เหตุผลที่เข้า / สิ่งที่เรียนรู้"></textarea>
+    </div>
+    <div class="jform-error" id="jf-error"></div>
+    <div class="jform-actions">
+      <button class="jform-btn-secondary" id="jf-cancel-btn">ยกเลิก</button>
+      <button class="jform-btn-primary" id="jf-save-btn">บันทึก</button>
+    </div>
+  `;
+
+  overlay.classList.add("open");
+
+  const close = () => overlay.classList.remove("open");
+  document.getElementById("jform-close-btn").addEventListener("click", close);
+  document.getElementById("jf-cancel-btn").addEventListener("click", close);
+
+  document.getElementById("jf-save-btn").addEventListener("click", () => {
+    const ticker = document.getElementById("jf-ticker").value.trim().toUpperCase();
+    const entryDate = document.getElementById("jf-entry-date").value;
+    const entryPrice = document.getElementById("jf-entry-price").value;
+    const errEl = document.getElementById("jf-error");
+
+    if (!ticker) { errEl.textContent = "กรุณากรอก Ticker"; return; }
+    if (!entryDate) { errEl.textContent = "กรุณาเลือกวันเข้า"; return; }
+    if (!entryPrice || isNaN(Number(entryPrice)) || Number(entryPrice) <= 0) {
+      errEl.textContent = "กรุณากรอกราคาเข้าที่ถูกต้อง"; return;
+    }
+    const exitPriceRaw = document.getElementById("jf-exit-price").value;
+    if (exitPriceRaw && (isNaN(Number(exitPriceRaw)) || Number(exitPriceRaw) <= 0)) {
+      errEl.textContent = "ราคาออกต้องเป็นตัวเลขมากกว่า 0"; return;
+    }
+
+    journalAddEntry({
+      ticker,
+      setup_name: document.getElementById("jf-setup").value || "",
+      entry_date: entryDate,
+      entry_price: Number(entryPrice),
+      exit_date: document.getElementById("jf-exit-date").value || "",
+      exit_price: exitPriceRaw ? Number(exitPriceRaw) : null,
+      note: document.getElementById("jf-note").value.trim(),
+    });
+
+    close();
+    renderJournalAll();
+  });
+}
+
+function journalExportCSV() {
+  if (!JOURNAL.length) { alert("ยังไม่มีบันทึก Trade ให้ export"); return; }
+  const headers = ["ticker", "setup_name", "entry_date", "entry_price", "exit_date", "exit_price", "pnl_pct", "note"];
+  const rows = JOURNAL.map(e => {
+    const pnl = journalPnlPct(e);
+    return [
+      e.ticker, e.setup_name || "", e.entry_date || "", e.entry_price ?? "",
+      e.exit_date || "", e.exit_price ?? "", pnl === null ? "" : pnl.toFixed(2),
+      `"${(e.note || "").replace(/"/g, '""')}"`,
+    ].join(",");
+  });
+  const csv = [headers.join(","), ...rows].join("\n");
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `trade_journal_${new Date().toISOString().slice(0, 10)}.csv`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+document.getElementById("journal-add-btn").addEventListener("click", () => openJournalForm());
+document.getElementById("journal-export-btn").addEventListener("click", journalExportCSV);
+document.getElementById("jform-overlay").addEventListener("click", (e) => {
+  if (e.target.id === "jform-overlay") e.currentTarget.classList.remove("open");
+});
 
 async function loadData() {
   try {
@@ -684,6 +1129,7 @@ function renderAll() {
   renderTopbar();
   populateSectorOptions();
   renderTop10();
+  renderHeatmap();
   renderGrid();
 }
 
@@ -750,13 +1196,20 @@ function earningsBannerHTML(warning) {
 function cardHTML(r, idx) {
   const matched = (r.setups_matched || []).filter(s => s.matched);
   const hasMatch = matched.length > 0;
+  const isCombo = matched.length >= 3;
   const fundScore = r.fundamental_score;
   const sparkPts = r._spark_prices ? sparklinePath(r._spark_prices) : null;
   const dqFlags = r.data_quality_flags || [];
 
   const chips = matched.length
     ? matched.map(s => `<span class="match-chip">${SETUP_ICONS[s.setup_name] || "•"} ${s.setup_name}</span>`).join("")
-    : `<span class="no-match-text">ไม่ match setup ใดในขณะนี้</span>`;
+    : (() => {
+        const nm = closestNearMiss(r.setups_matched);
+        const nmChip = nm
+          ? `<span class="near-miss-chip">🔍 ใกล้ ${SETUP_ICONS[nm.setup_name] || ""} ${nm.setup_name} (${nm.pct.toFixed(0)}%)</span>`
+          : "";
+        return `<span class="no-match-text">ไม่ match setup ใดในขณะนี้</span>${nmChip}`;
+      })();
 
   const dqBanner = dqFlags.length
     ? `<div class="data-quality-banner"><span class="icon">🩺</span><span><strong>ข้อมูลน่าสงสัย:</strong> ${dqFlags[0]}${dqFlags.length > 1 ? ` (และอีก ${dqFlags.length - 1} ข้อ — ดูรายละเอียดในป๊อปอัพ)` : ""}</span></div>`
@@ -780,13 +1233,17 @@ function cardHTML(r, idx) {
   }
 
   return `
-    <div class="card ${hasMatch ? "has-match" : ""}" data-idx="${idx}">
+    <div class="card ${hasMatch ? "has-match" : ""} ${isCombo ? "combo-strong" : ""}" data-idx="${idx}">
+      ${isCombo ? `<div class="combo-badge">🔥 Combo ${matched.length}</div>` : ""}
       <div class="card-top">
         <div class="card-head">
           <div class="ticker-block">
-            <div>
-              <span class="ticker">${r.ticker}</span>
-              <span class="company-name">${r.company_name || "—"}</span>
+            <div class="card-head-row">
+              ${watchStarHTML(r.ticker)}
+              <div>
+                <span class="ticker">${r.ticker}</span>
+                <span class="company-name">${r.company_name || "—"}</span>
+              </div>
             </div>
           </div>
           <div class="price-block">
@@ -821,6 +1278,51 @@ function compareBySetupsThenScore(a, b) {
   const diff = matchCount(b) - matchCount(a);
   if (diff !== 0) return diff;
   return (b.fundamental_score ?? -1) - (a.fundamental_score ?? -1);
+}
+
+// =========================================================================
+// 🔍 Near-miss indicator — เดา "ใกล้ match แค่ไหน" จากข้อความ detail แบบ
+// best-effort เท่านั้น เพราะ detail เป็นข้อความภาษาไทยที่ไม่มี structure ตายตัว
+// (scanner.py เขียน detail เป็น string บรรยาย ไม่ใช่ raw number field)
+// ถ้า parse ไม่ได้ (pattern ไม่ตรง) จะ return null และไม่แสดงอะไรเพิ่ม —
+// ไม่ throw error และไม่เดามั่วเป็นตัวเลขที่ผิดความหมาย
+// =========================================================================
+const NEAR_MISS_PATTERNS = [
+  // "Gap 1.2% ≤ 4.0%" / "+0.8% < 2%" — ค่าปัจจุบัน % เทียบเกณฑ์ %
+  { re: /([\d.]+)%?\s*[≤<]\s*([\d.]+)%/, unit: "%" },
+  // "volume 1.2x < 2.0x" — ค่าปัจจุบัน x เทียบเกณฑ์ x
+  { re: /([\d.]+)x?\s*<\s*([\d.]+)x/, unit: "x" },
+  // "ต่อเนื่องสูงสุด 2 วัน < 3 วัน" — จำนวนวันที่ทำได้ เทียบเกณฑ์วัน
+  { re: /สูงสุด\s*(\d+)\s*วัน\s*<\s*(\d+)\s*วัน/, unit: "วัน" },
+];
+
+function parseNearMiss(detail) {
+  if (!detail) return null;
+  for (const { re, unit } of NEAR_MISS_PATTERNS) {
+    const m = detail.match(re);
+    if (m) {
+      const current = parseFloat(m[1]);
+      const threshold = parseFloat(m[2]);
+      if (!isFinite(current) || !isFinite(threshold) || threshold <= 0) continue;
+      const pct = Math.max(0, Math.min(100, (current / threshold) * 100));
+      return { current, threshold, unit, pct };
+    }
+  }
+  return null;
+}
+
+// หา setup ที่ "ใกล้ match ที่สุด" ของ ticker นี้ (เปอร์เซ็นต์ความใกล้สูงสุด)
+// สำหรับแสดงเป็น chip สั้นๆ บนการ์ดหลัก (ไม่ต้องเปิด modal ก็เห็นว่าใกล้ตัวไหน)
+function closestNearMiss(setupsMatched) {
+  let best = null;
+  (setupsMatched || []).forEach(s => {
+    if (s.matched) return;
+    const nm = parseNearMiss(s.detail);
+    if (nm && (!best || nm.pct > best.pct)) {
+      best = { ...nm, setup_name: s.setup_name };
+    }
+  });
+  return best;
 }
 
 function getAllSectors() {
@@ -863,6 +1365,7 @@ function renderTop10() {
     const scoreStyle = (score === null || score === undefined) ? "" : `style="color:${scoreColor(score)}"`;
     return `
       <div class="top10-card" data-ticker="${r.ticker}">
+        ${watchStarHTML(r.ticker)}
         <div class="top10-rank">${i + 1}</div>
         <div class="top10-ticker">${r.ticker}</div>
         <div class="top10-price">${fmtUSD(r.price)} · ${r.sector || "Unknown"}</div>
@@ -875,7 +1378,83 @@ function renderTop10() {
   }).join("");
 
   scroll.querySelectorAll(".top10-card").forEach((card, i) => {
-    card.addEventListener("click", () => openModal(top10[i]));
+    card.addEventListener("click", (e) => {
+      if (e.target.closest(".watch-star")) return;
+      openModal(top10[i]);
+    });
+  });
+
+  scroll.querySelectorAll(".watch-star").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleWatch(btn.dataset.watchTicker);
+      btn.classList.toggle("active");
+      btn.textContent = btn.classList.contains("active") ? "★" : "☆";
+      if (CURRENT_FILTER === "watchlist") renderGrid();
+    });
+  });
+}
+
+// =========================================================================
+// 🌡️ Sector Heatmap — รวม "ความร้อน" ของแต่ละ sector จากจำนวน setup ที่ match
+// รวมกันทั้ง sector (ไม่ใช่แค่จำนวนตัวที่ match) เพื่อให้เห็นว่า sector ไหน
+// มีแรงซื้อสะสมหนาแน่นกว่ากัน ไม่ใช่แค่ "มีหุ้นเยอะ"
+// =========================================================================
+function computeSectorHeat() {
+  const bySector = {};
+  (SCAN_DATA.results || []).forEach(r => {
+    if (!r.passed_base_filter) return;
+    const sector = r.sector || "Unknown";
+    if (!bySector[sector]) bySector[sector] = { totalMatches: 0, tickerCount: 0, matchedTickerCount: 0 };
+    const mc = matchCount(r);
+    bySector[sector].totalMatches += mc;
+    bySector[sector].tickerCount += 1;
+    if (mc > 0) bySector[sector].matchedTickerCount += 1;
+  });
+  return bySector;
+}
+
+function renderHeatmap() {
+  const section = document.getElementById("heatmap-section");
+  const heat = computeSectorHeat();
+  const sectors = Object.entries(heat)
+    .filter(([, v]) => v.totalMatches > 0)
+    .sort((a, b) => b[1].totalMatches - a[1].totalMatches);
+
+  if (!sectors.length) {
+    section.style.display = "none";
+    return;
+  }
+  section.style.display = "";
+
+  const maxHeat = Math.max(...sectors.map(([, v]) => v.totalMatches));
+  const grid = document.getElementById("heatmap-grid");
+  const activeSector = document.getElementById("sector-select").value;
+
+  grid.innerHTML = sectors.map(([name, v]) => {
+    const intensity = maxHeat > 0 ? v.totalMatches / maxHeat : 0;
+    // เขียวอ่อน -> เขียวเข้ม ตามความร้อน (สื่อถึง "match รวมกันมาก" ไม่ใช่ "ราคาขึ้น")
+    const heatColor = `rgba(61,220,132,${0.12 + intensity * 0.55})`;
+    const isActive = activeSector === name;
+    return `
+      <div class="heatmap-tile ${isActive ? "heatmap-active" : ""}" data-sector="${name}">
+        <div class="heatmap-heat-fill" style="background:${heatColor}"></div>
+        <div class="heatmap-tile-name">${name}</div>
+        <div class="heatmap-tile-count">${v.totalMatches}</div>
+        <div class="heatmap-tile-sub">${v.matchedTickerCount}/${v.tickerCount} ตัว match</div>
+      </div>
+    `;
+  }).join("");
+
+  grid.querySelectorAll(".heatmap-tile").forEach(tile => {
+    tile.addEventListener("click", () => {
+      const sector = tile.dataset.sector;
+      const sel = document.getElementById("sector-select");
+      // toggle: คลิก sector ที่ active อยู่แล้วซ้ำ = ยกเลิก filter กลับไปดูทั้งหมด
+      sel.value = (sel.value === sector) ? "all" : sector;
+      renderGrid();
+      renderHeatmap();
+    });
   });
 }
 
@@ -884,6 +1463,8 @@ function getFilteredSorted() {
 
   if (CURRENT_FILTER === "matched") {
     results = results.filter(r => (r.setups_matched || []).some(s => s.matched));
+  } else if (CURRENT_FILTER === "watchlist") {
+    results = results.filter(r => isWatched(r.ticker));
   }
 
   const sectorVal = document.getElementById("sector-select").value;
@@ -893,7 +1474,7 @@ function getFilteredSorted() {
 
   const sortVal = document.getElementById("sort-select").value;
   results.sort((a, b) => {
-    if (sortVal === "setups_desc") {
+    if (sortVal === "setups_desc" || sortVal === "combo_desc") {
       return compareBySetupsThenScore(a, b);
     }
     if (sortVal === "fund_score_desc") {
@@ -918,19 +1499,42 @@ function renderGrid() {
   const grid = document.getElementById("grid");
 
   if (!results.length) {
-    grid.innerHTML = `
-      <div class="empty-state" style="grid-column:1/-1;">
-        <div class="big">🔍</div>
-        <h3>ไม่มีหุ้นที่ตรงตามเงื่อนไขนี้</h3>
-        <p>ลองเปลี่ยน filter หรือรอผลสแกนรอบถัดไป</p>
-      </div>`;
+    const emptyHTML = CURRENT_FILTER === "watchlist"
+      ? `
+        <div class="empty-state" style="grid-column:1/-1;">
+          <div class="big">⭐</div>
+          <h3>ยังไม่มีหุ้นใน Watchlist</h3>
+          <p>กดไอคอน ☆ บนการ์ดหุ้น หรือใน popup รายละเอียด เพื่อเพิ่มเข้า Watchlist
+          (เก็บไว้ในเบราว์เซอร์นี้เท่านั้น ไม่ sync ข้ามเครื่อง)</p>
+        </div>`
+      : `
+        <div class="empty-state" style="grid-column:1/-1;">
+          <div class="big">🔍</div>
+          <h3>ไม่มีหุ้นที่ตรงตามเงื่อนไขนี้</h3>
+          <p>ลองเปลี่ยน filter หรือรอผลสแกนรอบถัดไป</p>
+        </div>`;
+    grid.innerHTML = emptyHTML;
     return;
   }
 
   grid.innerHTML = results.map((r, i) => cardHTML(r, i)).join("");
 
   grid.querySelectorAll(".card").forEach((card, i) => {
-    card.addEventListener("click", () => openModal(results[i]));
+    card.addEventListener("click", (e) => {
+      if (e.target.closest(".watch-star")) return; // กดดาว ไม่เปิด modal
+      openModal(results[i]);
+    });
+  });
+
+  grid.querySelectorAll(".watch-star").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleWatch(btn.dataset.watchTicker);
+      btn.classList.toggle("active");
+      btn.textContent = btn.classList.contains("active") ? "★" : "☆";
+      btn.title = btn.classList.contains("active") ? "เอาออกจาก Watchlist" : "เพิ่มเข้า Watchlist";
+      if (CURRENT_FILTER === "watchlist") renderGrid(); // ถ้าอยู่ใน watchlist view เอาออกแล้วต้องหายจาก grid ทันที
+    });
   });
 }
 
@@ -939,13 +1543,22 @@ function openModal(r) {
   const modal = document.getElementById("modal-content");
 
   const setupItems = setups.length
-    ? setups.map(s => `
+    ? setups.map(s => {
+        const nm = !s.matched ? parseNearMiss(s.detail) : null;
+        const nmBar = nm ? `
+          <div class="near-miss-bar-wrap">
+            <div class="near-miss-label"><span>ใกล้แค่ไหน</span><span>${nm.current}${nm.unit} / ${nm.threshold}${nm.unit} (${nm.pct.toFixed(0)}%)</span></div>
+            <div class="near-miss-bar"><div class="near-miss-bar-fill" style="width:${nm.pct}%"></div></div>
+          </div>` : "";
+        return `
         <div class="modal-setup-item ${s.matched ? "matched" : ""}">
           <div class="setup-name">${SETUP_ICONS[s.setup_name] || "•"} ${s.setup_name} ${s.matched ? "✅" : ""}</div>
           <div class="setup-detail">${s.detail || "—"}</div>
           ${s.matched && s.suggested_hold_days ? `<span class="hold-tag">ระยะถือแนะนำ: ${s.suggested_hold_days}</span>` : ""}
+          ${nmBar}
         </div>
-      `).join("")
+      `;
+      }).join("")
     : `<div class="no-fund-data">ไม่ได้เช็ค setup (ไม่ผ่าน base/fundamental filter)</div>`;
 
   let fundDetail = `<div class="no-fund-data">ไม่มีข้อมูล fundamental เพียงพอสำหรับตัวนี้</div>`;
@@ -1059,7 +1672,7 @@ function openModal(r) {
 
   modal.innerHTML = `
     <button class="modal-close" id="modal-close-btn">&times;</button>
-    <h3>${r.ticker}</h3>
+    <h3>${watchStarHTML(r.ticker, "modal-watch-star")}${r.ticker}</h3>
     <div class="modal-sub">${r.company_name || "—"} · ${r.sector || "Unknown"} · ${fmtUSD(r.price)}</div>
 
     ${dqSection}
@@ -1079,12 +1692,25 @@ function openModal(r) {
 
     <div class="modal-section" style="margin-bottom:0;">
       <h4>⚠️ ก่อนตัดสินใจ</h4>
-      <div style="font-size:12.5px;color:var(--text-secondary);line-height:1.6;">
+      <div style="font-size:12.5px;color:var(--text-secondary);line-height:1.6;margin-bottom:14px;">
         ตรวจสอบกับแอป Dime!/Webull ว่าซื้อ ${r.ticker} ได้จริงไหม (เต็มหุ้น/fractional) และงบที่มีพอซื้อกี่หุ้น
         ก่อนตัดสินใจซื้อขายจริงเสมอ — นี่ไม่ใช่คำแนะนำการลงทุน
       </div>
+      <button class="journal-add-btn" id="modal-journal-btn" style="margin-bottom:0;width:100%;justify-content:center;">📝 บันทึก Trade นี้ลง Journal</button>
     </div>
   `;
+
+  modal.querySelector(".modal-watch-star").addEventListener("click", () => {
+    toggleWatch(r.ticker);
+    renderGrid();   // sync สถานะดาวกับการ์ดที่อยู่หลัง modal ทันที
+    renderTop10();  // sync กับ Top10 ด้วย เผื่อ ticker นี้ติด Top10 อยู่
+  });
+
+  modal.querySelector("#modal-journal-btn").addEventListener("click", () => {
+    const firstMatched = setups.find(s => s.matched);
+    closeModal();
+    openJournalForm(r.ticker, firstMatched ? firstMatched.setup_name : "");
+  });
 
   document.getElementById("modal-overlay").classList.add("open");
   document.getElementById("modal-close-btn").addEventListener("click", closeModal);
@@ -1111,7 +1737,10 @@ document.getElementById("filter-group").addEventListener("click", (e) => {
 });
 
 document.getElementById("sort-select").addEventListener("change", renderGrid);
-document.getElementById("sector-select").addEventListener("change", renderGrid);
+document.getElementById("sector-select").addEventListener("change", () => {
+  renderGrid();
+  renderHeatmap();
+});
 
 // =========================================================================
 // 📖 Conditions tab — ข้อมูลอธิบายเงื่อนไข Setup (อ้างอิงจาก SETUP_CONDITIONS_EXPLAINED.md)
@@ -1253,6 +1882,7 @@ document.querySelectorAll(".tab-btn").forEach(btn => {
     btn.classList.add("active");
     document.getElementById(`panel-${btn.dataset.tab}`).classList.add("active");
     if (btn.dataset.tab === "conditions") renderConditions();
+    if (btn.dataset.tab === "journal") renderJournalAll();
   });
 });
 
