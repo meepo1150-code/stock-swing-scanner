@@ -197,16 +197,27 @@ body{
 const HISTORY_DIR = "history";
 const MAX_LOOKBACK_DAYS = 35; // เผื่อ retention 30 วัน + กันชน
 
+// ใช้วันที่ไทย (Asia/Bangkok) แทน toISOString() ตรงๆ เพราะ toISOString() ของ
+// JavaScript คืนวันที่แบบ UTC เสมอ ไม่สนใจ timezone ของเบราว์เซอร์ผู้ใช้เลย —
+// ต้องตรงกับชื่อไฟล์ที่ stock_scanner.py สร้าง (ใช้ BANGKOK_TZ ฝั่ง Python)
+function bangkokDateStr(date) {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Bangkok",
+    year: "numeric", month: "2-digit", day: "2-digit",
+  }).format(date); // locale "en-CA" คืนรูปแบบ YYYY-MM-DD ตรงตัว
+}
+
 // =========================================================================
 // Init — โหลดทุก snapshot จาก history/ แล้วคำนวณ scorecard
 // =========================================================================
 async function init() {
   const candidates = [];
-  const today = new Date();
+  const todayMs = Date.now();
   for (let i = 0; i < MAX_LOOKBACK_DAYS; i++) {
-    const d = new Date(today);
-    d.setDate(d.getDate() - i);
-    candidates.push(d.toISOString().slice(0, 10));
+    // ลบเป็น milliseconds ตรงๆ (ไม่ใช้ setDate) เพื่อกัน edge case ของ local
+    // timezone บนเครื่องผู้ใช้ที่อาจทำให้เลขวันกระโดดผิดตอนข้ามเดือน/DST
+    const d = new Date(todayMs - i * 24 * 60 * 60 * 1000);
+    candidates.push(bangkokDateStr(d));
   }
 
   const checks = await Promise.all(candidates.map(async (dateStr) => {

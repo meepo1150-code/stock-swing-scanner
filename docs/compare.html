@@ -332,6 +332,17 @@ let SORT_STATE = { key: "setups_diff", dir: "desc" };
 
 const HISTORY_DIR = "history";
 
+// ใช้วันที่ไทย (Asia/Bangkok) แทน toISOString() ตรงๆ เพราะ toISOString() ของ
+// JavaScript คืนวันที่แบบ UTC เสมอ ไม่สนใจ timezone ของเบราว์เซอร์ผู้ใช้เลย —
+// ถ้าใช้ตรงๆ จะมองหาไฟล์ history คนละชื่อกับที่ stock_scanner.py สร้างจริง
+// (scanner ตั้งชื่อไฟล์ตามวันไทยแล้ว ตาม BANGKOK_TZ ฝั่ง Python)
+function bangkokDateStr(date) {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Bangkok",
+    year: "numeric", month: "2-digit", day: "2-digit",
+  }).format(date); // locale "en-CA" คืนรูปแบบ YYYY-MM-DD ตรงตัว
+}
+
 // =========================================================================
 // Init — โหลดรายชื่อวันที่ที่มี snapshot จริง
 // =========================================================================
@@ -341,11 +352,12 @@ async function init() {
   // ทีละวัน แล้วเก็บเฉพาะที่ fetch สำเร็จจริง — เพราะ static file server ส่วนใหญ่ไม่มี
   // directory listing ให้ใช้ตรงๆ
   const candidates = [];
-  const today = new Date();
+  const todayMs = Date.now();
   for (let i = 0; i < 35; i++) {
-    const d = new Date(today);
-    d.setDate(d.getDate() - i);
-    candidates.push(d.toISOString().slice(0, 10));
+    // ลบเป็น milliseconds ตรงๆ (ไม่ใช้ setDate) เพื่อกัน edge case ของ local
+    // timezone บนเครื่องผู้ใช้ที่อาจทำให้เลขวันกระโดดผิดตอนข้ามเดือน/DST
+    const d = new Date(todayMs - i * 24 * 60 * 60 * 1000);
+    candidates.push(bangkokDateStr(d));
   }
 
   const checks = await Promise.all(candidates.map(async (dateStr) => {
