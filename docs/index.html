@@ -195,6 +195,27 @@ body{
 }
 .select-group{display:flex;gap:8px;flex-wrap:wrap;}
 
+/* ---------- Search box ---------- */
+.search-wrap{position:relative;flex:1;min-width:180px;max-width:280px;}
+.search-input{
+  width:100%;font-family:var(--font-mono);font-size:12px;
+  background:var(--bg-card);border:1px solid var(--border);
+  color:var(--text-primary);padding:7px 32px 7px 30px;border-radius:var(--radius-sm);
+}
+.search-input::placeholder{color:var(--text-tertiary);}
+.search-input:focus{outline:none;border-color:var(--green);}
+.search-icon{
+  position:absolute;left:10px;top:50%;transform:translateY(-50%);
+  font-size:13px;color:var(--text-tertiary);pointer-events:none;
+}
+.search-clear-btn{
+  position:absolute;right:6px;top:50%;transform:translateY(-50%);
+  background:none;border:none;color:var(--text-tertiary);cursor:pointer;
+  font-size:14px;padding:4px 6px;display:none;line-height:1;
+}
+.search-clear-btn:hover{color:var(--text-primary);}
+.search-wrap.has-value .search-clear-btn{display:block;}
+
 /* ---------- Card grid ---------- */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;}
 
@@ -601,6 +622,7 @@ footer a{color:var(--blue);text-decoration:none;}
   .sector-select{width:100%;}
   .top10-card{flex:0 0 160px;}
   .heatmap-grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr));}
+  .search-wrap{max-width:none;width:100%;}
 }
 
 @media (prefers-reduced-motion:reduce){
@@ -675,9 +697,17 @@ footer a{color:var(--blue);text-decoration:none;}
       <button class="filter-btn" data-filter="matched">Match Setup</button>
       <button class="filter-btn" data-filter="watchlist">⭐ Watchlist</button>
     </div>
+    <div class="search-wrap" id="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" class="search-input" id="search-input" placeholder="ค้นหา ticker หรือชื่อบริษัท...">
+      <button class="search-clear-btn" id="search-clear-btn" title="ล้างคำค้นหา">&times;</button>
+    </div>
     <div class="select-group">
       <select class="sector-select" id="sector-select">
         <option value="all">ทุก Sector</option>
+      </select>
+      <select class="sector-select" id="setup-select">
+        <option value="all">ทุก Setup</option>
       </select>
       <select class="sort-select" id="sort-select">
         <option value="setups_desc">เรียงตาม: Setup ที่ match มากสุด</option>
@@ -1128,6 +1158,7 @@ function renderAll() {
   renderStats();
   renderTopbar();
   populateSectorOptions();
+  populateSetupOptions();
   renderTop10();
   renderHeatmap();
   renderGrid();
@@ -1345,6 +1376,20 @@ function populateSectorOptions() {
   }
 }
 
+// ใช้ SETUP_ICONS เป็นฐาน (ไม่ใช่ดึงจาก data ของวันนี้) เพื่อให้ dropdown มีครบ
+// ทั้ง 6 setup เสมอ แม้วันนั้นไม่มี ticker ไหน match setup บางตัวเลยก็ตาม —
+// ถ้าดึงจาก data จะมีปัญหา option หายไปบางวันที่ไม่มีใคร match setup นั้น
+function populateSetupOptions() {
+  const sel = document.getElementById("setup-select");
+  const currentVal = sel.value || "all";
+  const setupNames = Object.keys(SETUP_ICONS);
+  sel.innerHTML = `<option value="all">ทุก Setup</option>` +
+    setupNames.map(s => `<option value="${s}">${SETUP_ICONS[s]} ${s}</option>`).join("");
+  if (setupNames.includes(currentVal) || currentVal === "all") {
+    sel.value = currentVal;
+  }
+}
+
 function renderTop10() {
   const section = document.getElementById("top10-section");
   const eligible = (SCAN_DATA.results || [])
@@ -1472,6 +1517,19 @@ function getFilteredSorted() {
     results = results.filter(r => r.sector === sectorVal);
   }
 
+  const setupVal = document.getElementById("setup-select").value;
+  if (setupVal !== "all") {
+    results = results.filter(r => (r.setups_matched || []).some(s => s.matched && s.setup_name === setupVal));
+  }
+
+  const searchVal = document.getElementById("search-input").value.trim().toLowerCase();
+  if (searchVal) {
+    results = results.filter(r =>
+      r.ticker.toLowerCase().includes(searchVal) ||
+      (r.company_name || "").toLowerCase().includes(searchVal)
+    );
+  }
+
   const sortVal = document.getElementById("sort-select").value;
   results.sort((a, b) => {
     if (sortVal === "setups_desc" || sortVal === "combo_desc") {
@@ -1499,20 +1557,31 @@ function renderGrid() {
   const grid = document.getElementById("grid");
 
   if (!results.length) {
-    const emptyHTML = CURRENT_FILTER === "watchlist"
-      ? `
+    const searchVal = document.getElementById("search-input").value.trim();
+    let emptyHTML;
+    if (CURRENT_FILTER === "watchlist") {
+      emptyHTML = `
         <div class="empty-state" style="grid-column:1/-1;">
           <div class="big">⭐</div>
           <h3>ยังไม่มีหุ้นใน Watchlist</h3>
           <p>กดไอคอน ☆ บนการ์ดหุ้น หรือใน popup รายละเอียด เพื่อเพิ่มเข้า Watchlist
           (เก็บไว้ในเบราว์เซอร์นี้เท่านั้น ไม่ sync ข้ามเครื่อง)</p>
-        </div>`
-      : `
+        </div>`;
+    } else if (searchVal) {
+      emptyHTML = `
+        <div class="empty-state" style="grid-column:1/-1;">
+          <div class="big">🔍</div>
+          <h3>ไม่พบ "${searchVal}"</h3>
+          <p>ลองค้นด้วย ticker หรือชื่อบริษัทอื่น หรือล้างคำค้นหาเพื่อดูทั้งหมด</p>
+        </div>`;
+    } else {
+      emptyHTML = `
         <div class="empty-state" style="grid-column:1/-1;">
           <div class="big">🔍</div>
           <h3>ไม่มีหุ้นที่ตรงตามเงื่อนไขนี้</h3>
           <p>ลองเปลี่ยน filter หรือรอผลสแกนรอบถัดไป</p>
         </div>`;
+    }
     grid.innerHTML = emptyHTML;
     return;
   }
@@ -1740,6 +1809,22 @@ document.getElementById("sort-select").addEventListener("change", renderGrid);
 document.getElementById("sector-select").addEventListener("change", () => {
   renderGrid();
   renderHeatmap();
+});
+document.getElementById("setup-select").addEventListener("change", renderGrid);
+
+const searchInput = document.getElementById("search-input");
+const searchWrap = document.getElementById("search-wrap");
+const searchClearBtn = document.getElementById("search-clear-btn");
+
+searchInput.addEventListener("input", () => {
+  searchWrap.classList.toggle("has-value", searchInput.value.length > 0);
+  renderGrid();
+});
+searchClearBtn.addEventListener("click", () => {
+  searchInput.value = "";
+  searchWrap.classList.remove("has-value");
+  renderGrid();
+  searchInput.focus();
 });
 
 // =========================================================================
