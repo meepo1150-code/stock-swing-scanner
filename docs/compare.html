@@ -295,6 +295,12 @@ body{
         <label>วันที่ B (วันเทียบ)</label>
         <select id="date-b"><option value="">— เลือกวันที่ —</option></select>
       </div>
+      <div class="picker-field">
+        <label>กรองตาม Setup (ไม่บังคับ)</label>
+        <select id="setup-filter">
+          <option value="all">ทุก Setup</option>
+        </select>
+      </div>
     </div>
 
     <div class="mode-toggle">
@@ -329,6 +335,18 @@ let CURRENT_MODE = null;        // "list" | "focus"
 let SELECTED_TICKERS = [];      // สำหรับโหมด focus
 let LAST_COMPARE_ROWS = [];     // เก็บผลล่าสุดไว้ sort ใหม่ได้โดยไม่ต้องคำนวณซ้ำ
 let SORT_STATE = { key: "setups_diff", dir: "desc" };
+let CURRENT_SETUP_FILTER = "all"; // กรองตาม setup ที่ match — ใช้ค่าเดียวกับ index.html
+
+// ใช้ชื่อ/icon เดียวกับ index.html เพื่อให้ dropdown ตรงกัน — hardcode ไว้ตรงนี้
+// เพราะ compare.html ไม่ได้ import จาก index.html (เป็นไฟล์อิสระ static)
+const SETUP_ICONS = {
+  "Gap & Hold": "📊",
+  "Volume Breakout": "🚀",
+  "Relative Strength Leader": "💪",
+  "Pullback to Support (in uptrend)": "🎯",
+  "Sector Hype Rotation": "🔥",
+  "Earnings Surprise Momentum": "📈",
+};
 
 const HISTORY_DIR = "history";
 
@@ -378,6 +396,7 @@ async function init() {
   AVAILABLE_DATES.sort(); // เก่า -> ใหม่
 
   populateDateSelects();
+  populateSetupFilterOptions();
   setupModeToggle();
   setupTickerSearch();
 
@@ -392,6 +411,14 @@ async function init() {
 
   document.getElementById("date-a").addEventListener("change", validateForm);
   document.getElementById("date-b").addEventListener("change", validateForm);
+  document.getElementById("setup-filter").addEventListener("change", (e) => {
+    CURRENT_SETUP_FILTER = e.target.value;
+    // ถ้ามีผลเทียบแสดงอยู่แล้ว (กดเปรียบเทียบไปแล้วรอบหนึ่ง) ให้รันใหม่ทันที
+    // โดยไม่ต้องกดปุ่ม "เปรียบเทียบ" ซ้ำ — เพราะ filter เป็นแค่มุมมองของผลที่มีอยู่
+    if (LAST_COMPARE_ROWS.length || document.getElementById("results-area").classList.contains("visible")) {
+      runCompare();
+    }
+  });
   document.getElementById("compare-btn").addEventListener("click", runCompare);
 }
 
@@ -399,6 +426,15 @@ function populateDateSelects() {
   const optsHTML = AVAILABLE_DATES.map(d => `<option value="${d}">${formatDateThai(d)}</option>`).join("");
   document.getElementById("date-a").innerHTML = `<option value="">— เลือกวันที่ —</option>` + optsHTML;
   document.getElementById("date-b").innerHTML = `<option value="">— เลือกวันที่ —</option>` + optsHTML;
+}
+
+// ใช้ SETUP_ICONS เป็นฐาน (ไม่ใช่ดึงจาก snapshot data) เพื่อให้ dropdown มีครบ
+// ทั้ง 6 setup เสมอ แม้ตอนนั้นยังไม่ได้เลือกวันที่ A/B เลยก็ตาม
+function populateSetupFilterOptions() {
+  const sel = document.getElementById("setup-filter");
+  const setupNames = Object.keys(SETUP_ICONS);
+  sel.innerHTML = `<option value="all">ทุก Setup</option>` +
+    setupNames.map(s => `<option value="${s}">${SETUP_ICONS[s]} ${s}</option>`).join("");
 }
 
 function formatDateThai(dateStr) {
@@ -562,7 +598,7 @@ function buildCompareRows(snapA, snapB, tickerFilter) {
       .map(r => r.ticker);
   }
 
-  return tickers.map(ticker => {
+  const allRows = tickers.map(ticker => {
     const a = mapA[ticker] || null;
     const b = mapB[ticker] || null;
 
@@ -593,6 +629,19 @@ function buildCompareRows(snapA, snapB, tickerFilter) {
       dqFlagsB: (b && b.data_quality_flags) || [],
     };
   });
+
+  // กรองตาม setup ที่เลือก (ถ้ามี) — แบบ "OR" คือเอา ticker ที่มี setup นี้อยู่ใน
+  // kept/gained/lost ตัวไหนก็ได้ (รวมตัวที่เพิ่งหลุดหรือเพิ่งมาด้วย ไม่ใช่แค่ตัว
+  // ที่ match อยู่ทั้งสองวัน) — ใช้ค่าเดียวกับ dropdown "ทุก Setup" ของ index.html
+  if (CURRENT_SETUP_FILTER && CURRENT_SETUP_FILTER !== "all") {
+    return allRows.filter(r =>
+      r.keptSetups.includes(CURRENT_SETUP_FILTER) ||
+      r.gainedSetups.includes(CURRENT_SETUP_FILTER) ||
+      r.lostSetups.includes(CURRENT_SETUP_FILTER)
+    );
+  }
+
+  return allRows;
 }
 
 // =========================================================================
@@ -611,7 +660,15 @@ function runCompare() {
   area.classList.add("visible");
 
   if (!rows.length) {
-    area.innerHTML = `<div class="no-data-msg">ไม่พบ ticker ที่ตรงเงื่อนไข — ${CURRENT_MODE === "list" ? "วันที่ A ไม่มี ticker ที่ match setup ใดเลย" : "ตรวจสอบว่าเลือก ticker ที่มีข้อมูลในวันที่เลือกแล้ว"}</div>`;
+    let reason;
+    if (CURRENT_SETUP_FILTER !== "all") {
+      reason = `ไม่มี ticker ที่เกี่ยวข้องกับ setup "${CURRENT_SETUP_FILTER}" ในการเทียบนี้ (ไม่ match ทั้งวันที่ A และ B) — ลองเปลี่ยน setup หรือเลือก "ทุก Setup"`;
+    } else if (CURRENT_MODE === "list") {
+      reason = "วันที่ A ไม่มี ticker ที่ match setup ใดเลย";
+    } else {
+      reason = "ตรวจสอบว่าเลือก ticker ที่มีข้อมูลในวันที่เลือกแล้ว";
+    }
+    area.innerHTML = `<div class="no-data-msg">ไม่พบ ticker ที่ตรงเงื่อนไข — ${reason}</div>`;
     return;
   }
 
