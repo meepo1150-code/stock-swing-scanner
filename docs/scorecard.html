@@ -159,6 +159,21 @@ body{
   text-align:center;padding:60px 24px;color:var(--text-tertiary);font-size:13px;line-height:1.8;
 }
 
+/* ---------- Export button ---------- */
+.export-row{display:flex;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap;}
+.export-btn{
+  font-family:var(--font-mono);font-size:12.5px;font-weight:600;color:var(--bg);
+  background:var(--green);border:none;border-radius:999px;
+  padding:9px 18px;cursor:pointer;display:flex;align-items:center;gap:7px;
+  transition:opacity .15s ease,transform .1s ease;
+}
+.export-btn:hover{opacity:0.88;}
+.export-btn:active{transform:scale(0.98);}
+.export-btn:disabled{
+  background:var(--border);color:var(--text-tertiary);cursor:not-allowed;opacity:0.6;
+}
+.export-hint{font-size:11.5px;color:var(--text-tertiary);}
+
 @media (max-width:720px){
   .setup-metrics-grid{grid-template-columns:1fr;}
   .monthly-table{font-size:11px;}
@@ -188,6 +203,12 @@ body{
     <p>หุ้นที่ match setup แต่ละข้อในวันที่ผ่านมา ราคาขึ้น/ลงจริงกี่% ในวันถัดๆไป —
        เทียบราคาจาก snapshot ที่บันทึกไว้จริง ไม่ใช่ข้อมูลสมมติ ใช้ดูว่า setup ไหน
        ผลงานจริงดีกว่ากัน</p>
+    <div class="export-row">
+      <button id="export-btn" class="export-btn" disabled onclick="exportScorecardJSON()">
+        📥 Export JSON
+      </button>
+      <span class="export-hint">ดาวน์โหลดผลลัพธ์ทั้งหมด — เอาไปคุยกับ Claude สรุปรายสัปดาห์ได้</span>
+    </div>
   </div>
 
   <div id="content-area"></div>
@@ -196,6 +217,10 @@ body{
 <script>
 const HISTORY_DIR = "history";
 const MAX_LOOKBACK_DAYS = 35; // เผื่อ retention 30 วัน + กันชน
+
+// เก็บผลลัพธ์ล่าสุดที่คำนวณแล้วไว้ตรงนี้ ให้ปุ่ม Export ดึงไปใช้ได้ทันที
+// โดยไม่ต้องคำนวณซ้ำ — set ค่าตอน init() เสร็จสมบูรณ์เท่านั้น (renderScorecard)
+let LATEST_SCORECARD_DATA = null;
 
 // ใช้วันที่ไทย (Asia/Bangkok) แทน toISOString() ตรงๆ เพราะ toISOString() ของ
 // JavaScript คืนวันที่แบบ UTC เสมอ ไม่สนใจ timezone ของเบราว์เซอร์ผู้ใช้เลย —
@@ -240,6 +265,8 @@ async function init() {
 
   const setupNames = snapshots[snapshots.length - 1].data.setup_names || [];
   const results = computeScorecard(snapshots, setupNames);
+  LATEST_SCORECARD_DATA = { snapshots, setupNames, perSetup: results };
+  document.getElementById("export-btn").disabled = false;
   renderScorecard(snapshots, setupNames, results);
 }
 
@@ -529,6 +556,72 @@ function renderMonthlyBreakdown(setupNames, perSetup) {
       </table>
     </div>
   `;
+}
+
+// =========================================================================
+// Export — สร้างไฟล์ .json สรุปผล scorecard ทั้งหมด ให้ดาวน์โหลดไปคุยกับ Claude
+// ใช้ summarizeEntries() ตัวเดิมที่ใช้ render หน้าเว็บ เพื่อไม่ให้ตัวเลขเพี้ยน
+// จากกัน (single source of truth) — ไม่คำนวณ logic ซ้ำใหม่ที่นี่
+// =========================================================================
+function exportScorecardJSON() {
+  if (!LATEST_SCORECARD_DATA) return; // ปุ่มควร disabled อยู่แล้วถ้ายังไม่มีข้อมูล
+
+  const { snapshots, setupNames, perSetup } = LATEST_SCORECARD_DATA;
+
+  const setups = setupNames.map(name => {
+    const entries = perSetup[name] || [];
+    const summary = summarizeEntries(entries);
+    return {
+      setup_name: name,
+      total_occurrences: summary.totalOccurrences,
+      suggested_hold_days: summary.holdDays
+        ? `${summary.holdDays.min}-${summary.holdDays.max}`
+        : null,
+      at_min_hold: summary.atMin
+        ? {
+            hold_day: summary.holdDays.min,
+            count: summary.atMin.count,
+            win_rate_pct: Math.round(summary.atMin.winRate * 10) / 10,
+            avg_pct_change: Math.round(summary.atMin.avgPct * 10) / 10,
+          }
+        : null,
+      at_max_hold: summary.atMax
+        ? {
+            hold_day: summary.holdDays.max,
+            count: summary.atMax.count,
+            win_rate_pct: Math.round(summary.atMax.winRate * 10) / 10,
+            avg_pct_change: Math.round(summary.atMax.avgPct * 10) / 10,
+          }
+        : null,
+    };
+  });
+
+  const exportPayload = {
+    export_type: "swing_scanner_setup_performance_scorecard",
+    generated_at_utc: new Date().toISOString(),
+    history_range: {
+      from: snapshots[0].dateStr,
+      to: snapshots[snapshots.length - 1].dateStr,
+      total_days_with_data: snapshots.length,
+    },
+    setups,
+    note_for_claude:
+      "นี่คือผลย้อนหลัง (backtest) จากข้อมูลสแกนจริงที่เก็บไว้เท่านั้น ไม่ใช่การการันตี " +
+      "ผลในอนาคต ถ้า total_days_with_data ยังน้อย (เช่นต่ำกว่า 10-14 วัน) ควรเตือนผู้ใช้ว่า " +
+      "ตัวอย่างยังน้อยเกินจะสรุปอะไรที่หนักแน่นได้ ถ้าสแกนขาดบางวัน การนับ 'วันถัดไป' " +
+      "อิงลำดับ snapshot ที่มีจริง ไม่ใช่ปฏิทินจริง 100%",
+  };
+
+  const blob = new Blob([JSON.stringify(exportPayload, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  const fromTo = `${exportPayload.history_range.from}_to_${exportPayload.history_range.to}`;
+  a.href = url;
+  a.download = `scorecard_export_${fromTo}.json`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 }
 
 init();
