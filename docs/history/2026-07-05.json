@@ -1,14 +1,14 @@
 {
-  "scan_timestamp_utc": "2026-07-05T01:50:48.567151+00:00",
+  "scan_timestamp_utc": "2026-07-05T14:49:38.070597+00:00",
   "scan_timestamp_local_note": "เวลาด้านบนเป็น UTC — แปลงเป็นเวลาไทยใน dashboard (+7 ชม.)",
   "total_scanned": 1000,
   "total_passed_base_filter": 992,
-  "total_passed_fundamental_filter": 871,
-  "total_matched_any_setup": 316,
-  "total_with_data_quality_flags": 1,
+  "total_passed_fundamental_filter": 877,
+  "total_matched_any_setup": 317,
+  "total_with_data_quality_flags": 0,
   "total_with_upcoming_earnings": 0,
   "total_with_insider_buying": 0,
-  "total_with_institutional_data": 17,
+  "total_with_institutional_data": 13,
   "base_filter_config": {
     "min_price": 5.0,
     "min_avg_volume": 1000000,
@@ -1146,17 +1146,7 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": {
-        "num_institutions_reported": 10,
-        "top_holders_pct_combined": 49.0,
-        "top_holder_names": [
-          "Blackrock Inc.",
-          "FMR, LLC",
-          "Vanguard Capital Management LLC",
-          "State Street Corporation",
-          "Invesco Ltd."
-        ]
-      },
+      "institutional_ownership": null,
       "error": ""
     },
     {
@@ -1232,6 +1222,85 @@
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
           "detail": "ไม่มีข้อมูล earnings history",
+          "suggested_hold_days": ""
+        }
+      ],
+      "upcoming_earnings_warning": null,
+      "insider_buying_signal": null,
+      "institutional_ownership": null,
+      "error": ""
+    },
+    {
+      "ticker": "TXG",
+      "company_name": "10x Genomics, Inc.",
+      "sector": "Healthcare",
+      "price": 39.0099983215332,
+      "avg_volume": 3617955,
+      "market_cap": 4952560640.0,
+      "avg_dollar_volume": 141136418.47738266,
+      "passed_base_filter": true,
+      "base_filter_fail_reason": "",
+      "data_quality_flags": [],
+      "passed_fundamental_filter": true,
+      "fundamental_filter_fail_reason": "",
+      "fundamental_score": 48.0,
+      "fundamental_breakdown": {
+        "profitability": 0.0,
+        "growth": 45.7,
+        "financial_health": 98.3,
+        "_weights_used": {
+          "profitability": 25,
+          "growth": 25,
+          "financial_health": 25
+        },
+        "_data_completeness": "3/4 มุม"
+      },
+      "fundamentals_raw": {
+        "profit_margin": -0.035469998,
+        "roe": -0.029790001,
+        "revenue_growth": -0.026,
+        "earnings_growth": null,
+        "debt_to_equity": 9.995,
+        "current_ratio": 5.896,
+        "trailing_pe": null,
+        "forward_pe": 195.04999,
+        "sector": "Healthcare"
+      },
+      "setups_matched": [
+        {
+          "setup_name": "Gap & Hold",
+          "matched": false,
+          "detail": "Gap 0.6% ≤ 4.0%",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Volume Breakout",
+          "matched": false,
+          "detail": "close $39.01 ไม่ break high $40.08; volume 0.8x < 2.0x",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Relative Strength Leader",
+          "matched": true,
+          "detail": "แรงกว่า Nasdaq ติดต่อกัน 3 วัน (หุ้น +9.2% vs Nasdaq +1.9% ใน 5 วัน)",
+          "suggested_hold_days": "3-5 วัน"
+        },
+        {
+          "setup_name": "Pullback to Support (in uptrend)",
+          "matched": false,
+          "detail": "Uptrend อยู่ แต่ยังไม่ pullback มาแตะ EMA (ห่าง EMA10 7.5%, EMA20 15.4%)",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Sector Hype Rotation",
+          "matched": true,
+          "detail": "Sector 'Healthcare' ร้อน (+5.2% ใน 5 วัน) และหุ้นวิ่งตาม (+9.2%)",
+          "suggested_hold_days": "3-5 วัน"
+        },
+        {
+          "setup_name": "Earnings Surprise Momentum",
+          "matched": false,
+          "detail": "Earnings surprise +2.2% < 5.0%",
           "suggested_hold_days": ""
         }
       ],
@@ -1885,7 +1954,17 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": null,
+      "institutional_ownership": {
+        "num_institutions_reported": 10,
+        "top_holders_pct_combined": 43.2,
+        "top_holder_names": [
+          "Lilly Endowment, Inc",
+          "Blackrock Inc.",
+          "Vanguard Capital Management LLC",
+          "PNC Financial Services Group, Inc.",
+          "State Street Corporation"
+        ]
+      },
       "error": ""
     },
     {
@@ -2126,17 +2205,7 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": {
-        "num_institutions_reported": 10,
-        "top_holders_pct_combined": 31.7,
-        "top_holder_names": [
-          "Blackrock Inc.",
-          "Vanguard Capital Management LLC",
-          "State Street Corporation",
-          "Morgan Stanley",
-          "Vanguard Portfolio Management LLC"
-        ]
-      },
+      "institutional_ownership": null,
       "error": ""
     },
     {
@@ -2535,17 +2604,7 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": {
-        "num_institutions_reported": 10,
-        "top_holders_pct_combined": 34.1,
-        "top_holder_names": [
-          "Blackrock Inc.",
-          "Vanguard Capital Management LLC",
-          "State Street Corporation",
-          "Vanguard Portfolio Management LLC",
-          "JPMORGAN CHASE & CO"
-        ]
-      },
+      "institutional_ownership": null,
       "error": ""
     },
     {
@@ -2786,17 +2845,7 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": {
-        "num_institutions_reported": 10,
-        "top_holders_pct_combined": 38.5,
-        "top_holder_names": [
-          "Blackrock Inc.",
-          "Vanguard Capital Management LLC",
-          "Capital Research Global Investors",
-          "State Street Corporation",
-          "Morgan Stanley"
-        ]
-      },
+      "institutional_ownership": null,
       "error": ""
     },
     {
@@ -3033,7 +3082,7 @@
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "Earnings surprise +0.0% < 5.0%",
+          "detail": "ไม่มีข้อมูล earnings history",
           "suggested_hold_days": ""
         }
       ],
@@ -3044,41 +3093,29 @@
     },
     {
       "ticker": "PG",
-      "company_name": "Procter & Gamble Company (The)",
-      "sector": "Consumer Defensive",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 151.41000366210938,
       "avg_volume": 9509580,
-      "market_cap": 352573194240.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 1439845542.625122,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 76.0,
-      "fundamental_breakdown": {
-        "profitability": 97.9,
-        "growth": 61.0,
-        "financial_health": 57.0,
-        "valuation": 88.1,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.19162,
-        "roe": 0.31112,
-        "revenue_growth": 0.074,
-        "earnings_growth": 0.058,
-        "debt_to_equity": 67.651,
-        "current_ratio": 0.732,
-        "trailing_pe": 22.135965,
-        "forward_pe": 21.419962,
-        "sector": "Consumer Defensive"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -3108,94 +3145,13 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Consumer Defensive'",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
           "detail": "Earnings surprise +0.0% < 5.0%",
-          "suggested_hold_days": ""
-        }
-      ],
-      "upcoming_earnings_warning": null,
-      "insider_buying_signal": null,
-      "institutional_ownership": null,
-      "error": ""
-    },
-    {
-      "ticker": "HON",
-      "company_name": "Honeywell International Inc.",
-      "sector": "Industrials",
-      "price": 229.86000061035156,
-      "avg_volume": 6248955,
-      "market_cap": 72825749504.0,
-      "avg_dollar_volume": 1436384800.1140594,
-      "passed_base_filter": true,
-      "base_filter_fail_reason": "",
-      "data_quality_flags": [],
-      "passed_fundamental_filter": true,
-      "fundamental_filter_fail_reason": "",
-      "fundamental_score": 61.1,
-      "fundamental_breakdown": {
-        "profitability": 75.8,
-        "growth": 27.0,
-        "financial_health": 41.7,
-        "valuation": 100.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
-      "fundamentals_raw": {
-        "profit_margin": 0.1089,
-        "roe": 0.24264,
-        "revenue_growth": 0.024,
-        "earnings_growth": -0.419,
-        "debt_to_equity": 257.387,
-        "current_ratio": 1.385,
-        "trailing_pe": 18.344772,
-        "forward_pe": 24.263624,
-        "sector": "Industrials"
-      },
-      "setups_matched": [
-        {
-          "setup_name": "Gap & Hold",
-          "matched": false,
-          "detail": "Gap 0.2% ≤ 4.0%",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Volume Breakout",
-          "matched": false,
-          "detail": "close $229.86 ไม่ break high $252.00; volume 0.9x < 2.0x",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Relative Strength Leader",
-          "matched": false,
-          "detail": "แรงกว่าตลาดต่อเนื่องสูงสุด 1 วัน < 3 วัน",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Pullback to Support (in uptrend)",
-          "matched": true,
-          "detail": "Uptrend + pullback แตะ EMA10 (ห่าง 1.5%, close $229.86, EMA10 $226.56, EMA20 $225.45)",
-          "suggested_hold_days": "2-4 วัน"
-        },
-        {
-          "setup_name": "Sector Hype Rotation",
-          "matched": false,
-          "detail": "sector 'Industrials' ยังไม่ร้อน (-0.1% < 2%); หุ้นไม่วิ่งตาม sector (หุ้น -0.6% vs sector -0.1%)",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Earnings Surprise Momentum",
-          "matched": false,
-          "detail": "Earnings surprise +0.1% < 5.0%",
           "suggested_hold_days": ""
         }
       ],
@@ -3517,7 +3473,7 @@
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "ไม่มีข้อมูล earnings history",
+          "detail": "Earnings surprise +0.6% < 5.0%",
           "suggested_hold_days": ""
         }
       ],
@@ -4012,41 +3968,29 @@
     },
     {
       "ticker": "PM",
-      "company_name": "Philip Morris International Inc",
-      "sector": "Consumer Defensive",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 182.27000427246094,
       "avg_volume": 5450945,
-      "market_cap": 284078538752.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 993543768.4389496,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 70.2,
-      "fundamental_breakdown": {
-        "profitability": 100.0,
-        "growth": 49.8,
-        "financial_health": 48.8,
-        "valuation": 82.3,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.26742,
+        "profit_margin": null,
         "roe": null,
-        "revenue_growth": 0.091,
-        "earnings_growth": -0.093,
+        "revenue_growth": null,
+        "earnings_growth": null,
         "debt_to_equity": null,
-        "current_ratio": 0.976,
-        "trailing_pe": 25.635725,
-        "forward_pe": 19.983051,
-        "sector": "Consumer Defensive"
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -4076,13 +4020,13 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Consumer Defensive'",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "Earnings surprise +0.1% < 5.0%",
+          "detail": "ไม่มีข้อมูล earnings history",
           "suggested_hold_days": ""
         }
       ],
@@ -4207,7 +4151,7 @@
         "debt_to_equity": 5.943,
         "current_ratio": 2.06,
         "trailing_pe": 33.10422,
-        "forward_pe": 26.787714,
+        "forward_pe": 26.746033,
         "sector": "Communication Services"
       },
       "setups_matched": [
@@ -5139,17 +5083,7 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": {
-        "num_institutions_reported": 10,
-        "top_holders_pct_combined": 39.6,
-        "top_holder_names": [
-          "Blackrock Inc.",
-          "Vanguard Capital Management LLC",
-          "Vanguard Portfolio Management LLC",
-          "State Street Corporation",
-          "JPMORGAN CHASE & CO"
-        ]
-      },
+      "institutional_ownership": null,
       "error": ""
     },
     {
@@ -5712,17 +5646,7 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": {
-        "num_institutions_reported": 10,
-        "top_holders_pct_combined": 3.7,
-        "top_holder_names": [
-          "Dodge & Cox Inc.",
-          "LOOMIS SAYLES & CO L P",
-          "Franklin Resources, Inc.",
-          "Capital International Investors",
-          "Susquehanna International Group, LLP"
-        ]
-      },
+      "institutional_ownership": null,
       "error": ""
     },
     {
@@ -5799,17 +5723,7 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": {
-        "num_institutions_reported": 10,
-        "top_holders_pct_combined": 70.4,
-        "top_holder_names": [
-          "Deerfield Management Company, L.P",
-          "FMR, LLC",
-          "Paradigm Biocapital Advisors LP",
-          "Blackrock Inc.",
-          "JPMORGAN CHASE & CO"
-        ]
-      },
+      "institutional_ownership": null,
       "error": ""
     },
     {
@@ -5886,17 +5800,7 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": {
-        "num_institutions_reported": 10,
-        "top_holders_pct_combined": 41.7,
-        "top_holder_names": [
-          "Farallon Capital Management LLC",
-          "Blackrock Inc.",
-          "Janus Henderson Group PLC",
-          "Baker Bros. Advisors, LP",
-          "FMR, LLC"
-        ]
-      },
+      "institutional_ownership": null,
       "error": ""
     },
     {
@@ -5977,7 +5881,17 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": null,
+      "institutional_ownership": {
+        "num_institutions_reported": 10,
+        "top_holders_pct_combined": 42.2,
+        "top_holder_names": [
+          "Blackrock Inc.",
+          "State Street Corporation",
+          "Vanguard Capital Management LLC",
+          "Vanguard Portfolio Management LLC",
+          "FMR, LLC"
+        ]
+      },
       "error": ""
     },
     {
@@ -6536,7 +6450,17 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": null,
+      "institutional_ownership": {
+        "num_institutions_reported": 10,
+        "top_holders_pct_combined": 38.7,
+        "top_holder_names": [
+          "Blackrock Inc.",
+          "Capital International Investors",
+          "Vanguard Capital Management LLC",
+          "State Street Corporation",
+          "Bank of America Corporation"
+        ]
+      },
       "error": ""
     },
     {
@@ -6615,7 +6539,17 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": null,
+      "institutional_ownership": {
+        "num_institutions_reported": 10,
+        "top_holders_pct_combined": 39.3,
+        "top_holder_names": [
+          "Alphabet Inc.",
+          "Blackrock Inc.",
+          "Vanguard Portfolio Management LLC",
+          "Vanguard Capital Management LLC",
+          "Van Eck Associates Corporation"
+        ]
+      },
       "error": ""
     },
     {
@@ -7994,6 +7928,85 @@
       "error": ""
     },
     {
+      "ticker": "NTRA",
+      "company_name": "Natera, Inc.",
+      "sector": "Healthcare",
+      "price": 279.32000732421875,
+      "avg_volume": 1628610,
+      "market_cap": 40002920448.0,
+      "avg_dollar_volume": 454903357.1282959,
+      "passed_base_filter": true,
+      "base_filter_fail_reason": "",
+      "data_quality_flags": [],
+      "passed_fundamental_filter": true,
+      "fundamental_filter_fail_reason": "",
+      "fundamental_score": 65.9,
+      "fundamental_breakdown": {
+        "profitability": 0.0,
+        "growth": 100.0,
+        "financial_health": 97.7,
+        "_weights_used": {
+          "profitability": 25,
+          "growth": 25,
+          "financial_health": 25
+        },
+        "_data_completeness": "3/4 มุม"
+      },
+      "fundamentals_raw": {
+        "profit_margin": -0.09049,
+        "roe": -0.15019,
+        "revenue_growth": 0.388,
+        "earnings_growth": null,
+        "debt_to_equity": 13.533,
+        "current_ratio": 2.959,
+        "trailing_pe": null,
+        "forward_pe": -1309.7628,
+        "sector": "Healthcare"
+      },
+      "setups_matched": [
+        {
+          "setup_name": "Gap & Hold",
+          "matched": false,
+          "detail": "Gap 0.8% ≤ 4.0%",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Volume Breakout",
+          "matched": false,
+          "detail": "close $279.32 ไม่ break high $279.42; volume 0.8x < 2.0x",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Relative Strength Leader",
+          "matched": false,
+          "detail": "แรงกว่าตลาดต่อเนื่องสูงสุด 2 วัน < 3 วัน",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Pullback to Support (in uptrend)",
+          "matched": false,
+          "detail": "Uptrend อยู่ แต่ยังไม่ pullback มาแตะ EMA (ห่าง EMA10 7.4%, EMA20 14.1%)",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Sector Hype Rotation",
+          "matched": true,
+          "detail": "Sector 'Healthcare' ร้อน (+5.2% ใน 5 วัน) และหุ้นวิ่งตาม (+7.1%)",
+          "suggested_hold_days": "3-5 วัน"
+        },
+        {
+          "setup_name": "Earnings Surprise Momentum",
+          "matched": false,
+          "detail": "Earnings surprise -0.1% < 5.0%",
+          "suggested_hold_days": ""
+        }
+      ],
+      "upcoming_earnings_warning": null,
+      "insider_buying_signal": null,
+      "institutional_ownership": null,
+      "error": ""
+    },
+    {
       "ticker": "MDLN",
       "company_name": "Medline Inc.",
       "sector": "Healthcare",
@@ -8314,7 +8327,17 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": null,
+      "institutional_ownership": {
+        "num_institutions_reported": 10,
+        "top_holders_pct_combined": 60.2,
+        "top_holder_names": [
+          "Blackrock Inc.",
+          "Goldman Sachs Group Inc",
+          "Vanguard Portfolio Management LLC",
+          "Elliott Investment Management L.P.",
+          "Vanguard Capital Management LLC"
+        ]
+      },
       "error": ""
     },
     {
@@ -10086,6 +10109,75 @@
       "error": ""
     },
     {
+      "ticker": "LUV",
+      "company_name": "",
+      "sector": "Unknown",
+      "price": 50.25,
+      "avg_volume": 6929530,
+      "market_cap": 0.0,
+      "avg_dollar_volume": 348208882.5,
+      "passed_base_filter": true,
+      "base_filter_fail_reason": "",
+      "data_quality_flags": [],
+      "passed_fundamental_filter": true,
+      "fundamental_filter_fail_reason": "",
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
+      "fundamentals_raw": {
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
+      },
+      "setups_matched": [
+        {
+          "setup_name": "Gap & Hold",
+          "matched": false,
+          "detail": "Gap 2.0% ≤ 4.0%",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Volume Breakout",
+          "matched": false,
+          "detail": "close $50.25 ไม่ break high $53.13; volume 0.7x < 2.0x",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Relative Strength Leader",
+          "matched": false,
+          "detail": "แรงกว่าตลาดต่อเนื่องสูงสุด 1 วัน < 3 วัน",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Pullback to Support (in uptrend)",
+          "matched": true,
+          "detail": "Uptrend + pullback แตะ EMA10 (ห่าง 0.7%, close $50.25, EMA10 $49.92, EMA20 $47.87)",
+          "suggested_hold_days": "2-4 วัน"
+        },
+        {
+          "setup_name": "Sector Hype Rotation",
+          "matched": false,
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Earnings Surprise Momentum",
+          "matched": false,
+          "detail": "Earnings surprise -0.1% < 5.0%",
+          "suggested_hold_days": ""
+        }
+      ],
+      "upcoming_earnings_warning": null,
+      "insider_buying_signal": null,
+      "institutional_ownership": null,
+      "error": ""
+    },
+    {
       "ticker": "IQV",
       "company_name": "IQVIA Holdings, Inc.",
       "sector": "Healthcare",
@@ -11055,41 +11147,29 @@
     },
     {
       "ticker": "TMHC",
-      "company_name": "Taylor Morrison Home Corporatio",
-      "sector": "Consumer Cyclical",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 71.86000061035156,
       "avg_volume": 4298200,
-      "market_cap": 6611116544.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 308868654.6234131,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 60.1,
-      "fundamental_breakdown": {
-        "profitability": 44.1,
-        "growth": 2.7,
-        "financial_health": 93.6,
-        "valuation": 100.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.08771,
-        "roe": 0.111090004,
-        "revenue_growth": -0.268,
-        "earnings_growth": -0.512,
-        "debt_to_equity": 38.645,
-        "current_ratio": 9.262,
-        "trailing_pe": 10.709389,
-        "forward_pe": 11.216156,
-        "sector": "Consumer Cyclical"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -11119,13 +11199,13 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Consumer Cyclical'",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "Earnings surprise +0.3% < 5.0%",
+          "detail": "ไม่มีข้อมูล earnings history",
           "suggested_hold_days": ""
         }
       ],
@@ -11775,17 +11855,7 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": {
-        "num_institutions_reported": 10,
-        "top_holders_pct_combined": 49.9,
-        "top_holder_names": [
-          "Bank of Nova Scotia",
-          "Blackrock Inc.",
-          "Vanguard Capital Management LLC",
-          "Vanguard Portfolio Management LLC",
-          "State Street Corporation"
-        ]
-      },
+      "institutional_ownership": null,
       "error": ""
     },
     {
@@ -12427,7 +12497,17 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": null,
+      "institutional_ownership": {
+        "num_institutions_reported": 10,
+        "top_holders_pct_combined": 52.6,
+        "top_holder_names": [
+          "Blackrock Inc.",
+          "FMR, LLC",
+          "Price (T.Rowe) Associates Inc",
+          "Vanguard Portfolio Management LLC",
+          "Vanguard Capital Management LLC"
+        ]
+      },
       "error": ""
     },
     {
@@ -12593,87 +12673,6 @@
       "error": ""
     },
     {
-      "ticker": "PODD",
-      "company_name": "Insulet Corporation",
-      "sector": "Healthcare",
-      "price": 164.47999572753906,
-      "avg_volume": 1644340,
-      "market_cap": 11392653312.0,
-      "avg_dollar_volume": 270461036.1746216,
-      "passed_base_filter": true,
-      "base_filter_fail_reason": "",
-      "data_quality_flags": [],
-      "passed_fundamental_filter": true,
-      "fundamental_filter_fail_reason": "",
-      "fundamental_score": 84.1,
-      "fundamental_breakdown": {
-        "profitability": 72.1,
-        "growth": 100.0,
-        "financial_health": 87.0,
-        "valuation": 77.2,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
-      "fundamentals_raw": {
-        "profit_margin": 0.10438,
-        "roe": 0.22997999,
-        "revenue_growth": 0.339,
-        "earnings_growth": 1.59,
-        "debt_to_equity": 77.844,
-        "current_ratio": 2.487,
-        "trailing_pe": 38.429905,
-        "forward_pe": 20.346539,
-        "sector": "Healthcare"
-      },
-      "setups_matched": [
-        {
-          "setup_name": "Gap & Hold",
-          "matched": false,
-          "detail": "Gap 0.6% ≤ 4.0%",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Volume Breakout",
-          "matched": false,
-          "detail": "volume 0.9x < 2.0x",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Relative Strength Leader",
-          "matched": false,
-          "detail": "แรงกว่าตลาดต่อเนื่องสูงสุด 2 วัน < 3 วัน",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Pullback to Support (in uptrend)",
-          "matched": false,
-          "detail": "Uptrend อยู่ แต่ยังไม่ pullback มาแตะ EMA (ห่าง EMA10 6.1%, EMA20 7.4%)",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Sector Hype Rotation",
-          "matched": true,
-          "detail": "Sector 'Healthcare' ร้อน (+5.2% ใน 5 วัน) และหุ้นวิ่งตาม (+6.9%)",
-          "suggested_hold_days": "3-5 วัน"
-        },
-        {
-          "setup_name": "Earnings Surprise Momentum",
-          "matched": false,
-          "detail": "Earnings surprise +0.2% < 5.0%",
-          "suggested_hold_days": ""
-        }
-      ],
-      "upcoming_earnings_warning": null,
-      "insider_buying_signal": null,
-      "institutional_ownership": null,
-      "error": ""
-    },
-    {
       "ticker": "TD",
       "company_name": "Toronto Dominion Bank (The)",
       "sector": "Financial Services",
@@ -12706,7 +12705,7 @@
         "debt_to_equity": null,
         "current_ratio": null,
         "trailing_pe": 19.883333,
-        "forward_pe": 15.75911,
+        "forward_pe": 15.770839,
         "sector": "Financial Services"
       },
       "setups_matched": [
@@ -12749,7 +12748,17 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": null,
+      "institutional_ownership": {
+        "num_institutions_reported": 10,
+        "top_holders_pct_combined": 27.0,
+        "top_holder_names": [
+          "Royal Bank of Canada",
+          "Bank of Montreal /CAN/",
+          "Vanguard Capital Management LLC",
+          "CIBC World Market, Inc.",
+          "TD Asset Management, Inc"
+        ]
+      },
       "error": ""
     },
     {
@@ -13152,17 +13161,7 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": {
-        "num_institutions_reported": 10,
-        "top_holders_pct_combined": 47.7,
-        "top_holder_names": [
-          "Blackrock Inc.",
-          "FMR, LLC",
-          "Victory Capital Management Inc.",
-          "Viking Global Investors, L.P.",
-          "Vanguard Capital Management LLC"
-        ]
-      },
+      "institutional_ownership": null,
       "error": ""
     },
     {
@@ -13329,41 +13328,29 @@
     },
     {
       "ticker": "PHM",
-      "company_name": "PulteGroup, Inc.",
-      "sector": "Consumer Cyclical",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 133.6699981689453,
       "avg_volume": 1872905,
-      "market_cap": 25462310912.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 250351207.92060852,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 68.6,
-      "fundamental_breakdown": {
-        "profitability": 62.7,
-        "growth": 14.7,
-        "financial_health": 96.8,
-        "valuation": 100.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.121400006,
-        "roe": 0.16178,
-        "revenue_growth": -0.124,
-        "earnings_growth": -0.304,
-        "debt_to_equity": 18.942,
-        "current_ratio": 7.139,
-        "trailing_pe": 12.914975,
-        "forward_pe": 12.014007,
-        "sector": "Consumer Cyclical"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -13393,7 +13380,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Consumer Cyclical'",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -13410,41 +13397,29 @@
     },
     {
       "ticker": "PEG",
-      "company_name": "Public Service Enterprise Group",
-      "sector": "Utilities",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 81.62000274658203,
       "avg_volume": 3056905,
-      "market_cap": 40672993280.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 249504594.49604034,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 77.3,
-      "fundamental_breakdown": {
-        "profitability": 71.1,
-        "growth": 87.3,
-        "financial_health": 50.7,
-        "valuation": 100.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.17688,
-        "roe": 0.13441,
-        "revenue_growth": 0.194,
-        "earnings_growth": 0.254,
-        "debt_to_equity": 141.01,
-        "current_ratio": 0.969,
-        "trailing_pe": 18.057524,
-        "forward_pe": 17.389488,
-        "sector": "Utilities"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -13474,13 +13449,13 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "sector 'Utilities' ยังไม่ร้อน (-0.2% < 2%); หุ้นไม่วิ่งตาม sector (หุ้น -1.2% vs sector -0.2%)",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "Earnings surprise +0.1% < 5.0%",
+          "detail": "ไม่มีข้อมูล earnings history",
           "suggested_hold_days": ""
         }
       ],
@@ -13842,7 +13817,7 @@
         "debt_to_equity": null,
         "current_ratio": null,
         "trailing_pe": 16.712328,
-        "forward_pe": 13.097255,
+        "forward_pe": 13.107001,
         "sector": "Financial Services"
       },
       "setups_matched": [
@@ -14128,17 +14103,7 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": {
-        "num_institutions_reported": 10,
-        "top_holders_pct_combined": 43.3,
-        "top_holder_names": [
-          "Morgan Stanley",
-          "Capital International Investors",
-          "Blackrock Inc.",
-          "FMR, LLC",
-          "BAILLIE GIFFORD & CO"
-        ]
-      },
+      "institutional_ownership": null,
       "error": ""
     },
     {
@@ -14219,7 +14184,17 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": null,
+      "institutional_ownership": {
+        "num_institutions_reported": 10,
+        "top_holders_pct_combined": 43.6,
+        "top_holder_names": [
+          "Farallon Capital Management LLC",
+          "Caligan Partners, LP",
+          "Blackrock Inc.",
+          "Findell Capital Management LLC",
+          "Vanguard Capital Management LLC"
+        ]
+      },
       "error": ""
     },
     {
@@ -14544,29 +14519,41 @@
     },
     {
       "ticker": "NTR",
-      "company_name": "",
-      "sector": "Unknown",
+      "company_name": "Nutrien Ltd.",
+      "sector": "Basic Materials",
       "price": 65.05999755859375,
       "avg_volume": 3290335,
-      "market_cap": 0.0,
+      "market_cap": 31230330880.0,
       "avg_dollar_volume": 214069187.06695557,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": null,
-      "fundamental_breakdown": {},
+      "fundamental_score": 76.1,
+      "fundamental_breakdown": {
+        "profitability": 41.8,
+        "growth": 90.8,
+        "financial_health": 71.7,
+        "valuation": 100.0,
+        "_weights_used": {
+          "profitability": 25,
+          "growth": 25,
+          "financial_health": 25,
+          "valuation": 25
+        },
+        "_data_completeness": "4/4 มุม"
+      },
       "fundamentals_raw": {
-        "profit_margin": null,
-        "roe": null,
-        "revenue_growth": null,
-        "earnings_growth": null,
-        "debt_to_equity": null,
-        "current_ratio": null,
-        "trailing_pe": null,
-        "forward_pe": null,
-        "sector": null
+        "profit_margin": 0.08881,
+        "roe": 0.098129995,
+        "revenue_growth": 0.19,
+        "earnings_growth": 12.5,
+        "debt_to_equity": 55.359,
+        "current_ratio": 1.239,
+        "trailing_pe": 13.250509,
+        "forward_pe": 12.163703,
+        "sector": "Basic Materials"
       },
       "setups_matched": [
         {
@@ -14596,13 +14583,13 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Basic Materials'",
           "suggested_hold_days": ""
         },
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "ไม่มีข้อมูล earnings history",
+          "detail": "Earnings surprise -0.1% < 5.0%",
           "suggested_hold_days": ""
         }
       ],
@@ -14847,17 +14834,7 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": {
-        "num_institutions_reported": 10,
-        "top_holders_pct_combined": 28.1,
-        "top_holder_names": [
-          "Wellington Management Group, LLP",
-          "FMR, LLC",
-          "D1 Capital Partners, LP",
-          "Massachusetts Financial Services Co.",
-          "JPMORGAN CHASE & CO"
-        ]
-      },
+      "institutional_ownership": null,
       "error": ""
     },
     {
@@ -16224,17 +16201,7 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": {
-        "num_institutions_reported": 10,
-        "top_holders_pct_combined": 44.3,
-        "top_holder_names": [
-          "Blackrock Inc.",
-          "Vanguard Capital Management LLC",
-          "FMR, LLC",
-          "State Street Corporation",
-          "Vanguard Portfolio Management LLC"
-        ]
-      },
+      "institutional_ownership": null,
       "error": ""
     },
     {
@@ -16315,17 +16282,7 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": {
-        "num_institutions_reported": 10,
-        "top_holders_pct_combined": 57.6,
-        "top_holder_names": [
-          "State Street Corporation",
-          "Independent Franchise Partners, LLP",
-          "Blackrock Inc.",
-          "Vanguard Capital Management LLC",
-          "Barclays Plc"
-        ]
-      },
+      "institutional_ownership": null,
       "error": ""
     },
     {
@@ -16500,9 +16457,7 @@
       "avg_dollar_volume": 179529386.68407458,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
-      "data_quality_flags": [
-        "Volume วันล่าสุด = 0 (อาจ halt หรือข้อมูลขาด)"
-      ],
+      "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
       "fundamental_score": 80.3,
@@ -16570,56 +16525,34 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": {
-        "num_institutions_reported": 10,
-        "top_holders_pct_combined": 52.7,
-        "top_holder_names": [
-          "Trian Fund Management, LP",
-          "Blackrock Inc.",
-          "Vanguard Portfolio Management LLC",
-          "Vanguard Capital Management LLC",
-          "State Street Corporation"
-        ]
-      },
+      "institutional_ownership": null,
       "error": ""
     },
     {
       "ticker": "TECK",
-      "company_name": "Teck Resources Ltd",
-      "sector": "Basic Materials",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 60.0099983215332,
       "avg_volume": 2953195,
-      "market_cap": 29398556672.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 177221226.99316025,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 81.0,
-      "fundamental_breakdown": {
-        "profitability": 49.1,
-        "growth": 100.0,
-        "financial_health": 87.7,
-        "valuation": 87.4,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.14909,
-        "roe": 0.0592,
-        "revenue_growth": 0.722,
-        "earnings_growth": 1.288,
-        "debt_to_equity": 36.94,
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
         "current_ratio": null,
-        "trailing_pe": 22.560148,
-        "forward_pe": 19.6146,
-        "sector": "Basic Materials"
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -16649,7 +16582,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Basic Materials'",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -17065,41 +16998,29 @@
     },
     {
       "ticker": "TGTX",
-      "company_name": "TG Therapeutics, Inc.",
-      "sector": "Healthcare",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 53.310001373291016,
       "avg_volume": 3146340,
-      "market_cap": 8160886272.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 167731389.72084045,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 94.6,
-      "fundamental_breakdown": {
-        "profitability": 100.0,
-        "growth": 100.0,
-        "financial_health": 78.5,
-        "valuation": 100.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.65952003,
-        "roe": 1.1259999,
-        "revenue_growth": 0.696,
-        "earnings_growth": 3.0,
-        "debt_to_equity": 129.226,
-        "current_ratio": 5.809,
-        "trailing_pe": 18.639862,
-        "forward_pe": 18.56088,
-        "sector": "Healthcare"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -17129,7 +17050,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "หุ้นไม่วิ่งตาม sector (หุ้น -0.6% vs sector +5.2%)",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -17389,41 +17310,29 @@
     },
     {
       "ticker": "PFG",
-      "company_name": "Principal Financial Group Inc",
-      "sector": "Financial Services",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 110.87000274658203,
       "avg_volume": 1471925,
-      "market_cap": 23949293568.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 163192328.79276276,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 76.1,
-      "fundamental_breakdown": {
-        "profitability": 52.0,
-        "growth": 71.2,
-        "financial_health": 82.5,
-        "valuation": 98.5,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.10102,
-        "roe": 0.13385999,
-        "revenue_growth": -0.045,
-        "earnings_growth": 8.19,
-        "debt_to_equity": 33.624,
-        "current_ratio": 1.526,
-        "trailing_pe": 15.906744,
-        "forward_pe": 10.870376,
-        "sector": "Financial Services"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -17453,7 +17362,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Financial Services'",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -17702,7 +17611,17 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": null,
+      "institutional_ownership": {
+        "num_institutions_reported": 10,
+        "top_holders_pct_combined": 49.9,
+        "top_holder_names": [
+          "FMR, LLC",
+          "Blackrock Inc.",
+          "RTW Investments LP",
+          "Fairmount Funds Management LLC",
+          "Perceptive Advisors Llc"
+        ]
+      },
       "error": ""
     },
     {
@@ -17776,6 +17695,85 @@
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
           "detail": "Earnings surprise +0.2% < 5.0%",
+          "suggested_hold_days": ""
+        }
+      ],
+      "upcoming_earnings_warning": null,
+      "insider_buying_signal": null,
+      "institutional_ownership": null,
+      "error": ""
+    },
+    {
+      "ticker": "CWAN",
+      "company_name": "Clearwater Analytics Holdings, ",
+      "sector": "Technology",
+      "price": 24.559999465942383,
+      "avg_volume": 6348960,
+      "market_cap": 7330872320.0,
+      "avg_dollar_volume": 155930454.20928955,
+      "passed_base_filter": true,
+      "base_filter_fail_reason": "",
+      "data_quality_flags": [],
+      "passed_fundamental_filter": true,
+      "fundamental_filter_fail_reason": "",
+      "fundamental_score": 64.3,
+      "fundamental_breakdown": {
+        "profitability": 0.0,
+        "growth": 100.0,
+        "financial_health": 93.0,
+        "_weights_used": {
+          "profitability": 25,
+          "growth": 25,
+          "financial_health": 25
+        },
+        "_data_completeness": "3/4 มุม"
+      },
+      "fundamentals_raw": {
+        "profit_margin": -0.05824,
+        "roe": -0.03127,
+        "revenue_growth": 0.744,
+        "earnings_growth": null,
+        "debt_to_equity": 41.899,
+        "current_ratio": 2.255,
+        "trailing_pe": null,
+        "forward_pe": 28.025011,
+        "sector": "Technology"
+      },
+      "setups_matched": [
+        {
+          "setup_name": "Gap & Hold",
+          "matched": false,
+          "detail": "Gap 0.0% ≤ 4.0%",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Volume Breakout",
+          "matched": false,
+          "detail": "close $24.56 ไม่ break high $24.56; volume 0.0x < 2.0x",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Relative Strength Leader",
+          "matched": false,
+          "detail": "แรงกว่าตลาดต่อเนื่องสูงสุด 2 วัน < 3 วัน",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Pullback to Support (in uptrend)",
+          "matched": true,
+          "detail": "Uptrend + pullback แตะ EMA10 (ห่าง 0.2%, close $24.56, EMA10 $24.52, EMA20 $24.46)",
+          "suggested_hold_days": "2-4 วัน"
+        },
+        {
+          "setup_name": "Sector Hype Rotation",
+          "matched": false,
+          "detail": "sector 'Technology' ยังไม่ร้อน (-2.2% < 2%)",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Earnings Surprise Momentum",
+          "matched": false,
+          "detail": "Earnings surprise -0.0% < 5.0%",
           "suggested_hold_days": ""
         }
       ],
@@ -18106,39 +18104,29 @@
     },
     {
       "ticker": "PNFP",
-      "company_name": "Pinnacle Financial Partners, In",
-      "sector": "Financial Services",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 99.5,
       "avg_volume": 1491535,
-      "market_cap": 15035127808.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 148407732.5,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 70.8,
-      "fundamental_breakdown": {
-        "profitability": 62.3,
-        "growth": 50.0,
-        "valuation": 100.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "3/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.24658,
-        "roe": 0.061680004,
-        "revenue_growth": 1.564,
-        "earnings_growth": -0.497,
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
         "debt_to_equity": null,
         "current_ratio": null,
-        "trailing_pe": 13.838665,
-        "forward_pe": 8.435556,
-        "sector": "Financial Services"
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -18168,7 +18156,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Financial Services'",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -18578,75 +18566,6 @@
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
           "detail": "Earnings surprise +0.4% < 5.0%",
-          "suggested_hold_days": ""
-        }
-      ],
-      "upcoming_earnings_warning": null,
-      "insider_buying_signal": null,
-      "institutional_ownership": null,
-      "error": ""
-    },
-    {
-      "ticker": "TXG",
-      "company_name": "",
-      "sector": "Unknown",
-      "price": 39.0099983215332,
-      "avg_volume": 3617955,
-      "market_cap": 0.0,
-      "avg_dollar_volume": 141136418.47738266,
-      "passed_base_filter": true,
-      "base_filter_fail_reason": "",
-      "data_quality_flags": [],
-      "passed_fundamental_filter": true,
-      "fundamental_filter_fail_reason": "",
-      "fundamental_score": null,
-      "fundamental_breakdown": {},
-      "fundamentals_raw": {
-        "profit_margin": null,
-        "roe": null,
-        "revenue_growth": null,
-        "earnings_growth": null,
-        "debt_to_equity": null,
-        "current_ratio": null,
-        "trailing_pe": null,
-        "forward_pe": null,
-        "sector": null
-      },
-      "setups_matched": [
-        {
-          "setup_name": "Gap & Hold",
-          "matched": false,
-          "detail": "Gap 0.6% ≤ 4.0%",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Volume Breakout",
-          "matched": false,
-          "detail": "close $39.01 ไม่ break high $40.08; volume 0.8x < 2.0x",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Relative Strength Leader",
-          "matched": true,
-          "detail": "แรงกว่า Nasdaq ติดต่อกัน 3 วัน (หุ้น +9.2% vs Nasdaq +1.9% ใน 5 วัน)",
-          "suggested_hold_days": "3-5 วัน"
-        },
-        {
-          "setup_name": "Pullback to Support (in uptrend)",
-          "matched": false,
-          "detail": "Uptrend อยู่ แต่ยังไม่ pullback มาแตะ EMA (ห่าง EMA10 7.5%, EMA20 15.4%)",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Sector Hype Rotation",
-          "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Earnings Surprise Momentum",
-          "matched": false,
-          "detail": "ไม่มีข้อมูล earnings history",
           "suggested_hold_days": ""
         }
       ],
@@ -19138,17 +19057,7 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": {
-        "num_institutions_reported": 10,
-        "top_holders_pct_combined": 55.7,
-        "top_holder_names": [
-          "Price (T.Rowe) Associates Inc",
-          "Blackrock Inc.",
-          "FMR, LLC",
-          "Vanguard Portfolio Management LLC",
-          "Boston Partners"
-        ]
-      },
+      "institutional_ownership": null,
       "error": ""
     },
     {
@@ -19186,7 +19095,7 @@
         "debt_to_equity": 132.582,
         "current_ratio": 1.51,
         "trailing_pe": 104.11111,
-        "forward_pe": 41.986317,
+        "forward_pe": 42.017563,
         "sector": "Industrials"
       },
       "setups_matched": [
@@ -19427,7 +19336,7 @@
         "debt_to_equity": 140.013,
         "current_ratio": 1.131,
         "trailing_pe": 49.430656,
-        "forward_pe": 46.169697,
+        "forward_pe": 45.917053,
         "sector": "Industrials"
       },
       "setups_matched": [
@@ -19699,7 +19608,7 @@
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "Earnings surprise -0.3% < 5.0%",
+          "detail": "ไม่มีข้อมูล earnings history",
           "suggested_hold_days": ""
         }
       ],
@@ -20030,39 +19939,29 @@
     },
     {
       "ticker": "LMND",
-      "company_name": "Lemonade, Inc.",
-      "sector": "Financial Services",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 71.5199966430664,
       "avg_volume": 1572570,
-      "market_cap": 5494222848.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 112470201.12098694,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 58.2,
-      "fundamental_breakdown": {
-        "profitability": 0.0,
-        "growth": 100.0,
-        "financial_health": 74.6,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25
-        },
-        "_data_completeness": "3/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": -0.16444,
-        "roe": -0.26121,
-        "revenue_growth": 0.706,
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
         "earnings_growth": null,
-        "debt_to_equity": 38.687,
-        "current_ratio": 1.241,
+        "debt_to_equity": null,
+        "current_ratio": null,
         "trailing_pe": null,
-        "forward_pe": -190.71999,
-        "sector": "Financial Services"
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -20092,7 +19991,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Financial Services'",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -20345,7 +20244,17 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": null,
+      "institutional_ownership": {
+        "num_institutions_reported": 10,
+        "top_holders_pct_combined": 54.5,
+        "top_holder_names": [
+          "FMR, LLC",
+          "Blackrock Inc.",
+          "Vanguard Portfolio Management LLC",
+          "Vanguard Capital Management LLC",
+          "Dimensional Fund Advisors LP"
+        ]
+      },
       "error": ""
     },
     {
@@ -21221,39 +21130,29 @@
     },
     {
       "ticker": "SYM",
-      "company_name": "Symbotic Inc.",
-      "sector": "Industrials",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 42.7400016784668,
       "avg_volume": 2229485,
-      "market_cap": 25799309312.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 95288192.64211655,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 58.1,
-      "fundamental_breakdown": {
-        "profitability": 0.0,
-        "growth": 88.5,
-        "financial_health": 85.7,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25
-        },
-        "_data_completeness": "3/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": -0.0029300002,
-        "roe": -0.05732,
-        "revenue_growth": 0.231,
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
         "earnings_growth": null,
-        "debt_to_equity": 2.717,
-        "current_ratio": 1.446,
+        "debt_to_equity": null,
+        "current_ratio": null,
         "trailing_pe": null,
-        "forward_pe": 59.24591,
-        "sector": "Industrials"
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -21283,7 +21182,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "sector 'Industrials' ยังไม่ร้อน (-0.1% < 2%)",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -21457,7 +21356,17 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": null,
+      "institutional_ownership": {
+        "num_institutions_reported": 10,
+        "top_holders_pct_combined": 49.3,
+        "top_holder_names": [
+          "Blackrock Inc.",
+          "Berkshire Hathaway, Inc",
+          "Price (T.Rowe) Associates Inc",
+          "59 North Capital Management, LP",
+          "Vanguard Portfolio Management LLC"
+        ]
+      },
       "error": ""
     },
     {
@@ -22660,7 +22569,17 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": null,
+      "institutional_ownership": {
+        "num_institutions_reported": 10,
+        "top_holders_pct_combined": 53.1,
+        "top_holder_names": [
+          "Blackrock Inc.",
+          "Vanguard Portfolio Management LLC",
+          "Nordea Investment Management AB",
+          "Vanguard Capital Management LLC",
+          "Capital World Investors"
+        ]
+      },
       "error": ""
     },
     {
@@ -23223,17 +23142,7 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": {
-        "num_institutions_reported": 10,
-        "top_holders_pct_combined": 34.3,
-        "top_holder_names": [
-          "State Street Corporation",
-          "SOF Ltd",
-          "Independent Franchise Partners, LLP",
-          "Blackrock Inc.",
-          "Vanguard Capital Management LLC"
-        ]
-      },
+      "institutional_ownership": null,
       "error": ""
     },
     {
@@ -23315,41 +23224,29 @@
     },
     {
       "ticker": "LNC",
-      "company_name": "Lincoln National Corporation",
-      "sector": "Financial Services",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 37.0,
       "avg_volume": 1731840,
-      "market_cap": 7074888192.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 64078080.0,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 80.1,
-      "fundamental_breakdown": {
-        "profitability": 60.5,
-        "growth": 70.8,
-        "financial_health": 89.0,
-        "valuation": 100.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.09172,
-        "roe": 0.18767,
-        "revenue_growth": 0.125,
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
         "earnings_growth": null,
-        "debt_to_equity": 65.727,
-        "current_ratio": 2.193,
-        "trailing_pe": 4.04814,
-        "forward_pe": 4.4431157,
-        "sector": "Financial Services"
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -23379,7 +23276,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Financial Services'",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -24424,7 +24321,17 @@
       ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
-      "institutional_ownership": null,
+      "institutional_ownership": {
+        "num_institutions_reported": 10,
+        "top_holders_pct_combined": 57.5,
+        "top_holder_names": [
+          "MHR Fund Management, LLC",
+          "Liberty 77 Capital L.P.                          ",
+          "Blackrock Inc.",
+          "Jericho Capital Asset Management, LP",
+          "Vanguard Portfolio Management LLC"
+        ]
+      },
       "error": ""
     },
     {
@@ -24992,37 +24899,29 @@
     },
     {
       "ticker": "PDI",
-      "company_name": "PIMCO Dynamic Income Fund",
-      "sector": "Financial Services",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 16.700000762939453,
       "avg_volume": 2780545,
-      "market_cap": 7708126208.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 46435103.62138748,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 50.0,
-      "fundamental_breakdown": {
-        "profitability": 0.0,
-        "valuation": 100.0,
-        "_weights_used": {
-          "profitability": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "2/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.0,
+        "profit_margin": null,
         "roe": null,
         "revenue_growth": null,
         "earnings_growth": null,
         "debt_to_equity": null,
         "current_ratio": null,
-        "trailing_pe": 8.106796,
+        "trailing_pe": null,
         "forward_pe": null,
-        "sector": "Financial Services"
+        "sector": null
       },
       "setups_matched": [
         {
@@ -25052,7 +24951,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Financial Services'",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -26444,41 +26343,29 @@
     },
     {
       "ticker": "PLTR",
-      "company_name": "Palantir Technologies Inc.",
-      "sector": "Technology",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 129.3000030517578,
       "avg_volume": 43585275,
-      "market_cap": 309972434944.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 5635576190.5117035,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 74.9,
-      "fundamental_breakdown": {
-        "profitability": 100.0,
-        "growth": 100.0,
-        "financial_health": 99.6,
-        "valuation": 0.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.43673,
-        "roe": 0.32587,
-        "revenue_growth": 0.847,
-        "earnings_growth": 3.25,
-        "debt_to_equity": 2.477,
-        "current_ratio": 6.907,
-        "trailing_pe": 145.2809,
-        "forward_pe": 61.7337,
-        "sector": "Technology"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -26508,7 +26395,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "sector 'Technology' ยังไม่ร้อน (-2.2% < 2%)",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -26525,41 +26412,29 @@
     },
     {
       "ticker": "LRCX",
-      "company_name": "Lam Research Corporation",
-      "sector": "Technology",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 351.4100036621094,
       "avg_volume": 14640635,
-      "market_cap": 439463149568.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 5144865598.965607,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 86.8,
-      "fundamental_breakdown": {
-        "profitability": 100.0,
-        "growth": 94.8,
-        "financial_health": 94.1,
-        "valuation": 58.1,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.30938998,
-        "roe": 0.66762,
-        "revenue_growth": 0.238,
-        "earnings_growth": 0.408,
-        "debt_to_equity": 35.282,
-        "current_ratio": 2.536,
-        "trailing_pe": 66.17891,
-        "forward_pe": 43.76116,
-        "sector": "Technology"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -26589,7 +26464,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "sector 'Technology' ยังไม่ร้อน (-2.2% < 2%); หุ้นไม่วิ่งตาม sector (หุ้น -12.5% vs sector -2.2%)",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -27465,29 +27340,41 @@
     },
     {
       "ticker": "TXN",
-      "company_name": "",
-      "sector": "Unknown",
+      "company_name": "Texas Instruments Incorporated",
+      "sector": "Technology",
       "price": 293.0799865722656,
       "avg_volume": 10644480,
-      "market_cap": 0.0,
+      "market_cap": 266729979904.0,
       "avg_dollar_volume": 3119684055.46875,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": null,
-      "fundamental_breakdown": {},
+      "fundamental_score": 89.3,
+      "fundamental_breakdown": {
+        "profitability": 100.0,
+        "growth": 90.5,
+        "financial_health": 86.0,
+        "valuation": 80.5,
+        "_weights_used": {
+          "profitability": 25,
+          "growth": 25,
+          "financial_health": 25,
+          "valuation": 25
+        },
+        "_data_completeness": "4/4 มุม"
+      },
       "fundamentals_raw": {
-        "profit_margin": null,
-        "roe": null,
-        "revenue_growth": null,
-        "earnings_growth": null,
-        "debt_to_equity": null,
-        "current_ratio": null,
-        "trailing_pe": null,
-        "forward_pe": null,
-        "sector": null
+        "profit_margin": 0.29108,
+        "roe": 0.32347,
+        "revenue_growth": 0.186,
+        "earnings_growth": 0.313,
+        "debt_to_equity": 83.741,
+        "current_ratio": 4.456,
+        "trailing_pe": 50.01365,
+        "forward_pe": 30.614151,
+        "sector": "Technology"
       },
       "setups_matched": [
         {
@@ -27517,13 +27404,13 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
+          "detail": "sector 'Technology' ยังไม่ร้อน (-2.2% < 2%); หุ้นไม่วิ่งตาม sector (หุ้น -6.0% vs sector -2.2%)",
           "suggested_hold_days": ""
         },
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "ไม่มีข้อมูล earnings history",
+          "detail": "Earnings surprise +0.2% < 5.0%",
           "suggested_hold_days": ""
         }
       ],
@@ -30416,6 +30303,87 @@
       "error": ""
     },
     {
+      "ticker": "HON",
+      "company_name": "Honeywell International Inc.",
+      "sector": "Industrials",
+      "price": 229.86000061035156,
+      "avg_volume": 6018084,
+      "market_cap": 72825749504.0,
+      "avg_dollar_volume": 1383316998.7871475,
+      "passed_base_filter": true,
+      "base_filter_fail_reason": "",
+      "data_quality_flags": [],
+      "passed_fundamental_filter": true,
+      "fundamental_filter_fail_reason": "",
+      "fundamental_score": 61.1,
+      "fundamental_breakdown": {
+        "profitability": 75.8,
+        "growth": 27.0,
+        "financial_health": 41.7,
+        "valuation": 100.0,
+        "_weights_used": {
+          "profitability": 25,
+          "growth": 25,
+          "financial_health": 25,
+          "valuation": 25
+        },
+        "_data_completeness": "4/4 มุม"
+      },
+      "fundamentals_raw": {
+        "profit_margin": 0.1089,
+        "roe": 0.24264,
+        "revenue_growth": 0.024,
+        "earnings_growth": -0.419,
+        "debt_to_equity": 257.387,
+        "current_ratio": 1.385,
+        "trailing_pe": 18.344772,
+        "forward_pe": 24.263624,
+        "sector": "Industrials"
+      },
+      "setups_matched": [
+        {
+          "setup_name": "Gap & Hold",
+          "matched": false,
+          "detail": "Gap 0.2% ≤ 4.0%",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Volume Breakout",
+          "matched": false,
+          "detail": "close $229.86 ไม่ break high $252.00; volume 0.9x < 2.0x",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Relative Strength Leader",
+          "matched": false,
+          "detail": "แรงกว่าตลาดต่อเนื่องสูงสุด 1 วัน < 3 วัน",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Pullback to Support (in uptrend)",
+          "matched": false,
+          "detail": "ไม่อยู่ใน uptrend (EMA10 ไม่อยู่เหนือ EMA20 หรือราคาไม่สูงกว่า 20 วันก่อน)",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Sector Hype Rotation",
+          "matched": false,
+          "detail": "sector 'Industrials' ยังไม่ร้อน (-0.1% < 2%); หุ้นไม่วิ่งตาม sector (หุ้น -5.2% vs sector -0.1%)",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Earnings Surprise Momentum",
+          "matched": false,
+          "detail": "Earnings surprise +0.1% < 5.0%",
+          "suggested_hold_days": ""
+        }
+      ],
+      "upcoming_earnings_warning": null,
+      "insider_buying_signal": null,
+      "institutional_ownership": null,
+      "error": ""
+    },
+    {
       "ticker": "MCD",
       "company_name": "McDonald's Corporation",
       "sector": "Consumer Cyclical",
@@ -31072,41 +31040,29 @@
     },
     {
       "ticker": "PFE",
-      "company_name": "Pfizer, Inc.",
-      "sector": "Healthcare",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 24.31999969482422,
       "avg_volume": 50046965,
-      "market_cap": 138610475008.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 1217142173.5268784,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 65.4,
-      "fundamental_breakdown": {
-        "profitability": 46.2,
-        "growth": 46.1,
-        "financial_health": 69.2,
-        "valuation": 100.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.118310004,
-        "roe": 0.083100006,
-        "revenue_growth": 0.054,
-        "earnings_growth": -0.101,
-        "debt_to_equity": 71.602,
-        "current_ratio": 1.247,
-        "trailing_pe": 18.564886,
-        "forward_pe": 8.5961,
-        "sector": "Healthcare"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -31136,7 +31092,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "หุ้นไม่วิ่งตาม sector (หุ้น +2.7% vs sector +5.2%)",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -32375,41 +32331,29 @@
     },
     {
       "ticker": "TJX",
-      "company_name": "TJX Companies, Inc. (The)",
-      "sector": "Consumer Cyclical",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 154.25999450683594,
       "avg_volume": 6424125,
-      "market_cap": 170411687936.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 990985487.2112274,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 71.6,
-      "fundamental_breakdown": {
-        "profitability": 73.5,
-        "growth": 82.1,
-        "financial_health": 55.8,
-        "valuation": 75.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.09402,
-        "roe": 0.6125,
-        "revenue_growth": 0.092,
-        "earnings_growth": 0.293,
-        "debt_to_equity": 136.307,
-        "current_ratio": 1.139,
-        "trailing_pe": 30.011673,
-        "forward_pe": 26.785063,
-        "sector": "Consumer Cyclical"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -32439,7 +32383,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Consumer Cyclical'",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -33496,7 +33440,7 @@
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "Earnings surprise -0.1% < 5.0%",
+          "detail": "ไม่มีข้อมูล earnings history",
           "suggested_hold_days": ""
         }
       ],
@@ -33507,43 +33451,68 @@
     },
     {
       "ticker": "PGR",
-      "company_name": "Progressive Corporation (The)",
-      "sector": "Financial Services",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 232.22000122070312,
       "avg_volume": 3702380,
-      "market_cap": 135198482432.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 859766688.1195068,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
-      "passed_fundamental_filter": false,
-      "fundamental_filter_fail_reason": "Current Ratio 0.30 < 0.5 (สภาพคล่องระยะสั้นน่ากังวล)",
-      "fundamental_score": 75.2,
-      "fundamental_breakdown": {
-        "profitability": 82.3,
-        "growth": 65.4,
-        "financial_health": 53.2,
-        "valuation": 100.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "passed_fundamental_filter": true,
+      "fundamental_filter_fail_reason": "",
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.12927,
-        "roe": 0.37903,
-        "revenue_growth": 0.087,
-        "earnings_growth": 0.098,
-        "debt_to_equity": 26.174,
-        "current_ratio": 0.301,
-        "trailing_pe": 11.805796,
-        "forward_pe": 14.126181,
-        "sector": "Financial Services"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
-      "setups_matched": [],
+      "setups_matched": [
+        {
+          "setup_name": "Gap & Hold",
+          "matched": false,
+          "detail": "Gap 0.4% ≤ 4.0%",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Volume Breakout",
+          "matched": false,
+          "detail": "volume 0.8x < 2.0x",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Relative Strength Leader",
+          "matched": false,
+          "detail": "แรงกว่าตลาดต่อเนื่องสูงสุด 2 วัน < 3 วัน",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Pullback to Support (in uptrend)",
+          "matched": false,
+          "detail": "Uptrend อยู่ แต่ยังไม่ pullback มาแตะ EMA (ห่าง EMA10 5.9%, EMA20 9.0%)",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Sector Hype Rotation",
+          "matched": false,
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Earnings Surprise Momentum",
+          "matched": false,
+          "detail": "Earnings surprise +0.0% < 5.0%",
+          "suggested_hold_days": ""
+        }
+      ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
       "institutional_ownership": null,
@@ -34281,29 +34250,41 @@
     },
     {
       "ticker": "JCI",
-      "company_name": "",
-      "sector": "Unknown",
+      "company_name": "Johnson Controls International ",
+      "sector": "Industrials",
       "price": 140.75999450683594,
       "avg_volume": 5401860,
-      "market_cap": 0.0,
+      "market_cap": 85879865344.0,
       "avg_dollar_volume": 760365783.9266968,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": null,
-      "fundamental_breakdown": {},
+      "fundamental_score": 72.9,
+      "fundamental_breakdown": {
+        "profitability": 63.0,
+        "growth": 81.8,
+        "financial_health": 64.2,
+        "valuation": 82.6,
+        "_weights_used": {
+          "profitability": 25,
+          "growth": 25,
+          "financial_health": 25,
+          "valuation": 25
+        },
+        "_data_completeness": "4/4 มุม"
+      },
       "fundamentals_raw": {
-        "profit_margin": null,
-        "roe": null,
-        "revenue_growth": null,
-        "earnings_growth": null,
-        "debt_to_equity": null,
-        "current_ratio": null,
-        "trailing_pe": null,
-        "forward_pe": null,
-        "sector": null
+        "profit_margin": 0.14452,
+        "roe": 0.13449,
+        "revenue_growth": 0.082,
+        "earnings_growth": 0.389,
+        "debt_to_equity": 70.317,
+        "current_ratio": 1.036,
+        "trailing_pe": 43.04587,
+        "forward_pe": 24.387623,
+        "sector": "Industrials"
       },
       "setups_matched": [
         {
@@ -34333,13 +34314,13 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
+          "detail": "sector 'Industrials' ยังไม่ร้อน (-0.1% < 2%); หุ้นไม่วิ่งตาม sector (หุ้น -3.3% vs sector -0.1%)",
           "suggested_hold_days": ""
         },
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "ไม่มีข้อมูล earnings history",
+          "detail": "Earnings surprise +0.1% < 5.0%",
           "suggested_hold_days": ""
         }
       ],
@@ -34350,41 +34331,29 @@
     },
     {
       "ticker": "LMT",
-      "company_name": "Lockheed Martin Corporation",
-      "sector": "Industrials",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 545.9099731445312,
       "avg_volume": 1391550,
-      "market_cap": 125866975232.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 759661023.1292725,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 59.7,
-      "fundamental_breakdown": {
-        "profitability": 66.0,
-        "growth": 40.7,
-        "financial_health": 32.3,
-        "valuation": 100.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.06382,
-        "roe": 0.6764,
-        "revenue_growth": 0.003,
-        "earnings_growth": -0.115,
-        "debt_to_equity": 276.365,
-        "current_ratio": 1.135,
-        "trailing_pe": 26.449127,
-        "forward_pe": 17.013378,
-        "sector": "Industrials"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -34414,7 +34383,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "sector 'Industrials' ยังไม่ร้อน (-0.1% < 2%)",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -36470,43 +36439,68 @@
     },
     {
       "ticker": "MAR",
-      "company_name": "Marriott International",
-      "sector": "Consumer Cyclical",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 372.95001220703125,
       "avg_volume": 1683220,
-      "market_cap": 98342674432.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 627756919.5471191,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
-      "passed_fundamental_filter": false,
-      "fundamental_filter_fail_reason": "Current Ratio 0.46 < 0.5 (สภาพคล่องระยะสั้นน่ากังวล)",
-      "fundamental_score": 61.2,
-      "fundamental_breakdown": {
-        "profitability": 100.0,
-        "growth": 61.9,
-        "financial_health": 23.0,
-        "valuation": 59.9,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "passed_fundamental_filter": true,
+      "fundamental_filter_fail_reason": "",
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.35969,
+        "profit_margin": null,
         "roe": null,
-        "revenue_growth": 0.126,
-        "earnings_growth": 0.017,
+        "revenue_growth": null,
+        "earnings_growth": null,
         "debt_to_equity": null,
-        "current_ratio": 0.46,
-        "trailing_pe": 39.052357,
-        "forward_pe": 28.50182,
-        "sector": "Consumer Cyclical"
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
-      "setups_matched": [],
+      "setups_matched": [
+        {
+          "setup_name": "Gap & Hold",
+          "matched": false,
+          "detail": "Gap 0.4% ≤ 4.0%",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Volume Breakout",
+          "matched": false,
+          "detail": "close $372.95 ไม่ break high $410.98; volume 0.9x < 2.0x",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Relative Strength Leader",
+          "matched": false,
+          "detail": "แรงกว่าตลาดต่อเนื่องสูงสุด 2 วัน < 3 วัน",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Pullback to Support (in uptrend)",
+          "matched": false,
+          "detail": "ไม่อยู่ใน uptrend (EMA10 ไม่อยู่เหนือ EMA20 หรือราคาไม่สูงกว่า 20 วันก่อน)",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Sector Hype Rotation",
+          "matched": false,
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Earnings Surprise Momentum",
+          "matched": false,
+          "detail": "Earnings surprise +0.1% < 5.0%",
+          "suggested_hold_days": ""
+        }
+      ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
       "institutional_ownership": null,
@@ -37770,41 +37764,29 @@
     },
     {
       "ticker": "LULU",
-      "company_name": "lululemon athletica inc.",
-      "sector": "Consumer Cyclical",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 118.43000030517578,
       "avg_volume": 4859640,
-      "market_cap": 13448190976.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 575527166.6830444,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 75.9,
-      "fundamental_breakdown": {
-        "profitability": 82.6,
-        "growth": 28.6,
-        "financial_health": 92.6,
-        "valuation": 100.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.13029,
-        "roe": 0.32027,
-        "revenue_growth": 0.043,
-        "earnings_growth": -0.35,
-        "debt_to_equity": 44.264,
-        "current_ratio": 2.226,
-        "trailing_pe": 9.589474,
-        "forward_pe": 10.353061,
-        "sector": "Consumer Cyclical"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -37834,7 +37816,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Consumer Cyclical'",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -37972,43 +37954,68 @@
     },
     {
       "ticker": "LNG",
-      "company_name": "Cheniere Energy, Inc.",
-      "sector": "Energy",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 245.97000122070312,
       "avg_volume": 2291385,
-      "market_cap": 51543474176.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 563611971.2471008,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
-      "passed_fundamental_filter": false,
-      "fundamental_filter_fail_reason": "Debt/Equity 321% > 300% (หนี้สูงผิดปกติ)",
-      "fundamental_score": 54.4,
-      "fundamental_breakdown": {
-        "profitability": 67.8,
-        "growth": 90.3,
-        "financial_health": 14.3,
-        "valuation": 45.2,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "passed_fundamental_filter": true,
+      "fundamental_filter_fail_reason": "",
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.07102,
-        "roe": 0.2892,
-        "revenue_growth": 0.242,
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
         "earnings_growth": null,
-        "debt_to_equity": 321.125,
-        "current_ratio": 0.572,
-        "trailing_pe": 41.68983,
-        "forward_pe": 12.608622,
-        "sector": "Energy"
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
-      "setups_matched": [],
+      "setups_matched": [
+        {
+          "setup_name": "Gap & Hold",
+          "matched": false,
+          "detail": "Gap 1.6% ≤ 4.0%",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Volume Breakout",
+          "matched": false,
+          "detail": "volume 0.7x < 2.0x",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Relative Strength Leader",
+          "matched": false,
+          "detail": "แรงกว่าตลาดต่อเนื่องสูงสุด 2 วัน < 3 วัน",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Pullback to Support (in uptrend)",
+          "matched": false,
+          "detail": "Uptrend อยู่ แต่ยังไม่ pullback มาแตะ EMA (ห่าง EMA10 2.6%, EMA20 3.1%)",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Sector Hype Rotation",
+          "matched": false,
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Earnings Surprise Momentum",
+          "matched": false,
+          "detail": "ไม่มีข้อมูล earnings history",
+          "suggested_hold_days": ""
+        }
+      ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
       "institutional_ownership": null,
@@ -38016,41 +38023,29 @@
     },
     {
       "ticker": "TECH",
-      "company_name": "Bio-Techne Corp",
-      "sector": "Healthcare",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 70.83000183105469,
       "avg_volume": 7876510,
-      "market_cap": 11036068864.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 557893217.7223206,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 51.2,
-      "fundamental_breakdown": {
-        "profitability": 33.3,
-        "growth": 73.8,
-        "financial_health": 97.7,
-        "valuation": 0.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.09049,
-        "roe": 0.053400002,
-        "revenue_growth": -0.015,
-        "earnings_growth": 1.286,
-        "debt_to_equity": 13.922,
-        "current_ratio": 4.489,
-        "trailing_pe": 101.18572,
-        "forward_pe": 34.630955,
-        "sector": "Healthcare"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -38080,7 +38075,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "หุ้นไม่วิ่งตาม sector (หุ้น +0.2% vs sector +5.2%)",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -38257,29 +38252,41 @@
     },
     {
       "ticker": "JBL",
-      "company_name": "",
-      "sector": "Unknown",
+      "company_name": "Jabil Inc.",
+      "sector": "Technology",
       "price": 341.29998779296875,
       "avg_volume": 1620570,
-      "market_cap": 0.0,
+      "market_cap": 35763830784.0,
       "avg_dollar_volume": 553100521.2176514,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": null,
-      "fundamental_breakdown": {},
+      "fundamental_score": 63.7,
+      "fundamental_breakdown": {
+        "profitability": 56.4,
+        "growth": 82.8,
+        "financial_health": 25.0,
+        "valuation": 90.7,
+        "_weights_used": {
+          "profitability": 25,
+          "growth": 25,
+          "financial_health": 25,
+          "valuation": 25
+        },
+        "_data_completeness": "4/4 มุม"
+      },
       "fundamentals_raw": {
-        "profit_margin": null,
-        "roe": null,
-        "revenue_growth": null,
-        "earnings_growth": null,
-        "debt_to_equity": null,
-        "current_ratio": null,
-        "trailing_pe": null,
-        "forward_pe": null,
-        "sector": null
+        "profit_margin": 0.02566,
+        "roe": 0.65876,
+        "revenue_growth": 0.118,
+        "earnings_growth": 0.276,
+        "debt_to_equity": 297.136,
+        "current_ratio": 0.981,
+        "trailing_pe": 42.715893,
+        "forward_pe": 20.380232,
+        "sector": "Technology"
       },
       "setups_matched": [
         {
@@ -38309,13 +38316,13 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
+          "detail": "sector 'Technology' ยังไม่ร้อน (-2.2% < 2%); หุ้นไม่วิ่งตาม sector (หุ้น -8.9% vs sector -2.2%)",
           "suggested_hold_days": ""
         },
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "ไม่มีข้อมูล earnings history",
+          "detail": "Earnings surprise +0.0% < 5.0%",
           "suggested_hold_days": ""
         }
       ],
@@ -38736,39 +38743,29 @@
     },
     {
       "ticker": "MARA",
-      "company_name": "MARA Holdings, Inc.",
-      "sector": "Financial Services",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 12.399999618530273,
       "avg_volume": 42832130,
-      "market_cap": 4727754240.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 531118395.6608391,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 32.6,
-      "fundamental_breakdown": {
-        "profitability": 0.0,
-        "growth": 19.3,
-        "financial_health": 78.5,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25
-        },
-        "_data_completeness": "3/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": -2.34829,
-        "roe": -0.67333,
-        "revenue_growth": -0.184,
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
         "earnings_growth": null,
-        "debt_to_equity": 105.602,
-        "current_ratio": 1.844,
+        "debt_to_equity": null,
+        "current_ratio": null,
         "trailing_pe": null,
-        "forward_pe": -18.235292,
-        "sector": "Financial Services"
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -38798,7 +38795,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Financial Services'",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -39181,41 +39178,29 @@
     },
     {
       "ticker": "TEL",
-      "company_name": "TE Connectivity plc",
-      "sector": "Technology",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 197.44000244140625,
       "avg_volume": 2572865,
-      "market_cap": 57631907840.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 507986471.8814087,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 90.3,
-      "fundamental_breakdown": {
-        "profitability": 84.3,
-        "growth": 87.1,
-        "financial_health": 89.9,
-        "valuation": 100.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.15543,
-        "roe": 0.22719999,
-        "revenue_growth": 0.145,
-        "earnings_growth": 71.5,
-        "debt_to_equity": 43.798,
-        "current_ratio": 1.888,
-        "trailing_pe": 20.167519,
-        "forward_pe": 15.648442,
-        "sector": "Technology"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -39245,7 +39230,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "sector 'Technology' ยังไม่ร้อน (-2.2% < 2%)",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -39414,85 +39399,6 @@
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
           "detail": "Earnings surprise +0.1% < 5.0%",
-          "suggested_hold_days": ""
-        }
-      ],
-      "upcoming_earnings_warning": null,
-      "insider_buying_signal": null,
-      "institutional_ownership": null,
-      "error": ""
-    },
-    {
-      "ticker": "CWAN",
-      "company_name": "Clearwater Analytics Holdings, ",
-      "sector": "Technology",
-      "price": 24.559999465942383,
-      "avg_volume": 20341731,
-      "market_cap": 7330872320.0,
-      "avg_dollar_volume": 499592902.4963436,
-      "passed_base_filter": true,
-      "base_filter_fail_reason": "",
-      "data_quality_flags": [],
-      "passed_fundamental_filter": true,
-      "fundamental_filter_fail_reason": "",
-      "fundamental_score": 64.3,
-      "fundamental_breakdown": {
-        "profitability": 0.0,
-        "growth": 100.0,
-        "financial_health": 93.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25
-        },
-        "_data_completeness": "3/4 มุม"
-      },
-      "fundamentals_raw": {
-        "profit_margin": -0.05824,
-        "roe": -0.03127,
-        "revenue_growth": 0.744,
-        "earnings_growth": null,
-        "debt_to_equity": 41.899,
-        "current_ratio": 2.255,
-        "trailing_pe": null,
-        "forward_pe": 28.025011,
-        "sector": "Technology"
-      },
-      "setups_matched": [
-        {
-          "setup_name": "Gap & Hold",
-          "matched": false,
-          "detail": "ข้อมูลไม่พอ",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Volume Breakout",
-          "matched": false,
-          "detail": "ข้อมูลไม่พอ",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Relative Strength Leader",
-          "matched": false,
-          "detail": "ข้อมูลไม่พอ",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Pullback to Support (in uptrend)",
-          "matched": false,
-          "detail": "ข้อมูลไม่พอ",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Sector Hype Rotation",
-          "matched": false,
-          "detail": "ข้อมูลไม่พอ",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Earnings Surprise Momentum",
-          "matched": false,
-          "detail": "Earnings surprise -0.0% < 5.0%",
           "suggested_hold_days": ""
         }
       ],
@@ -40588,7 +40494,7 @@
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "Earnings surprise +0.1% < 5.0%",
+          "detail": "ไม่มีข้อมูล earnings history",
           "suggested_hold_days": ""
         }
       ],
@@ -40599,29 +40505,41 @@
     },
     {
       "ticker": "NTAP",
-      "company_name": "",
-      "sector": "Unknown",
+      "company_name": "NetApp, Inc.",
+      "sector": "Technology",
       "price": 154.1699981689453,
       "avg_volume": 3022345,
-      "market_cap": 0.0,
+      "market_cap": 30204973056.0,
       "avg_dollar_volume": 465954923.115921,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": null,
-      "fundamental_breakdown": {},
+      "fundamental_score": 82.0,
+      "fundamental_breakdown": {
+        "profitability": 96.1,
+        "growth": 79.9,
+        "financial_health": 52.2,
+        "valuation": 100.0,
+        "_weights_used": {
+          "profitability": 25,
+          "growth": 25,
+          "financial_health": 25,
+          "valuation": 25
+        },
+        "_data_completeness": "4/4 มุม"
+      },
       "fundamentals_raw": {
-        "profit_margin": null,
-        "roe": null,
-        "revenue_growth": null,
-        "earnings_growth": null,
-        "debt_to_equity": null,
-        "current_ratio": null,
-        "trailing_pe": null,
-        "forward_pe": null,
-        "sector": null
+        "profit_margin": 0.18426001,
+        "roe": 1.06734,
+        "revenue_growth": 0.125,
+        "earnings_growth": 0.234,
+        "debt_to_equity": 202.295,
+        "current_ratio": 1.436,
+        "trailing_pe": 24.27874,
+        "forward_pe": 15.661761,
+        "sector": "Technology"
       },
       "setups_matched": [
         {
@@ -40651,13 +40569,13 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
+          "detail": "sector 'Technology' ยังไม่ร้อน (-2.2% < 2%)",
           "suggested_hold_days": ""
         },
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "ไม่มีข้อมูล earnings history",
+          "detail": "Earnings surprise +0.1% < 5.0%",
           "suggested_hold_days": ""
         }
       ],
@@ -41276,75 +41194,6 @@
       "error": ""
     },
     {
-      "ticker": "NTRA",
-      "company_name": "",
-      "sector": "Unknown",
-      "price": 279.32000732421875,
-      "avg_volume": 1628610,
-      "market_cap": 0.0,
-      "avg_dollar_volume": 454903357.1282959,
-      "passed_base_filter": true,
-      "base_filter_fail_reason": "",
-      "data_quality_flags": [],
-      "passed_fundamental_filter": true,
-      "fundamental_filter_fail_reason": "",
-      "fundamental_score": null,
-      "fundamental_breakdown": {},
-      "fundamentals_raw": {
-        "profit_margin": null,
-        "roe": null,
-        "revenue_growth": null,
-        "earnings_growth": null,
-        "debt_to_equity": null,
-        "current_ratio": null,
-        "trailing_pe": null,
-        "forward_pe": null,
-        "sector": null
-      },
-      "setups_matched": [
-        {
-          "setup_name": "Gap & Hold",
-          "matched": false,
-          "detail": "Gap 0.8% ≤ 4.0%",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Volume Breakout",
-          "matched": false,
-          "detail": "close $279.32 ไม่ break high $279.42; volume 0.8x < 2.0x",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Relative Strength Leader",
-          "matched": false,
-          "detail": "แรงกว่าตลาดต่อเนื่องสูงสุด 2 วัน < 3 วัน",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Pullback to Support (in uptrend)",
-          "matched": false,
-          "detail": "Uptrend อยู่ แต่ยังไม่ pullback มาแตะ EMA (ห่าง EMA10 7.4%, EMA20 14.1%)",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Sector Hype Rotation",
-          "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Earnings Surprise Momentum",
-          "matched": false,
-          "detail": "ไม่มีข้อมูล earnings history",
-          "suggested_hold_days": ""
-        }
-      ],
-      "upcoming_earnings_warning": null,
-      "insider_buying_signal": null,
-      "institutional_ownership": null,
-      "error": ""
-    },
-    {
       "ticker": "DLTR",
       "company_name": "Dollar Tree, Inc.",
       "sector": "Consumer Defensive",
@@ -41508,41 +41357,68 @@
     },
     {
       "ticker": "TEM",
-      "company_name": "Tempus AI, Inc.",
-      "sector": "Healthcare",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 60.27000045776367,
       "avg_volume": 7425625,
-      "market_cap": 10822368256.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 447542422.14918137,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
-      "passed_fundamental_filter": false,
-      "fundamental_filter_fail_reason": "Debt/Equity 317% > 300% (หนี้สูงผิดปกติ)",
-      "fundamental_score": 50.0,
-      "fundamental_breakdown": {
-        "profitability": 0.0,
-        "growth": 100.0,
-        "financial_health": 50.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25
-        },
-        "_data_completeness": "3/4 มุม"
-      },
+      "passed_fundamental_filter": true,
+      "fundamental_filter_fail_reason": "",
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": -0.22205,
-        "roe": -0.81581,
-        "revenue_growth": 0.361,
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
         "earnings_growth": null,
-        "debt_to_equity": 316.647,
-        "current_ratio": 3.315,
+        "debt_to_equity": null,
+        "current_ratio": null,
         "trailing_pe": null,
-        "forward_pe": -565.0136,
-        "sector": "Healthcare"
+        "forward_pe": null,
+        "sector": null
       },
-      "setups_matched": [],
+      "setups_matched": [
+        {
+          "setup_name": "Gap & Hold",
+          "matched": false,
+          "detail": "Gap -0.8% ≤ 4.0%",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Volume Breakout",
+          "matched": false,
+          "detail": "close $60.27 ไม่ break high $63.11; volume 0.8x < 2.0x",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Relative Strength Leader",
+          "matched": false,
+          "detail": "แรงกว่าตลาดต่อเนื่องสูงสุด 2 วัน < 3 วัน",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Pullback to Support (in uptrend)",
+          "matched": false,
+          "detail": "Uptrend อยู่ แต่ยังไม่ pullback มาแตะ EMA (ห่าง EMA10 7.4%, EMA20 12.5%)",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Sector Hype Rotation",
+          "matched": false,
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Earnings Surprise Momentum",
+          "matched": false,
+          "detail": "Earnings surprise +0.4% < 5.0%",
+          "suggested_hold_days": ""
+        }
+      ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
       "institutional_ownership": null,
@@ -44549,39 +44425,29 @@
     },
     {
       "ticker": "TEAM",
-      "company_name": "Atlassian Corporation",
-      "sector": "Technology",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 83.83999633789062,
       "avg_volume": 4561610,
-      "market_cap": 21275895808.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 382445365.69488525,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 48.0,
-      "fundamental_breakdown": {
-        "profitability": 0.0,
-        "growth": 100.0,
-        "financial_health": 44.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25
-        },
-        "_data_completeness": "3/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": -0.03502,
-        "roe": -0.19288999,
-        "revenue_growth": 0.317,
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
         "earnings_growth": null,
-        "debt_to_equity": 141.408,
-        "current_ratio": 0.702,
+        "debt_to_equity": null,
+        "current_ratio": null,
         "trailing_pe": null,
-        "forward_pe": 13.4711075,
-        "sector": "Technology"
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -44611,7 +44477,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "sector 'Technology' ยังไม่ร้อน (-2.2% < 2%)",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -44904,7 +44770,7 @@
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "ไม่มีข้อมูล earnings history",
+          "detail": "Earnings surprise +0.1% < 5.0%",
           "suggested_hold_days": ""
         }
       ],
@@ -46299,50 +46165,6 @@
       "error": ""
     },
     {
-      "ticker": "LUV",
-      "company_name": "Southwest Airlines Company",
-      "sector": "Industrials",
-      "price": 50.25,
-      "avg_volume": 6929530,
-      "market_cap": 24560879616.0,
-      "avg_dollar_volume": 348208882.5,
-      "passed_base_filter": true,
-      "base_filter_fail_reason": "",
-      "data_quality_flags": [],
-      "passed_fundamental_filter": false,
-      "fundamental_filter_fail_reason": "Current Ratio 0.48 < 0.5 (สภาพคล่องระยะสั้นน่ากังวล)",
-      "fundamental_score": 60.6,
-      "fundamental_breakdown": {
-        "profitability": 27.2,
-        "growth": 71.3,
-        "financial_health": 46.4,
-        "valuation": 97.6,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
-      "fundamentals_raw": {
-        "profit_margin": 0.02829,
-        "roe": 0.10062,
-        "revenue_growth": 0.128,
-        "earnings_growth": null,
-        "debt_to_equity": 93.033,
-        "current_ratio": 0.478,
-        "trailing_pe": 33.5,
-        "forward_pe": 10.752941,
-        "sector": "Industrials"
-      },
-      "setups_matched": [],
-      "upcoming_earnings_warning": null,
-      "insider_buying_signal": null,
-      "institutional_ownership": null,
-      "error": ""
-    },
-    {
       "ticker": "W",
       "company_name": "Wayfair Inc.",
       "sector": "Consumer Cyclical",
@@ -46717,41 +46539,29 @@
     },
     {
       "ticker": "TKO",
-      "company_name": "TKO Group Holdings, Inc.",
-      "sector": "Communication Services",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 194.4199981689453,
       "avg_volume": 1742565,
-      "market_cap": 37158772736.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 338789484.1092682,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 48.8,
-      "fundamental_breakdown": {
-        "profitability": 24.6,
-        "growth": 96.6,
-        "financial_health": 73.8,
-        "valuation": 0.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.044699997,
-        "roe": 0.06736,
-        "revenue_growth": 0.259,
-        "earnings_growth": 0.63,
-        "debt_to_equity": 58.229,
-        "current_ratio": 1.339,
-        "trailing_pe": 72.54478,
-        "forward_pe": 41.70295,
-        "sector": "Communication Services"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -46781,7 +46591,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "หุ้นไม่วิ่งตาม sector (หุ้น -4.6% vs sector +3.8%)",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -49678,6 +49488,75 @@
       "error": ""
     },
     {
+      "ticker": "PODD",
+      "company_name": "",
+      "sector": "Unknown",
+      "price": 164.47999572753906,
+      "avg_volume": 1644340,
+      "market_cap": 0.0,
+      "avg_dollar_volume": 270461036.1746216,
+      "passed_base_filter": true,
+      "base_filter_fail_reason": "",
+      "data_quality_flags": [],
+      "passed_fundamental_filter": true,
+      "fundamental_filter_fail_reason": "",
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
+      "fundamentals_raw": {
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
+      },
+      "setups_matched": [
+        {
+          "setup_name": "Gap & Hold",
+          "matched": false,
+          "detail": "Gap 0.6% ≤ 4.0%",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Volume Breakout",
+          "matched": false,
+          "detail": "volume 0.9x < 2.0x",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Relative Strength Leader",
+          "matched": false,
+          "detail": "แรงกว่าตลาดต่อเนื่องสูงสุด 2 วัน < 3 วัน",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Pullback to Support (in uptrend)",
+          "matched": false,
+          "detail": "Uptrend อยู่ แต่ยังไม่ pullback มาแตะ EMA (ห่าง EMA10 6.1%, EMA20 7.4%)",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Sector Hype Rotation",
+          "matched": false,
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Earnings Surprise Momentum",
+          "matched": false,
+          "detail": "Earnings surprise +0.2% < 5.0%",
+          "suggested_hold_days": ""
+        }
+      ],
+      "upcoming_earnings_warning": null,
+      "insider_buying_signal": null,
+      "institutional_ownership": null,
+      "error": ""
+    },
+    {
       "ticker": "ATO",
       "company_name": "Atmos Energy Corporation",
       "sector": "Utilities",
@@ -50978,68 +50857,43 @@
     },
     {
       "ticker": "TXRH",
-      "company_name": "",
-      "sector": "Unknown",
+      "company_name": "Texas Roadhouse, Inc.",
+      "sector": "Consumer Cyclical",
       "price": 194.27999877929688,
       "avg_volume": 1282255,
-      "market_cap": 0.0,
+      "market_cap": 12769949696.0,
       "avg_dollar_volume": 249116499.8347473,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
-      "passed_fundamental_filter": true,
-      "fundamental_filter_fail_reason": "",
-      "fundamental_score": null,
-      "fundamental_breakdown": {},
-      "fundamentals_raw": {
-        "profit_margin": null,
-        "roe": null,
-        "revenue_growth": null,
-        "earnings_growth": null,
-        "debt_to_equity": null,
-        "current_ratio": null,
-        "trailing_pe": null,
-        "forward_pe": null,
-        "sector": null
+      "passed_fundamental_filter": false,
+      "fundamental_filter_fail_reason": "Current Ratio 0.46 < 0.5 (สภาพคล่องระยะสั้นน่ากังวล)",
+      "fundamental_score": 64.9,
+      "fundamental_breakdown": {
+        "profitability": 67.1,
+        "growth": 69.0,
+        "financial_health": 50.1,
+        "valuation": 73.4,
+        "_weights_used": {
+          "profitability": 25,
+          "growth": 25,
+          "financial_health": 25,
+          "valuation": 25
+        },
+        "_data_completeness": "4/4 มุม"
       },
-      "setups_matched": [
-        {
-          "setup_name": "Gap & Hold",
-          "matched": false,
-          "detail": "Gap 0.5% ≤ 4.0%",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Volume Breakout",
-          "matched": false,
-          "detail": "close $194.28 ไม่ break high $196.86; volume 0.7x < 2.0x",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Relative Strength Leader",
-          "matched": false,
-          "detail": "แรงกว่าตลาดต่อเนื่องสูงสุด 1 วัน < 3 วัน",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Pullback to Support (in uptrend)",
-          "matched": false,
-          "detail": "Uptrend อยู่ แต่ยังไม่ pullback มาแตะ EMA (ห่าง EMA10 3.2%, EMA20 6.4%)",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Sector Hype Rotation",
-          "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
-          "suggested_hold_days": ""
-        },
-        {
-          "setup_name": "Earnings Surprise Momentum",
-          "matched": false,
-          "detail": "ไม่มีข้อมูล earnings history",
-          "suggested_hold_days": ""
-        }
-      ],
+      "fundamentals_raw": {
+        "profit_margin": 0.06849,
+        "roe": 0.28922,
+        "revenue_growth": 0.128,
+        "earnings_growth": 0.1,
+        "debt_to_equity": 68.531,
+        "current_ratio": 0.459,
+        "trailing_pe": 30.936304,
+        "forward_pe": 25.441874,
+        "sector": "Consumer Cyclical"
+      },
+      "setups_matched": [],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
       "institutional_ownership": null,
@@ -53099,7 +52953,7 @@
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "ไม่มีข้อมูล earnings history",
+          "detail": "Earnings surprise -0.1% < 5.0%",
           "suggested_hold_days": ""
         }
       ],
@@ -53665,7 +53519,7 @@
         "debt_to_equity": 105.664,
         "current_ratio": 0.668,
         "trailing_pe": 22.721495,
-        "forward_pe": 19.613638,
+        "forward_pe": 19.628235,
         "sector": "Industrials"
       },
       "setups_matched": [
@@ -54116,43 +53970,68 @@
     },
     {
       "ticker": "LVS",
-      "company_name": "Las Vegas Sands Corp.",
-      "sector": "Consumer Cyclical",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 46.9900016784668,
       "avg_volume": 4518400,
-      "market_cap": 31137329152.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 212319623.58398438,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
-      "passed_fundamental_filter": false,
-      "fundamental_filter_fail_reason": "Debt/Equity 981% > 300% (หนี้สูงผิดปกติ)",
-      "fundamental_score": 74.7,
-      "fundamental_breakdown": {
-        "profitability": 83.5,
-        "growth": 96.1,
-        "financial_health": 23.0,
-        "valuation": 96.1,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "passed_fundamental_filter": true,
+      "fundamental_filter_fail_reason": "",
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.13406,
-        "roe": 0.90455,
-        "revenue_growth": 0.253,
-        "earnings_growth": 0.73,
-        "debt_to_equity": 981.405,
-        "current_ratio": 0.921,
-        "trailing_pe": 17.339483,
-        "forward_pe": 12.71464,
-        "sector": "Consumer Cyclical"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
-      "setups_matched": [],
+      "setups_matched": [
+        {
+          "setup_name": "Gap & Hold",
+          "matched": false,
+          "detail": "Gap 0.1% ≤ 4.0%",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Volume Breakout",
+          "matched": false,
+          "detail": "close $46.99 ไม่ break high $52.47; volume 0.8x < 2.0x",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Relative Strength Leader",
+          "matched": false,
+          "detail": "แรงกว่าตลาดต่อเนื่องสูงสุด 2 วัน < 3 วัน",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Pullback to Support (in uptrend)",
+          "matched": false,
+          "detail": "ไม่อยู่ใน uptrend (EMA10 ไม่อยู่เหนือ EMA20 หรือราคาไม่สูงกว่า 20 วันก่อน)",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Sector Hype Rotation",
+          "matched": false,
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Earnings Surprise Momentum",
+          "matched": false,
+          "detail": "Earnings surprise +0.2% < 5.0%",
+          "suggested_hold_days": ""
+        }
+      ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
       "institutional_ownership": null,
@@ -54614,29 +54493,41 @@
     },
     {
       "ticker": "NTNX",
-      "company_name": "",
-      "sector": "Unknown",
+      "company_name": "Nutanix, Inc.",
+      "sector": "Technology",
       "price": 51.279998779296875,
       "avg_volume": 3975560,
-      "market_cap": 0.0,
+      "market_cap": 13862035456.0,
       "avg_dollar_volume": 203866711.94702148,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": null,
-      "fundamental_breakdown": {},
+      "fundamental_score": 71.7,
+      "fundamental_breakdown": {
+        "profitability": 50.2,
+        "growth": 72.7,
+        "financial_health": 88.8,
+        "valuation": 75.0,
+        "_weights_used": {
+          "profitability": 25,
+          "growth": 25,
+          "financial_health": 25,
+          "valuation": 25
+        },
+        "_data_completeness": "4/4 มุม"
+      },
       "fundamentals_raw": {
-        "profit_margin": null,
+        "profit_margin": 0.10032,
         "roe": null,
-        "revenue_growth": null,
-        "earnings_growth": null,
+        "revenue_growth": 0.1,
+        "earnings_growth": 0.172,
         "debt_to_equity": null,
-        "current_ratio": null,
-        "trailing_pe": null,
-        "forward_pe": null,
-        "sector": null
+        "current_ratio": 1.777,
+        "trailing_pe": 53.978947,
+        "forward_pe": 23.415203,
+        "sector": "Technology"
       },
       "setups_matched": [
         {
@@ -54666,13 +54557,13 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
+          "detail": "sector 'Technology' ยังไม่ร้อน (-2.2% < 2%)",
           "suggested_hold_days": ""
         },
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "ไม่มีข้อมูล earnings history",
+          "detail": "Earnings surprise +0.3% < 5.0%",
           "suggested_hold_days": ""
         }
       ],
@@ -56647,41 +56538,29 @@
     },
     {
       "ticker": "PFGC",
-      "company_name": "Performance Food Group Company",
-      "sector": "Consumer Defensive",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 113.08999633789062,
       "avg_volume": 1597710,
-      "market_cap": 17765292032.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 180685018.04901123,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 35.8,
-      "fundamental_breakdown": {
-        "profitability": 15.8,
-        "growth": 32.2,
-        "financial_health": 60.1,
-        "valuation": 35.2,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.00519,
-        "roe": 0.072519995,
-        "revenue_growth": 0.064,
-        "earnings_growth": -0.278,
-        "debt_to_equity": 166.845,
-        "current_ratio": 1.516,
-        "trailing_pe": 53.852383,
-        "forward_pe": 19.845852,
-        "sector": "Consumer Defensive"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -56711,7 +56590,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Consumer Defensive'",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -60607,7 +60486,7 @@
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "Earnings surprise -0.1% < 5.0%",
+          "detail": "ไม่มีข้อมูล earnings history",
           "suggested_hold_days": ""
         }
       ],
@@ -60706,41 +60585,29 @@
     },
     {
       "ticker": "PNW",
-      "company_name": "Pinnacle West Capital Corporati",
-      "sector": "Utilities",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 109.37000274658203,
       "avg_volume": 1348715,
-      "market_cap": 13254241280.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 147508963.25435638,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 61.9,
-      "fundamental_breakdown": {
-        "profitability": 49.1,
-        "growth": 69.0,
-        "financial_health": 29.5,
-        "valuation": 100.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.11986,
-        "roe": 0.09559,
-        "revenue_growth": 0.114,
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
         "earnings_growth": null,
-        "debt_to_equity": 212.957,
-        "current_ratio": 0.599,
-        "trailing_pe": 20.40485,
-        "forward_pe": 19.64613,
-        "sector": "Utilities"
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -60770,7 +60637,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "sector 'Utilities' ยังไม่ร้อน (-0.2% < 2%)",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -62017,29 +61884,41 @@
     },
     {
       "ticker": "TXNM",
-      "company_name": "",
-      "sector": "Unknown",
+      "company_name": "TXNM Energy, Inc.",
+      "sector": "Utilities",
       "price": 56.939998626708984,
       "avg_volume": 2352765,
-      "market_cap": 0.0,
+      "market_cap": 6303670784.0,
       "avg_dollar_volume": 133966435.86896896,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": null,
-      "fundamental_breakdown": {},
+      "fundamental_score": 36.7,
+      "fundamental_breakdown": {
+        "profitability": 27.5,
+        "growth": 28.8,
+        "financial_health": 36.5,
+        "valuation": 54.1,
+        "_weights_used": {
+          "profitability": 25,
+          "growth": 25,
+          "financial_health": 25,
+          "valuation": 25
+        },
+        "_data_completeness": "4/4 มุม"
+      },
       "fundamentals_raw": {
-        "profit_margin": null,
-        "roe": null,
-        "revenue_growth": null,
-        "earnings_growth": null,
-        "debt_to_equity": null,
-        "current_ratio": null,
-        "trailing_pe": null,
-        "forward_pe": null,
-        "sector": null
+        "profit_margin": 0.066810004,
+        "roe": 0.054050002,
+        "revenue_growth": 0.046,
+        "earnings_growth": -0.687,
+        "debt_to_equity": 163.552,
+        "current_ratio": 0.55,
+        "trailing_pe": 40.38298,
+        "forward_pe": 17.512133,
+        "sector": "Utilities"
       },
       "setups_matched": [
         {
@@ -62069,13 +61948,13 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
+          "detail": "sector 'Utilities' ยังไม่ร้อน (-0.2% < 2%); หุ้นไม่วิ่งตาม sector (หุ้น -1.0% vs sector -0.2%)",
           "suggested_hold_days": ""
         },
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "ไม่มีข้อมูล earnings history",
+          "detail": "Earnings surprise -0.4% < 5.0%",
           "suggested_hold_days": ""
         }
       ],
@@ -62327,41 +62206,29 @@
     },
     {
       "ticker": "LTH",
-      "company_name": "Life Time Group Holdings, Inc.",
-      "sector": "Consumer Cyclical",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 40.810001373291016,
       "avg_volume": 3206445,
-      "market_cap": 9084418048.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 130855024.85338211,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 64.1,
-      "fundamental_breakdown": {
-        "profitability": 57.2,
-        "growth": 72.0,
-        "financial_health": 41.8,
-        "valuation": 85.2,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.12529,
-        "roe": 0.12954001,
-        "revenue_growth": 0.117,
-        "earnings_growth": 0.147,
-        "debt_to_equity": 129.071,
-        "current_ratio": 0.531,
-        "trailing_pe": 23.865498,
-        "forward_pe": 20.914799,
-        "sector": "Consumer Cyclical"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -62391,7 +62258,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Consumer Cyclical'",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -66585,39 +66452,29 @@
     },
     {
       "ticker": "LUMN",
-      "company_name": "Lumen Technologies, Inc.",
-      "sector": "Communication Services",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 6.429999828338623,
       "avg_volume": 15083200,
-      "market_cap": 6624899584.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 96984973.41079712,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 28.2,
-      "fundamental_breakdown": {
-        "profitability": 0.0,
-        "growth": 35.2,
-        "financial_health": 49.4,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25
-        },
-        "_data_completeness": "3/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": -0.14341,
+        "profit_margin": null,
         "roe": null,
-        "revenue_growth": -0.089,
+        "revenue_growth": null,
         "earnings_growth": null,
         "debt_to_equity": null,
-        "current_ratio": 0.988,
+        "current_ratio": null,
         "trailing_pe": null,
-        "forward_pe": -22.099257,
-        "sector": "Communication Services"
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -66647,7 +66504,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "หุ้นไม่วิ่งตาม sector (หุ้น -22.7% vs sector +3.8%)",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -66664,29 +66521,41 @@
     },
     {
       "ticker": "JBS",
-      "company_name": "",
-      "sector": "Unknown",
+      "company_name": "JBS N.V.",
+      "sector": "Consumer Defensive",
       "price": 12.260000228881836,
       "avg_volume": 7792435,
-      "market_cap": 0.0,
+      "market_cap": 40323477504.0,
       "avg_dollar_volume": 95535254.88354683,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": null,
-      "fundamental_breakdown": {},
+      "fundamental_score": 56.5,
+      "fundamental_breakdown": {
+        "profitability": 49.1,
+        "growth": 33.9,
+        "financial_health": 42.9,
+        "valuation": 100.0,
+        "_weights_used": {
+          "profitability": 25,
+          "growth": 25,
+          "financial_health": 25,
+          "valuation": 25
+        },
+        "_data_completeness": "4/4 มุม"
+      },
       "fundamentals_raw": {
-        "profit_margin": null,
-        "roe": null,
-        "revenue_growth": null,
-        "earnings_growth": null,
-        "debt_to_equity": null,
-        "current_ratio": null,
-        "trailing_pe": null,
-        "forward_pe": null,
-        "sector": null
+        "profit_margin": 0.01977,
+        "roe": 0.22102,
+        "revenue_growth": 0.107,
+        "earnings_growth": -0.572,
+        "debt_to_equity": 268.232,
+        "current_ratio": 1.503,
+        "trailing_pe": 7.567901,
+        "forward_pe": 7.256153,
+        "sector": "Consumer Defensive"
       },
       "setups_matched": [
         {
@@ -66716,13 +66585,13 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Consumer Defensive'",
           "suggested_hold_days": ""
         },
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "ไม่มีข้อมูล earnings history",
+          "detail": "Earnings surprise +0.0% < 5.0%",
           "suggested_hold_days": ""
         }
       ],
@@ -68914,41 +68783,29 @@
     },
     {
       "ticker": "POWI",
-      "company_name": "Power Integrations, Inc.",
-      "sector": "Technology",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 72.98999786376953,
       "avg_volume": 1119030,
-      "market_cap": 4067001600.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 81677997.30949402,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 35.3,
-      "fundamental_breakdown": {
-        "profitability": 14.0,
-        "growth": 27.2,
-        "financial_health": 100.0,
-        "valuation": 0.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.0372,
-        "roe": 0.02359,
-        "revenue_growth": 0.026,
-        "earnings_growth": -0.604,
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
         "debt_to_equity": null,
-        "current_ratio": 6.883,
-        "trailing_pe": 243.29999,
-        "forward_pe": 39.302788,
-        "sector": "Technology"
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -68978,7 +68835,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "sector 'Technology' ยังไม่ร้อน (-2.2% < 2%); หุ้นไม่วิ่งตาม sector (หุ้น -13.9% vs sector -2.2%)",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -70323,7 +70180,7 @@
         "debt_to_equity": 190.139,
         "current_ratio": 0.669,
         "trailing_pe": 24.261904,
-        "forward_pe": 14.125311,
+        "forward_pe": 14.12394,
         "sector": "Communication Services"
       },
       "setups_matched": [
@@ -70371,41 +70228,29 @@
     },
     {
       "ticker": "POR",
-      "company_name": "Portland General Electric Co",
-      "sector": "Utilities",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 52.720001220703125,
       "avg_volume": 1347105,
-      "market_cap": 6101286400.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 71019377.24441528,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 50.2,
-      "fundamental_breakdown": {
-        "profitability": 30.4,
-        "growth": 20.6,
-        "financial_health": 55.6,
-        "valuation": 94.1,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.07117,
-        "roe": 0.06303,
-        "revenue_growth": -0.053,
-        "earnings_growth": -0.582,
-        "debt_to_equity": 129.539,
-        "current_ratio": 1.087,
-        "trailing_pe": 23.535715,
-        "forward_pe": 14.735312,
-        "sector": "Utilities"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -70435,7 +70280,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "sector 'Utilities' ยังไม่ร้อน (-0.2% < 2%)",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -70862,43 +70707,68 @@
     },
     {
       "ticker": "MAIR",
-      "company_name": "Madison Air Solutions Corporati",
-      "sector": "Industrials",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 37.18000030517578,
       "avg_volume": 1829140,
-      "market_cap": 18638974976.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 68007425.75820923,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
-      "passed_fundamental_filter": false,
-      "fundamental_filter_fail_reason": "Debt/Equity 561% > 300% (หนี้สูงผิดปกติ)",
-      "fundamental_score": 39.3,
-      "fundamental_breakdown": {
-        "profitability": 13.0,
-        "growth": 100.0,
-        "financial_health": 44.2,
-        "valuation": 0.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "passed_fundamental_filter": true,
+      "fundamental_filter_fail_reason": "",
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.025999999,
+        "profit_margin": null,
         "roe": null,
-        "revenue_growth": 0.338,
+        "revenue_growth": null,
         "earnings_growth": null,
-        "debt_to_equity": 561.143,
-        "current_ratio": 1.77,
-        "trailing_pe": 106.22858,
-        "forward_pe": 29.839249,
-        "sector": "Industrials"
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
-      "setups_matched": [],
+      "setups_matched": [
+        {
+          "setup_name": "Gap & Hold",
+          "matched": false,
+          "detail": "Gap -0.1% ≤ 4.0%",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Volume Breakout",
+          "matched": false,
+          "detail": "close $37.18 ไม่ break high $44.15; volume 1.2x < 2.0x",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Relative Strength Leader",
+          "matched": false,
+          "detail": "แรงกว่าตลาดต่อเนื่องสูงสุด 1 วัน < 3 วัน",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Pullback to Support (in uptrend)",
+          "matched": false,
+          "detail": "ไม่อยู่ใน uptrend (EMA10 ไม่อยู่เหนือ EMA20 หรือราคาไม่สูงกว่า 20 วันก่อน)",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Sector Hype Rotation",
+          "matched": false,
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
+          "suggested_hold_days": ""
+        },
+        {
+          "setup_name": "Earnings Surprise Momentum",
+          "matched": false,
+          "detail": "ไม่พบ column surprise % ใน earnings history",
+          "suggested_hold_days": ""
+        }
+      ],
       "upcoming_earnings_warning": null,
       "insider_buying_signal": null,
       "institutional_ownership": null,
@@ -70906,41 +70776,29 @@
     },
     {
       "ticker": "LW",
-      "company_name": "Lamb Weston Holdings, Inc.",
-      "sector": "Consumer Defensive",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 45.90999984741211,
       "avg_volume": 1462615,
-      "market_cap": 6338921984.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 67148654.42682266,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 53.1,
-      "fundamental_breakdown": {
-        "profitability": 46.2,
-        "growth": 27.4,
-        "financial_health": 49.8,
-        "valuation": 89.1,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.04607,
-        "roe": 0.17355,
-        "revenue_growth": 0.029,
-        "earnings_growth": -0.622,
-        "debt_to_equity": 220.065,
-        "current_ratio": 1.461,
-        "trailing_pe": 21.55399,
-        "forward_pe": 15.279498,
-        "sector": "Consumer Defensive"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -70970,7 +70828,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Consumer Defensive'",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -71717,29 +71575,39 @@
     },
     {
       "ticker": "JAN",
-      "company_name": "",
-      "sector": "Unknown",
+      "company_name": "Janus Living, Inc.",
+      "sector": "Real Estate",
       "price": 29.1200008392334,
       "avg_volume": 2049860,
-      "market_cap": 0.0,
+      "market_cap": 6179933696.0,
       "avg_dollar_volume": 59691924.920310974,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": null,
-      "fundamental_breakdown": {},
+      "fundamental_score": 66.7,
+      "fundamental_breakdown": {
+        "profitability": 0.0,
+        "growth": 100.0,
+        "financial_health": 100.0,
+        "_weights_used": {
+          "profitability": 25,
+          "growth": 25,
+          "financial_health": 25
+        },
+        "_data_completeness": "3/4 มุม"
+      },
       "fundamentals_raw": {
-        "profit_margin": null,
+        "profit_margin": -0.00014999999,
         "roe": null,
-        "revenue_growth": null,
+        "revenue_growth": 0.345,
         "earnings_growth": null,
         "debt_to_equity": null,
-        "current_ratio": null,
+        "current_ratio": 4.004,
         "trailing_pe": null,
-        "forward_pe": null,
-        "sector": null
+        "forward_pe": 136.50214,
+        "sector": "Real Estate"
       },
       "setups_matched": [
         {
@@ -71769,13 +71637,13 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
+          "detail": "sector 'Real Estate' ยังไม่ร้อน (+0.2% < 2%)",
           "suggested_hold_days": ""
         },
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "ไม่มีข้อมูล earnings history",
+          "detail": "Earnings surprise -0.9% < 5.0%",
           "suggested_hold_days": ""
         }
       ],
@@ -73400,7 +73268,7 @@
         {
           "setup_name": "Earnings Surprise Momentum",
           "matched": false,
-          "detail": "Earnings surprise +0.4% < 5.0%",
+          "detail": "ไม่มีข้อมูล earnings history",
           "suggested_hold_days": ""
         }
       ],
@@ -73573,41 +73441,29 @@
     },
     {
       "ticker": "TDS",
-      "company_name": "Telephone and Data Systems, Inc",
-      "sector": "Communication Services",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 36.189998626708984,
       "avg_volume": 1171445,
-      "market_cap": 4120231424.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 42394592.941265106,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 70.3,
-      "fundamental_breakdown": {
-        "profitability": 38.3,
-        "growth": 60.8,
-        "financial_health": 96.0,
-        "valuation": 86.2,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.104940005,
-        "roe": 0.060149997,
-        "revenue_growth": 0.065,
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
         "earnings_growth": null,
-        "debt_to_equity": 23.845,
-        "current_ratio": 3.426,
-        "trailing_pe": 21.288235,
-        "forward_pe": 4451.4146,
-        "sector": "Communication Services"
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -73637,7 +73493,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "หุ้นไม่วิ่งตาม sector (หุ้น -2.8% vs sector +3.8%)",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -74980,41 +74836,29 @@
     },
     {
       "ticker": "PHG",
-      "company_name": "Koninklijke Philips N.V. NY Reg",
-      "sector": "Healthcare",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 27.739999771118164,
       "avg_volume": 1058230,
-      "market_cap": 26962798592.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 29355299.957790375,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 68.2,
-      "fundamental_breakdown": {
-        "profitability": 30.5,
-        "growth": 71.1,
-        "financial_health": 71.1,
-        "valuation": 100.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.054980002,
-        "roe": 0.08364,
-        "revenue_growth": -0.047,
-        "earnings_growth": 0.972,
-        "debt_to_equity": 70.914,
-        "current_ratio": 1.317,
-        "trailing_pe": 24.333334,
-        "forward_pe": 13.7178,
-        "sector": "Healthcare"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -75044,7 +74888,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "หุ้นไม่วิ่งตาม sector (หุ้น +1.6% vs sector +5.2%)",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
@@ -75434,41 +75278,29 @@
     },
     {
       "ticker": "TKC",
-      "company_name": "Turkcell Iletisim Hizmetleri AS",
-      "sector": "Communication Services",
+      "company_name": "",
+      "sector": "Unknown",
       "price": 5.840000152587891,
       "avg_volume": 2392335,
-      "market_cap": 5084169728.0,
+      "market_cap": 0.0,
       "avg_dollar_volume": 13971236.765041351,
       "passed_base_filter": true,
       "base_filter_fail_reason": "",
       "data_quality_flags": [],
       "passed_fundamental_filter": true,
       "fundamental_filter_fail_reason": "",
-      "fundamental_score": 70.9,
-      "fundamental_breakdown": {
-        "profitability": 33.1,
-        "growth": 70.0,
-        "financial_health": 80.5,
-        "valuation": 100.0,
-        "_weights_used": {
-          "profitability": 25,
-          "growth": 25,
-          "financial_health": 25,
-          "valuation": 25
-        },
-        "_data_completeness": "4/4 มุม"
-      },
+      "fundamental_score": null,
+      "fundamental_breakdown": {},
       "fundamentals_raw": {
-        "profit_margin": 0.07368,
-        "roe": 0.073460005,
-        "revenue_growth": 0.089,
-        "earnings_growth": 0.151,
-        "debt_to_equity": 70.932,
-        "current_ratio": 1.692,
-        "trailing_pe": 12.977778,
-        "forward_pe": 11.018868,
-        "sector": "Communication Services"
+        "profit_margin": null,
+        "roe": null,
+        "revenue_growth": null,
+        "earnings_growth": null,
+        "debt_to_equity": null,
+        "current_ratio": null,
+        "trailing_pe": null,
+        "forward_pe": null,
+        "sector": null
       },
       "setups_matched": [
         {
@@ -75498,7 +75330,7 @@
         {
           "setup_name": "Sector Hype Rotation",
           "matched": false,
-          "detail": "หุ้นไม่วิ่งตาม sector (หุ้น -3.0% vs sector +3.8%)",
+          "detail": "ไม่มีข้อมูล sector ETF สำหรับ 'Unknown'",
           "suggested_hold_days": ""
         },
         {
